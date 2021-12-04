@@ -40,7 +40,9 @@ public class ComplexNumbers {
         this.imaginaryNum = complex1.imaginaryNum - complex2.imaginaryNum;        
     }
     
-    
+   public String printComplex(ComplexNumbers complex){
+       return Float.toString(complex.getRealNum()) + " j" + Float.toString(complex);
+   }
     
     
 }
