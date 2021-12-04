@@ -40,9 +40,35 @@ public class ComplexNumbers {
         this.imaginaryNum = complex1.imaginaryNum - complex2.imaginaryNum;        
     }
     
-   public String printComplex(ComplexNumbers complex){
-       return Float.toString(complex.getRealNum()) + " j" + Float.toString(complex);
+   public void printComplex(ComplexNumbers complex){
+       System.out.println(Float.toString(complex.getRealNum()) + " " + Float.toString(complex.imaginaryNum) + "j\n");
    }
-    
+   
+   public void printComplex(){
+       float real = realNum;
+       float imaginary = imaginaryNum;
+       System.out.println(Float.toHexString(real) + " " + Float.toString(imaginary) + "j\n");
+   }
+   
+   static ComplexNumbers complex1, complex2;
+   public static void main(String[] args) {
+        // TODO code application logic here
+        //implementation of complex numbers class
+        //print default complex number
+        ComplexNumbers complex = new ComplexNumbers();
+        complex.printComplex(); 
+        
+        //create two complex numbers
+        complex1 = new ComplexNumbers(12, 6);
+        complex2 = new ComplexNumbers(4, 5);
+        
+        //add the two complex numbers
+        complex.add(complex1, complex2);
+        complex.printComplex();
+        
+        //...substract the two cmoplex number
+        complex.substract(complex1, complex2);
+        complex.printComplex();        
+    }
     
 }
