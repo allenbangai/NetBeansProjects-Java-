@@ -41,13 +41,13 @@ public class ComplexNumbers {
     }
     
    public void printComplex(ComplexNumbers complex){
-       System.out.println(Float.toString(complex.getRealNum()) + " " + Float.toString(complex.imaginaryNum) + "j\n");
+       System.out.println(Float.toString(complex.getRealNum()) + " + " + Float.toString(complex.imaginaryNum) + "j\n");
    }
    
    public void printComplex(){
        float real = realNum;
        float imaginary = imaginaryNum;
-       System.out.println(Float.toHexString(real) + " " + Float.toString(imaginary) + "j\n");
+       System.out.println(Float.toString(real) + " + " + Float.toString(imaginary) + "j\n");
    }
    
    static ComplexNumbers complex1, complex2;
