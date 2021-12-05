@@ -29,9 +29,10 @@ public class Ex8_15_Rational {
         return denominator;
     }
     
-    private int[2] simplifyRational(){
+    private int[] simplifyRational(int nominator, int denominator){
         
-        int[] rationalNum
-        return 
+        
+        int[] rationalNum = {2, 3};
+        return rationalNum;
     }
 }
