@@ -21,18 +21,36 @@ public class Ex8_15_Rational {
         this.denominator = denominator;
     }
 
-    public int getNumerator() {
+    private int getNumerator() {
         return numerator;
     }
 
-    public int getDenominator() {
+    private int getDenominator() {
         return denominator;
     }
+
+    private void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    private void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
     
-    private int[] simplifyRational(int nominator, int denominator){
+    private void simplifyRational(int numerator, int denominator){
+        //for loop for simplifying rational number to it simplest form
+        int i;
+        for(i = 2; i <= numerator; i++){
+            if((numerator%i) == 0 && (denominator%i) == 0){
+                numerator = numerator/i;
+                denominator = denominator/i;
+                i = 1;
+            }
+        }
+        
+        seNumerator
         
         
         int[] rationalNum = {2, 3};
-        return rationalNum;
     }
 }
