@@ -67,19 +67,28 @@ public class Ex8_15_Rational {
     
     //...Method to add two rational number from tqo different instatiated object nd return the addition...
     public static Ex8_15_Rational add(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
-        int newDenum = rational1.getDenominator() * rational2.getNumerator();
+        int newDenum = rational1.getDenominator() * rational2.getDenominator();
         int newNum = rational1.getNumerator()*rational2.getDenominator() 
                 + rational2.getNumerator()*rational1.getDenominator();
         
         return new Ex8_15_Rational(newNum, newDenum);
     }
     
-    //...Method to subtract two rational number from tqo different instatiated object nd return the addition...
+    //...Method to subtract two rational number from tqo different instatiated object nd return the subtaction...
     public static Ex8_15_Rational subtraction(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
-        int newDenum = rational1.getDenominator() * rational2.getNumerator();
+        int newDenum = rational1.getDenominator() * rational2.getDenominator();
         int newNum = rational1.getNumerator()*rational2.getDenominator() 
                 - rational2.getNumerator()*rational1.getDenominator();
         
+        return new Ex8_15_Rational(newNum, newDenum);        
+    }
+    
+    //...Method to multiply two rational number from tqo different instatiated object nd return the multiplication...
+    public static Ex8_15_Rational product(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
+        int newDenum = rational1.getDenominator() * rational2.getDenominator();
+        int newNum = rational1.getNumerator() * rational2.getNumerator();
+        
+        //...return product
         return new Ex8_15_Rational(newNum, newDenum);        
     }
 }
