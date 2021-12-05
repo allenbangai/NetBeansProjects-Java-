@@ -19,15 +19,6 @@ public class Ex8_15_Rational {
     public Ex8_15_Rational(int numerator, int denominator) {
         simplifyRational(numerator, denominator);
     }
-
-    //...getter methods for private variables of the class
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
     
     //setter methods for private variables of the the class
     private void setNumerator(int numerator) {
@@ -36,6 +27,15 @@ public class Ex8_15_Rational {
 
     private void setDenominator(int denominator) {
         this.denominator = denominator;
+    }
+
+    //...getter methods for private variables of the class
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
     }
     
     private void simplifyRational(int numerator, int denominator){
@@ -55,6 +55,15 @@ public class Ex8_15_Rational {
         setDenominator(denominator);        
     }
     
+    public String printfr(){
+        return Integer.toString(getNumerator()) + "/" + Integer.toString(getDenominator());
+    }
+    
+    public String printfl(){
+        float value = 
+    }
+    
+    
     
     /**
      * The following methods are for addition, subtraction, division, and multiplication of two rational numbers
@@ -65,7 +74,7 @@ public class Ex8_15_Rational {
      * @return 
      */
     
-    //...Method to add two rational number from tqo different instatiated object nd return the addition...
+    //...Method to add two rational number from tqo different instatiated object and return the addition...
     public static Ex8_15_Rational add(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
         int newDenum = rational1.getDenominator() * rational2.getDenominator();
         int newNum = rational1.getNumerator()*rational2.getDenominator() 
@@ -74,7 +83,7 @@ public class Ex8_15_Rational {
         return new Ex8_15_Rational(newNum, newDenum);
     }
     
-    //...Method to subtract two rational number from tqo different instatiated object nd return the subtaction...
+    //...Method to subtract two rational number from tqo different instatiated object and return the subtaction...
     public static Ex8_15_Rational subtraction(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
         int newDenum = rational1.getDenominator() * rational2.getDenominator();
         int newNum = rational1.getNumerator()*rational2.getDenominator() 
@@ -83,12 +92,21 @@ public class Ex8_15_Rational {
         return new Ex8_15_Rational(newNum, newDenum);        
     }
     
-    //...Method to multiply two rational number from tqo different instatiated object nd return the multiplication...
+    //...Method to multiply two rational number from tqo different instatiated object and return the multiplication...
     public static Ex8_15_Rational product(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
         int newDenum = rational1.getDenominator() * rational2.getDenominator();
         int newNum = rational1.getNumerator() * rational2.getNumerator();
         
         //...return product
         return new Ex8_15_Rational(newNum, newDenum);        
+    }
+    
+    //...Method to devide two rational number from tqo different instatiated object and return the multiplication...
+    public static Ex8_15_Rational quotient(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
+        int newDenum = rational1.getDenominator() * rational2.getNumerator();
+        int newNum = rational1.getNumerator() * rational2.getDenominator();
+        
+        //...return quotient
+        return new Ex8_15_Rational(newNum, newDenum);      
     }
 }
