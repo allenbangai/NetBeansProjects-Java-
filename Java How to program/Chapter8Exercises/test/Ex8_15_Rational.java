@@ -54,7 +54,14 @@ public class Ex8_15_Rational {
         setDenominator(denominator);        
     }
     
-    //function to add to rational number from tqo different instatiated object
+    
+    /**
+     * 
+     * 
+     * ...Each rational number is an object and the returned addition is an abject...
+     */
+    
+    //...Function to add two rational number from tqo different instatiated object nd return the addition...
     public static Ex8_15_Rational add(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
         int newDenum = rational1.getDenominator() * rational2.getNumerator();
         int newNum = rational1.getNumerator()*rational2.getDenominator() 
