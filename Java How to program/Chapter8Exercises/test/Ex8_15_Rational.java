@@ -12,23 +12,23 @@ public class Ex8_15_Rational {
     private int denominator;
 
     public Ex8_15_Rational() {
-        numerator = 1;
-        denominator = 2;
+        simplifyRational(1, 2);
     }
 
     public Ex8_15_Rational(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        simplifyRational(numerator, denominator);
     }
 
-    private int getNumerator() {
+    //...getter methods for private variables of the class
+    public int getNumerator() {
         return numerator;
     }
 
-    private int getDenominator() {
+    public int getDenominator() {
         return denominator;
     }
-
+    
+    //setter methods for private variables of the the class
     private void setNumerator(int numerator) {
         this.numerator = numerator;
     }
@@ -48,9 +48,18 @@ public class Ex8_15_Rational {
             }
         }
         
-        seNumerator
+        //...setting the simplifies values using the setters methods of the class 
+        //so they can be called in their simplifies form by theor getter methods...
+        setNumerator(numerator);
+        setDenominator(denominator);        
+    }
+    
+    //function to add to rational number from tqo different instatiated object
+    public static Ex8_15_Rational add(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
+        int newDenum = rational1.getDenominator() * rational2.getNumerator();
+        int newNum = rational1.getNumerator()*rational2.getDenominator() 
+                - rational2.getNumerator()*rational1.getDenominator();
         
-        
-        int[] rationalNum = {2, 3};
+        return new Ex8_15_Rational(newNum, newDenum);
     }
 }
