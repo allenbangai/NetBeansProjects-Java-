@@ -11,6 +11,7 @@ public class Ex8_15_Rational {
     private int numerator;
     private int denominator;
 
+    //...empty contructor with default parameters...
     public Ex8_15_Rational() {
         simplifyRational(1, 2);
     }
@@ -38,7 +39,7 @@ public class Ex8_15_Rational {
     }
     
     private void simplifyRational(int numerator, int denominator){
-        //for loop for simplifying rational number to it simplest form
+        //...for loop for simplifying rational number to it simplest form...
         int i;
         for(i = 2; i <= numerator; i++){
             if((numerator%i) == 0 && (denominator%i) == 0){
@@ -48,17 +49,20 @@ public class Ex8_15_Rational {
             }
         }
         
-        //...setting the simplifies values using the setters methods of the class 
-        //so they can be called in their simplifies form by theor getter methods...
+        /*...setting the simplifies values using the setters methods of the class 
+         so they can be called in their simplifies form by theor getter methods...*/
         setNumerator(numerator);
         setDenominator(denominator);        
     }
     
     
     /**
+     * The following methods are for addition, subtraction, division, and multiplication of two rational numbers
      * 
-     * 
-     * ...Each rational number is an object and the returned addition is an abject...
+     * ...Each rational number is an object and the returned computation is an abject......Hence, the each methods takes two objects and returns and object...
+     * @param rational1
+     * @param rational2
+     * @return 
      */
     
     //...Function to add two rational number from tqo different instatiated object nd return the addition...
@@ -68,5 +72,13 @@ public class Ex8_15_Rational {
                 - rational2.getNumerator()*rational1.getDenominator();
         
         return new Ex8_15_Rational(newNum, newDenum);
+    }
+    
+    public static Ex8_15_Rational subtraction(Ex8_15_Rational rational1, Ex8_15_Rational rational2){
+        int newDenum = rational1.getDenominator() * rational2.getNumerator();
+        int newNum = rational1.getNumerator()*rational2.getDenominator() 
+                - rational2.getNumerator()*rational1.getDenominator();
+        
+        return new Ex8_15_Rational(newNum, newDenum);        
     }
 }
