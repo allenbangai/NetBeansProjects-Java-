@@ -22,3 +22,15 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /Java How to program/Chapter8Exercises/nbproject/private/
+/JavaFX/nbproject/private/
+/JavaFX/build/
+/JavaFX/dist/
+/FxJava/nbproject/private/
+/FxJava/build/
+/FxJava/dist/
+/JavaFx01/nbproject/private/
+/JavaFx01/build/
+/JavaFx01/dist/
+/Projet_Fx/build/
+/Projet_Fx/dist/
+/Projet_Fx/nbproject/private/
