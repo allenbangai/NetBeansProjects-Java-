@@ -9,11 +9,14 @@ package chapter8exercises;
  * @author DELL
  */
 public class Emergency {
+    //declaring private vriables of class emergency
     private String firstName;
     private String lastName;
     private String location;
     private String time;
     private String phoneNumber;
+    private String info;
+    
     
     
 }
