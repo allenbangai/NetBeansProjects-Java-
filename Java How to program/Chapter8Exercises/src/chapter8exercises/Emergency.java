@@ -9,5 +9,11 @@ package chapter8exercises;
  * @author DELL
  */
 public class Emergency {
+    private String firstName;
+    private String lastName;
+    private String location;
+    private String time;
+    private String phoneNumber;
+    
     
 }
