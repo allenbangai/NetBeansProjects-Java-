@@ -9,9 +9,11 @@ public class Chapter9Exercises {
      */
     
     int num;
+    Scanner inte;
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Enter exercice number you which to run")
+        System.out.println("Enter exercice number you which to run");
+        inte = new Scanner(System.in);
         switch(num){
             case 1:
                 break;

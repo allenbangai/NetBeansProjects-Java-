@@ -1,2 +1,0 @@
-chapter8exercises.PackageData
-chapter8exercises.PackageDataTest
