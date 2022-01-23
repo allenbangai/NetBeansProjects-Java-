@@ -1,5 +1,8 @@
 
+import chapter10exercises.*;
+
 import java.util.Scanner;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -46,6 +49,16 @@ public class Chapter10Exercises {
         }
         System.out.println("className.methodName()");
         System.err.println("How you doing today");
+    }
+    
+    private void TestEmployeePay(){
+        // create subclass objects 
+        SalariedEmployees salariedEmployee = new SalariedEmployees(800.00, "John", "Smith", "111-11-1111"); 
+        HourlyEmployee hourlyEmployee = new HourlyEmployee(16.75, 40, "Karen", "Price", "222-22-2222");
+        CommissionEmployee commissionEmployee = new CommissionEmployee(10000, .06, "Sue", "Jones", "333-33-3333"); 
+        Base_CommissionEmployee basePlusCommissionEmployee = new Base_CommissionEmployee( 
+          5000, .04, 300, "Bob", "Lewis", "444-44-4444");
+
     }
     
 }

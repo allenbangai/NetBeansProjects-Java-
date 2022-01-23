@@ -11,7 +11,7 @@ package chapter10exercises;
 public class Base_CommissionEmployee extends CommissionEmployee{
     private double baseSalary;
 
-    public Base_CommissionEmployee(double baseSalary, double grossSales, double commissionRate, 
+    public Base_CommissionEmployee(double grossSales, double commissionRate, double baseSalary, 
             String firstName, String secondname, String SSN) {
         super(grossSales, commissionRate, firstName, secondname, SSN);
         if (baseSalary < 0.0) {
@@ -25,14 +25,21 @@ public class Base_CommissionEmployee extends CommissionEmployee{
     }
 
     public void setBaseSalary(double baseSalary) {
+        if (baseSalary < 0.0) {
+            throw new IllegalArgumentException("Salary cannot be negative");
+        }
         this.baseSalary = baseSalary;
     }
 
+    @Override
+    public String toString(){
+        return String.format("%s %s; %s: $%,.2f", "base-salaried", super.toString(), 
+                "base salary", getBaseSalary());
+    }
     
     @Override
     public double earnings() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return getBaseSalary() + super.earnings();
     }
-    
-    
+        
 }
