@@ -1,3 +1,5 @@
+package chapter10exercise;
+
 import java.util.Scanner;
 
 /*
@@ -12,23 +14,35 @@ import java.util.Scanner;
 public class Chapter10Exercise {
 
     private static Scanner value = new Scanner(System.in);
+    private static int val;
 
     /**
      * @param args the command line arguments
      */
     
     public static void main(String[] args) {
-        int val = value.nextInt();
+        System.out.println("Select 1 for PolymorphysmTest");
+        val = value.nextInt();
         switch (val) {
-            case 1:
+            case 1:{
                 
                 break;
-            case 2:
+            }
                 
-            break;
+            case 2:{
 
-            case 3:
-            break;
+                break;
+            }
+
+            case 3:{
+
+                
+                break;
+            }
+            
+            case 4:
+                
+                break;
             default:
                 break;
         }
