@@ -7,7 +7,7 @@
  *
  * @author DELL
  */
-public class Chapter10Exercises {
+public class Main {
 
     /**
      * @param args the command line arguments
