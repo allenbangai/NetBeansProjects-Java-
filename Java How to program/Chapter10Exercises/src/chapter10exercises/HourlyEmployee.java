@@ -61,8 +61,5 @@ public class HourlyEmployee extends Employee{
         }else{
             return  40*getWages() + (getHours()-40)*getWages()*1.5;
         }
-    }
-    
-    
-    
+    }    
 }
