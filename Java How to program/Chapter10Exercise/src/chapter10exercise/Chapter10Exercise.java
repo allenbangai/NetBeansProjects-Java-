@@ -24,6 +24,7 @@ public class Chapter10Exercise {
                 
                 break;
             case 2:
+                
             break;
 
             case 3:
