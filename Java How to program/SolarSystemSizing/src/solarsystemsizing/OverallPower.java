@@ -12,5 +12,21 @@ import java.util.ArrayList;
  */
 public class OverallPower extends Total{
     private ArrayList<TPower> tPowers;
-    private ArrayList<TEnergy> tEnergys;
+
+    public OverallPower(ArrayList<TPower> tPowers) {
+        this.tPowers = tPowers;
+    }
+
+    public void settPowers(ArrayList<TPower> tPowers) {
+        this.tPowers = tPowers;
+    }
+
+    public ArrayList<TPower> gettPowers() {
+        return tPowers;
+    }
+
+    @Override
+    public double total() {
+        return 1.3;
+    }
 }
