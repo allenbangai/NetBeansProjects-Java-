@@ -28,10 +28,5 @@ public class MaxEnergy extends Total{
     @Override
     public double total() {
         return super.getVal() * gettEnergy();
-    }
-    
-   
-    
-    
-    
+    }    
 }

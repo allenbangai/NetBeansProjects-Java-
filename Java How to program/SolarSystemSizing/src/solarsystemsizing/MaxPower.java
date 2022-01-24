@@ -8,6 +8,19 @@ package solarsystemsizing;
  *
  * @author DELL
  */
-public class MaxPower {
+public class MaxPower extends Tot{
+    private int tPower;
+
+    public MaxPower(int tPower) {
+        this.tPower = tPower;
+    }
+
+    public int gettPower() {
+        return tPower;
+    }
+
+    public void settPower(int tPower) {
+        this.tPower = tPower;
+    }
     
 }
