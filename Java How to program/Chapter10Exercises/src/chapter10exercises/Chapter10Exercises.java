@@ -26,6 +26,7 @@ public class Chapter10Exercises {
         val = value.nextInt();
         switch (val) {
             case 1:{
+                //show implementation of polymorphism
                 testEmployeePay();
                 break;
             }
@@ -47,8 +48,7 @@ public class Chapter10Exercises {
             default:
                 break;
         }
-        System.out.println("className.methodName()");
-        System.err.println("How you doing today");
+        
     }
     
     private static void testEmployeePay(){
@@ -62,10 +62,10 @@ public class Chapter10Exercises {
         //create four element employee array
         Employee[] employees = new Employee[4];
         //initialize the four element employee array
-        employees[1] = salariedEmployee;
-        employees[2] = hourlyEmployee;
-        employees[3] = commissionEmployee;
-        employees[4] = baseCommissionEmployee;
+        employees[0] = salariedEmployee;
+        employees[1] = hourlyEmployee;
+        employees[2] = commissionEmployee;
+        employees[3] = baseCommissionEmployee;
         
         System.out.println("Employees process polymorphycally \n");
         
@@ -84,6 +84,9 @@ public class Chapter10Exercises {
             System.out.printf("earned $%,.2f%n%n", employee.earnings());
         }// ...end for...
         
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println("Employee " + i + " is a " + employees[i].getClass().getName());
+        }//... end main...
     }
     
 }
