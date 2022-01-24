@@ -12,6 +12,7 @@ import java.util.ArrayList;
  */
 public class OverallPower extends Total{
     private ArrayList<TPower> tPowers;
+    private int hours; //total harmonized hours of autonomy or utility of all loads
 
     public OverallPower(ArrayList<TPower> tPowers) {
         this.tPowers = tPowers;
