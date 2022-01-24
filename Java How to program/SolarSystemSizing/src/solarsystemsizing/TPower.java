@@ -12,6 +12,7 @@ import java.util.ArrayList;
  */
 public class TPower extends Total{
     private ArrayList<Power> powers;
+    private int tPower;
     private int hours; //total harmonized hours of autonomy or utility of all loads
 
     public TPower(ArrayList<Power> powers, int hours) {
@@ -19,6 +20,24 @@ public class TPower extends Total{
         this.hours = hours;
     }
 
+    public TPower(int tPower, int hours) {
+        this.tPower = tPower;
+        this.hours = hours;
+    }
+
+    public int gettPower() {
+        return tPower;
+    }
+
+    public void settPower(int tPower) {
+        this.tPower = tPower;
+    }
+
+    /**
+     * return a total same number of hours of autonomy for all loads in the local
+     * meaning all the loads will have the same number of autonomy
+     * @return 
+     */
     public int getHours() {
         return hours;
     }
@@ -35,17 +54,21 @@ public class TPower extends Total{
         return powers;
     }
     
-    private int returnTotal(){
+    private int returnTEnergy(){
         ArrayList<Power> powers = getPowers();
-        int val = 0;
-        for(Power power : powers){
-            val = val + power.getPower();
+        if (powers.isEmpty()) {
+            return gettPower() * getHours();
+        } else {
+            int val = 0;
+            for(Power power : powers){
+                val = val + power.getPower();
+            }
+            return val * getHours();
         }
-        return val * getHours();
     }
-
+    
     @Override
     public double total() {
-        return super.getVal() * returnTotal();
+        return super.getVal() * returnTEnergy();
     }
 }
