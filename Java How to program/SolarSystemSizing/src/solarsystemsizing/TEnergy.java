@@ -11,11 +11,24 @@ import java.util.ArrayList;
  * @author DELL
  */
 public class TEnergy extends Total{
-    private ArrayList<Energy> energys  ;
+    private ArrayList<Energy> energys;
+    int tEnergy;
 
     public TEnergy(ArrayList<Energy> energys) {
         this.energys = energys;
-    }    
+    }
+
+    public TEnergy(int tEnergy) {
+        this.tEnergy = tEnergy;
+    }
+
+    public int gettEnergy() {
+        return tEnergy;
+    }
+
+    public void settEnergy(int tEnergy) {
+        this.tEnergy = tEnergy;
+    }
 
     public ArrayList<Energy> getEnergys() {
         return energys;
@@ -25,17 +38,21 @@ public class TEnergy extends Total{
         this.energys = tEnergys;
     }
     
-    private int returnTotal(){
+    private int returnTotalEnergy(){
         ArrayList<Energy> energys = getEnergys();
-        int val = 0;
-        for (Energy energy : energys) {
-            val = val + energy.getPower();
+        if (energys.isEmpty()) {
+            return gettEnergy();
+        } else {
+            int val = 0;
+            for (Energy energy : energys) {
+                val = val + energy.getPower();
+            }
+            return val;
         }
-        return val;
     }
 
     @Override
     public double total() {
-        return super.getVal() * returnTotal();
+        return super.getVal() * returnTotalEnergy();
     }    
 }
