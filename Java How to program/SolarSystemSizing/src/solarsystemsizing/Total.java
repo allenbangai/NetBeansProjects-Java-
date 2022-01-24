@@ -8,6 +8,7 @@ package solarsystemsizing;
  *
  * @author DELL
  */
-privae class Overall_Power_Energy {
-    
+public abstract class Total {
+    private final double val = 1.3;
+    public abstract double total();
 }
