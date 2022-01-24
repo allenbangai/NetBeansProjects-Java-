@@ -8,6 +8,7 @@ package solarsystemsizing;
  *
  * @author DELL
  */
+
 public class TPower {
     
 }
