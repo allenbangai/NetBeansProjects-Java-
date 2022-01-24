@@ -10,5 +10,10 @@ package solarsystemsizing;
  */
 public abstract class Total {
     private final double val = 1.3;
+
+    public double getVal() {
+        return val;
+    }
+    
     public abstract double total();
 }

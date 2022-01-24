@@ -24,9 +24,17 @@ public class OverallPower extends Total{
     public ArrayList<TPower> gettPowers() {
         return tPowers;
     }
+    
+    private double returnTotal(){
+        ArrayList<TPower> powers = gettPowers();
+        int val
+        for(TPower power : powers){
+            
+        }
+    }
 
     @Override
     public double total() {
-        return 1.3;
+        return super.getVal();
     }
 }
