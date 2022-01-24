@@ -10,7 +10,25 @@ import java.util.ArrayList;
  *
  * @author DELL
  */
-public class MaxEnergy {
+public class MaxEnergy extends Total{
+    int tEnergy;
+
+    public MaxEnergy(int tEnergy) {
+        this.tEnergy = tEnergy;
+    }
+
+    public int gettEnergy() {
+        return tEnergy;
+    }
+
+    public void settEnergy(int tEnergy) {
+        this.tEnergy = tEnergy;
+    }
+
+    @Override
+    public double total() {
+    
+    }
     
    
     
