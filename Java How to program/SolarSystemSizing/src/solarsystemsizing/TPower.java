@@ -24,7 +24,10 @@ public class TPower {
         this.powerOfLoad = powerOfLoad;
     }
 
-    
+    /**
+     * return the available number of load
+     * @return 
+     */
     public int getNumOfLoad() {
         return numOfLoad;
     }
