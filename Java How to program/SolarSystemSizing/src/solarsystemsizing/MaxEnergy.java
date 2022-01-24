@@ -11,11 +11,11 @@ import java.util.ArrayList;
  * @author DELL
  */
 public class MaxEnergy {
-    private ArrayList<TPower> tPowers;
-    private ArrayList<TEnergy> tEnergys;
+    private ArrayList<Power> tPowers;
+    private ArrayList<Energy> tEnergys;
     private int hours; //total harmonized hours of autonomy or utility of all loads
 
-    public MaxEnergy(ArrayList<TPower> tPowers, int hours) {
+    public MaxEnergy(ArrayList<Power> tPowers, int hours) {
         this.tPowers = tPowers;
         this.hours = hours;
     }

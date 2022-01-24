@@ -4,63 +4,48 @@
  */
 package solarsystemsizing;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author DELL
  */
+public class TPower extends Total{
+    private ArrayList<Power> powers;
+    private int hours; //total harmonized hours of autonomy or utility of all loads
 
-public class TPower {
-    private int numOfLoad;
-    private int powerOfLoad;
-
-    /***
-     * instantiates parameters for a load so the total number of load can be return from object
-     * S.I.U of Load is Watt(W)
-     * @param numOfLoad
-     * @param powerOfLoad 
-     */
-    public TPower(int numOfLoad, int powerOfLoad) {
-        this.numOfLoad = numOfLoad;
-        this.powerOfLoad = powerOfLoad;
+    public TPower(ArrayList<Power> powers, int hours) {
+        this.powers = powers;
+        this.hours = hours;
     }
 
-    /**
-     * return the available number of load
-     * @return 
-     */
-    public int getNumOfLoad() {
-        return numOfLoad;
+    public int getHours() {
+        return hours;
     }
 
-    /**
-     * Set available number of load for a given load
-     * @param numOfLoad 
-     */
-    public void setNumOfLoad(int numOfLoad) {
-        this.numOfLoad = numOfLoad;
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
-    /**
-     * return the power of particular load
-     * @return 
-     */
-    public int getPowerOfLoad() {
-        return powerOfLoad;
+    public void setPowers(ArrayList<Power> tPowers) {
+        this.powers = tPowers;
     }
 
-    /**
-     * Set the power of a given load in Watt
-     * @param powerOfLoad 
-     */
-    public void setPowerOfLoad(int powerOfLoad) {
-        this.powerOfLoad = powerOfLoad;
+    public ArrayList<Power> getPowers() {
+        return powers;
     }
     
-    /**
-     * implementation to return the total power (W) from the load of a single device and number of load available
-     * @return 
-     */
-    public int getTPower(){
-        return (numOfLoad * powerOfLoad);
+    private int returnTotal(){
+        ArrayList<Power> powers = getPowers();
+        int val = 0;
+        for(Power power : powers){
+            val = val + power.getPower();
+        }
+        return val * getHours();
+    }
+
+    @Override
+    public double total() {
+        return super.getVal() * returnTotal();
     }
 }

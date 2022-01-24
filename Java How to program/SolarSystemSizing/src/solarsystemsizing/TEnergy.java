@@ -4,48 +4,38 @@
  */
 package solarsystemsizing;
 
+import java.util.ArrayList;
+
 /**
- * TEnergy stands for Total Energy
+ *
  * @author DELL
  */
-public class TEnergy extends TPower{
-    private int numOfHours;//hours of utilization of load per day
+public class TEnergy extends Total{
+    private ArrayList<Energy> energys  ;
 
-    /**
-     * instantiate parameters for a load from class Tpower
-     * instantiate parameters for total hours of use of load per day in Hours (H)
-     * S.I.U of hours is H
-     * @param numOfHours
-     * @param numOfLoad
-     * @param powerOfLoad 
-     */
-    public TEnergy(int numOfHours, int numOfLoad, int powerOfLoad) {
-        super(numOfLoad, powerOfLoad);
-        this.numOfHours = numOfHours;
+    public TEnergy(ArrayList<Energy> energys) {
+        this.energys = energys;
+    }    
+
+    public ArrayList<Energy> getEnergys() {
+        return energys;
     }
 
-    /**
-     * return the total number of hours the load is used per day
-     * @return 
-     */
-    public int getNumOfHours() {
-        return numOfHours;
-    }
-
-    /**
-     * set the total number of hours of load per day in H
-     * @param numOfHours 
-     */
-    public void setNumOfHours(int numOfHours) {
-        this.numOfHours = numOfHours;
+    public void setEnergys(ArrayList<Energy> tEnergys) {
+        this.energys = tEnergys;
     }
     
-    /**
-     * return the total energy consumed by a particular load in a day
-     * @return 
-     */
-    public int getTEnergy(){
-        return (super.getTPower() * getNumOfHours());
+    private int returnTotal(){
+        ArrayList<Energy> energys = getEnergys();
+        int val = 0;
+        for (Energy energy : energys) {
+            val = val + energy.getPower();
+        }
+        return val;
     }
-    
+
+    @Override
+    public double total() {
+        return super.getVal() * returnTotal();
+    }    
 }
