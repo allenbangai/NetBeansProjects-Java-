@@ -14,8 +14,17 @@ public class OverallPower extends Total{
     private ArrayList<TPower> tPowers;
     private int hours; //total harmonized hours of autonomy or utility of all loads
 
-    public OverallPower(ArrayList<TPower> tPowers) {
+    public OverallPower(ArrayList<TPower> tPowers, int hours) {
         this.tPowers = tPowers;
+        this.hours = hours;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     public void settPowers(ArrayList<TPower> tPowers) {
@@ -32,7 +41,7 @@ public class OverallPower extends Total{
         for(TPower power : powers){
             val = val + power.getTPower();
         }
-        return val;
+        return val * getHours();
     }
 
     @Override
