@@ -5,6 +5,7 @@
 package solarsystemsizing;
 
 import java.util.ArrayList;
+import java.lang.*;
 import java.util.Scanner;
 
 /**
@@ -33,6 +34,9 @@ public class SolarSizing {
             case 2:
                 System.out.println("Here, you will have the sizing of your system"
                         + " from the total power of the system and the total time of autonomy of all device inputed");
+                System.out.println("round1 " + Math.round(2.7));
+                System.out.println("round2 " + Math.round(2.3));
+                System.out.println("round3 " + Math.round(2.5));
                 break;
             case 3:
                 System.out.println("Here, you will have the sizing of your system from the total individual"
@@ -50,9 +54,15 @@ public class SolarSizing {
     
     private int getPanelNumber(float systemeEnergy){
         int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
-        ArrayList<Integer> panelNum = new ArrayList();
+        float panels;
+        ArrayList<Integer> panelList = new ArrayList();
         for(int panel : panelsPower){
-            
+            panels = systemeEnergy/panel;
+            int panelNum = Math.round(panels);
+            if (!isEven(panelNum)) {
+                panelNum++;
+            }
+            panelList.add(panelNum);
         }
         return 0;
     }
