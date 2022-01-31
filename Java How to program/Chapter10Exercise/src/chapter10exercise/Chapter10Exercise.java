@@ -36,7 +36,6 @@ public class Chapter10Exercise {
 
             case 3:{
 
-                
                 break;
             }
             

@@ -7,8 +7,8 @@ package solarsystemsizing;
 import java.util.ArrayList;
 
 /**
- *
- * @author DELL
+ * Class to get the total energy of the system from a fix time and variable power of the System
+ * @author Kamadje Allen
  */
 public class TPower extends Total{
     private ArrayList<Power> powers;

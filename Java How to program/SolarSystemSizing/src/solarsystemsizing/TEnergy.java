@@ -39,8 +39,7 @@ public class TEnergy extends Total{
     }
     
     private int returnTotalEnergy(){
-        ArrayList<Energy> energys = getEnergys();
-        if (energys.isEmpty()) {
+        if (getEnergys().isEmpty()) {
             return gettEnergy();
         } else {
             int val = 0;
