@@ -11,6 +11,17 @@ package solarsystemsizing;
 public class SolarPanels {
     private float energy;
     private float irradiance;
+
+    /**
+     * Constructor Solar panel
+     * @param energy
+     * @param irradiance 
+     */
+    public SolarPanels(float energy, float irradiance) {
+        this.energy = energy;
+        this.irradiance = irradiance;
+    }
+    
     
     
 }
