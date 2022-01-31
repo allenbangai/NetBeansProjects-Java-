@@ -4,6 +4,8 @@
  */
 package solarsystemsizing;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kamadje Allen
@@ -38,6 +40,19 @@ public class SolarPanels {
         this.irradiance = irradiance;
     }
     
-    
+    private int getPanelNumber(float systemeEnergy){
+        int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
+        float panels;
+        ArrayList<Integer> panelList = new ArrayList();
+        for(int panel : panelsPower){
+            panels = systemeEnergy/panel;
+            int panelNum = Math.round(panels);
+            if (!isEven(panelNum)) {
+                panelNum++;
+            }
+            panelList.add(panelNum);
+        }
+        return 0;
+    }
     
 }
