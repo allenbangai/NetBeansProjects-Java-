@@ -13,6 +13,10 @@ import java.util.ArrayList;
 public class SolarPanels {
     private float energy;
     private float irradiance;
+    /**
+     * This variable comprises all the availabe solar panels and their power
+     */
+    int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
 
     /**
      * Constructor Solar panel
@@ -40,8 +44,8 @@ public class SolarPanels {
         this.irradiance = irradiance;
     }
     
-    private int getPanelNumber(float systemeEnergy){
-        int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
+    private int getPanelNumber(){
+        
         float panels;
         ArrayList<Integer> panelList = new ArrayList();
         for(int panel : panelsPower){
@@ -53,6 +57,20 @@ public class SolarPanels {
             panelList.add(panelNum);
         }
         return 0;
+    }
+    
+    /**
+     * Function is to return true if input @param is even
+     * @param val is of type int
+     * @return 
+     * It return either a true or false
+     */
+    private boolean isEven(int val){
+        if(val%2 == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }
