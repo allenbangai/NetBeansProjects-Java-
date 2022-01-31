@@ -4,6 +4,7 @@
  */
 package solarsystemsizing;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -48,9 +49,20 @@ public class SolarSizing {
     }
     
     private int getPanelNumber(float systemeEnergy){
-        
-        
+        int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
+        ArrayList<Integer> panelNum = new ArrayList();
+        for(int panel : panelsPower){
+            
+        }
         return 0;
+    }
+    
+    private boolean isEven(int val){
+        if(val%2 == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }
