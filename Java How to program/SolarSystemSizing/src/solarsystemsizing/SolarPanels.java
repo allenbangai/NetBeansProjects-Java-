@@ -21,6 +21,22 @@ public class SolarPanels {
         this.energy = energy;
         this.irradiance = irradiance;
     }
+
+    /**
+     * Setter for initiating private variable energy
+     * @param energy 
+     */
+    public void setEnergy(float energy) {
+        this.energy = energy;
+    }
+
+    /**
+     * Setter for initiating private variable irradiance
+     * @param irradiance 
+     */
+    public void setIrradiance(float irradiance) {
+        this.irradiance = irradiance;
+    }
     
     
     
