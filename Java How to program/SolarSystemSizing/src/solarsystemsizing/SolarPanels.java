@@ -6,8 +6,11 @@ package solarsystemsizing;
 
 /**
  *
- * @author DELL
+ * @author kamadje Allen
  */
 public class SolarPanels {
+    private float energy;
+    private float irradiance;
+    
     
 }
