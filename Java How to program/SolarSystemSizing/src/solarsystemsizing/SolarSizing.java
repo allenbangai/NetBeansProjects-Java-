@@ -57,6 +57,12 @@ public class SolarSizing {
         return 0;
     }
     
+    /**
+     * Function is to return true if input param is even
+     * @param val is of type int
+     * @return 
+     * It return either a true or false
+     */
     private boolean isEven(int val){
         if(val%2 == 0){
             return true;
