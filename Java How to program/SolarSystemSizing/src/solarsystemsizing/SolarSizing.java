@@ -47,4 +47,10 @@ public class SolarSizing {
         }
     }
     
+    private int getPanelNumber(float systemeEnergy){
+        
+        
+        return 0;
+    }
+    
 }
