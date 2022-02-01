@@ -51,6 +51,12 @@ public class SolarPanels {
         this.irradiance = irradiance;
     }
 
+    /**
+     * Method getPanelNumber
+     * @return
+     * This method returns the number of panels needed from the selected panel power
+     * Return value is of type int
+     */
     public int getPanelNumber() {
         return panelNumber;
     }
