@@ -30,8 +30,10 @@ public class SolarPanelPro extends SolarPanels{
     }
 
     /**
-     * 
+     * Method getPanelNumber...
      * @return 
+     * This method return an integer number of the total number of solar panels 
+     * needed to size your system...
      */
     @Override
     public int getPanelNumber() {
@@ -44,8 +46,8 @@ public class SolarPanelPro extends SolarPanels{
     }
 
     /**
-     * 
      * @return 
+     * This method return the desired power of the available solar panels need to size you systems
      */
     @Override
     public int getPanelPower() {
