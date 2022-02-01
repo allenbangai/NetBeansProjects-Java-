@@ -6,7 +6,7 @@ package solarsystemsizing;
 
 /**
  * Energy stands for Total Energy
- * @author DELL
+ * @author Kamadje Allen
  */
 public class Energy extends Power{
     private int numOfHours;//hours of utilization of load per day

@@ -17,7 +17,7 @@ public class SolarPanels {
      * This variable comprises all the available solar panels 
      * and their respective power
      */
-    int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
+    private int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
     private ArrayList<Integer> panelList = new ArrayList<>();   
     private int panelNumber;
     private int panelPower;

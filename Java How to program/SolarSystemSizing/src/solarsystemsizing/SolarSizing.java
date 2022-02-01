@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author DELL
+ * @author Kamadje Allen
  */
 public class SolarSizing {
     static int sizingType;

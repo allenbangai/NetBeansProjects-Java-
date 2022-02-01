@@ -6,9 +6,8 @@ package solarsystemsizing;
 
 /**
  *
- * @author DELL
+ * @author Kamadje Allen
  */
-
 public class Power {
     private int numOfLoad;
     private int powerOfLoad;

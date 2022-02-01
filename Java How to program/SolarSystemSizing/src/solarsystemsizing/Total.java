@@ -6,7 +6,7 @@ package solarsystemsizing;
 
 /**
  *
- * @author DELL
+ * @author Kamadje Allen
  */
 public abstract class Total {
     private final double val = 1.3;
