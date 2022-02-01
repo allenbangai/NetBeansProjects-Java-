@@ -60,7 +60,7 @@ public class SolarPanels {
     }
     
     private void findPanelPower(){
-        
+       pa
     }
     
     /**
