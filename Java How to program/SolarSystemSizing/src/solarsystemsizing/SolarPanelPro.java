@@ -5,24 +5,24 @@
 package solarsystemsizing;
 
 /**
- * Class SolarPanelPro which extends class SolarPanels
+ * Class SolarPanelPro which extends class SolarPanels...
  * Has two methods, one to get the number of solar panels needed
- * and another to return the power of the desired solar panel..
+ * and another to return the power of the desired solar panel...
  * @author Kamadje Allen
  */
 public class SolarPanelPro extends SolarPanels{
     private int panelPower;
 
     /**
-     * Constructor Solar Panel Pro take the following @param
+     * Constructor Solar Panel Pro take the following @param...
      * @param energy
-     * Total of the system per day of variable float and is rated in wattHour
+     * Total of the system per day of variable float and is rated in wattHour...
      * @param irradiance
-     * Solar irradiance of a particular location e.i is total time of sunlight per day
+     * Solar irradiance of a particular location e.i is total time of sunlight per day...
      * @param panelPower 
-     * Desired or available solar panel power intended to size the system.
-     * In this case, the power of the available solar panel will be used to size the system 
-     * and might not be the most optimum choice.
+     * Desired or available solar panel power intended to size the system...
+     * In this case, the power of the available solar panel will be used to size the system
+     * and might not be the most optimum choice...
      */
     public SolarPanelPro(float energy, float irradiance, int panelPower) {
         super(energy, irradiance);
