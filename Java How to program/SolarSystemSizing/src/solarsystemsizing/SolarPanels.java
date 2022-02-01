@@ -56,12 +56,9 @@ public class SolarPanels {
     }
 
     public int getPanelPower() {
+        panelPower = panelsPower[position];
         return panelPower;
-    }
-    
-    private void findPanelPower(){
-       pa
-    }
+    }    
     
     /**
      * Private method to get the smallest number of panels needed for sizing the system
