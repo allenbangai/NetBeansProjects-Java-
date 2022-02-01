@@ -51,6 +51,22 @@ public class SolarPanels {
         this.irradiance = irradiance;
     }
 
+    /** 
+     * @return 
+     * Method returns the system energy
+     */
+    public float getEnergy() {
+        return energy;
+    }
+
+    /**
+     * @return 
+     * Method returns the system solar irradiance for the particular location
+     */
+    public float getIrradiance() {
+        return irradiance;
+    }
+
     /**
      * Method getPanelNumber
      * @return
