@@ -4,7 +4,6 @@
  */
 package solarsystemsizing;
 
-import java.util.ArrayList;
 import java.lang.*;
 import java.util.Scanner;
 
@@ -27,9 +26,9 @@ public class SolarSizing {
         SolarPanels solarPanels;
         
         //variables here
-        double stmEnergy;
-        int stmNumberOfPanels;
-        int stmPowerOfPanels;
+        double stmEnergy = 0;
+        int stmNumberOfPanels = 0;
+        int stmPowerOfPanels = 0;
         System.out.println("Enter value for sizing type");
         ssScanner = new Scanner(System.in);
         sizingType = ssScanner.nextInt();
@@ -52,8 +51,8 @@ public class SolarSizing {
                 stmEnergy = solarPanels.getEnergy();
                 break;
             case 4:
-                System.out.println("here, you will have the sizing of your system"
-                        + " from the total individual power and number of load for each device of the system inputed");
+                System.out.println("here, you will have the sizing of your system from the total ");
+                System.out.println("individual power and number of load for each device of the system inputed");
                 total = new TPower(2000, 4);
                 stmEnergy = total.total();
                 solarPanels = new SolarPanelPro(stmEnergy, 4.3, 300);
@@ -61,6 +60,8 @@ public class SolarSizing {
                 stmPowerOfPanels = solarPanels.getPanelPower();                
                 break;
         }
+        System.out.println("System Energy is: "+ stmEnergy);
+        System.out.println("System will have " + stmNumberOfPanels + " of " + stmPowerOfPanels + " each");
     }
     
 }
