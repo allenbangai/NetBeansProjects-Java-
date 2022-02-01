@@ -20,6 +20,8 @@ public class SolarPanels {
     int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
     private ArrayList<Integer> panelList = new ArrayList<>();   
     private int panelNumber;
+    private int panelPower;
+    private int position;
 
     /**
      * Constructor Solar panel
@@ -29,6 +31,8 @@ public class SolarPanels {
     public SolarPanels(float energy, float irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
+        
+        this.findPanelNumber();
     }
 
     /**
@@ -46,12 +50,24 @@ public class SolarPanels {
     public void setIrradiance(float irradiance) {
         this.irradiance = irradiance;
     }
+
+    public int getPanelNumber() {
+        return panelNumber;
+    }
+
+    public int getPanelPower() {
+        return panelPower;
+    }
+    
+    private void findPanelPower(){
+        
+    }
     
     /**
-     * private method to get the smallest number of panels needed for sizing the system
+     * Private method to get the smallest number of panels needed for sizing the system
      * @return 
      */
-    private int findPanelNumber(){        
+    private void findPanelNumber(){        
         float val;
         for(int panel : panelsPower){
             val = (float)panel;
@@ -66,14 +82,15 @@ public class SolarPanels {
             int num = panelList.get(i);
             if (num < panelNumber) {
                 panelNumber = num;
+                position = i;
             }
-        }
-        return 0;
+        }        
     } 
     
     /**
      * Function is to return true if input @param is even
-     * @param val is of type int
+     * @param 
+     * val is of type int
      * @return 
      * It return either a true or false
      */
