@@ -55,6 +55,12 @@ public class SolarPanels {
         return panelNumber;
     }
 
+    /** 
+     * Method getPanelPower()
+     * @return panelPower
+     * This method returns the selected panel power for sizing the system
+     * Returned value is of type Integer
+     */
     public int getPanelPower() {
         panelPower = panelsPower[position];
         return panelPower;
