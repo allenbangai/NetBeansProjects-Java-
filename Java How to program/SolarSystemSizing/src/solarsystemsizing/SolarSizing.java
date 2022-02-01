@@ -22,7 +22,14 @@ public class SolarSizing {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //objects here
         Total total;
+        SolarPanels solarPanels;
+        
+        //variables here
+        double stmEnergy;
+        int stmNumberOfPanels;
+        int stmPowerOfPanels;
         System.out.println("Enter value for sizing type");
         ssScanner = new Scanner(System.in);
         sizingType = ssScanner.nextInt();
@@ -34,19 +41,19 @@ public class SolarSizing {
             case 2:
                 System.out.println("Here, you will have the sizing of your system"
                         + " from the total power of the system and the total time of autonomy of all device inputed");
-                System.out.println("round1 " + Math.round(2.7));
-                System.out.println("round2 " + Math.round(2.3));
-                System.out.println("round3 " + Math.round(2.5));
                 break;
             case 3:
                 System.out.println("Here, you will have the sizing of your system from the total individual"
                         + " power, number of loads and hours of autonomu for each device of the system inputed");
                 total = new TEnergy(4000);
+                stmEnergy = total.total();
+                solarPanels = new SolarPanels(stmEnergy, 4.3);
                 break;
             case 4:
                 System.out.println("here, you will have the sizing of your system"
                         + " from the total individual power and number of load for each device of the system inputed");
                 total = new TPower(2000, 4);
+                stmEnergy = total.total();
                 
                 break;
         }

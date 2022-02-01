@@ -7,12 +7,12 @@ package solarsystemsizing;
 import java.util.ArrayList;
 
 /**
- *
+ * Class solar panel
  * @author kamadje Allen
  */
 public class SolarPanels {
-    private float energy;
-    private float irradiance;
+    private double energy;
+    private double irradiance;
     /**
      * This variable comprises all the available solar panels 
      * and their respective power
@@ -28,7 +28,7 @@ public class SolarPanels {
      * @param energy
      * @param irradiance 
      */
-    public SolarPanels(float energy, float irradiance) {
+    public SolarPanels(double energy, double irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
         //initializing method to find panelNumber and panel power position
@@ -39,7 +39,7 @@ public class SolarPanels {
      * Setter for initiating private variable energy
      * @param energy 
      */
-    public void setEnergy(float energy) {
+    public void setEnergy(double energy) {
         this.energy = energy;
     }
 
@@ -47,7 +47,7 @@ public class SolarPanels {
      * Setter for initiating private variable irradiance
      * @param irradiance 
      */
-    public void setIrradiance(float irradiance) {
+    public void setIrradiance(double irradiance) {
         this.irradiance = irradiance;
     }
 
@@ -55,7 +55,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system energy
      */
-    public float getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
@@ -63,7 +63,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system solar irradiance for the particular location
      */
-    public float getIrradiance() {
+    public double getIrradiance() {
         return irradiance;
     }
 
@@ -93,10 +93,10 @@ public class SolarPanels {
      * @return 
      */
     private void findPanelNumber(){        
-        float val;
+        double val;
         for(int panel : panelsPower){
-            val = (float)panel;
-            int panelNum = Math.round(energy/(val*irradiance));
+            val = (double)panel;
+            int panelNum = (int) Math.round(energy/(val*irradiance));
             if (!isEven(panelNum)) {
                 panelNum++;
             }
