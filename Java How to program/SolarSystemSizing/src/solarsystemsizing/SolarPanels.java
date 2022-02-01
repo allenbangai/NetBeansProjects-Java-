@@ -31,7 +31,7 @@ public class SolarPanels {
     public SolarPanels(float energy, float irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
-        
+        //initializing method to find panelNumber and panel power position
         this.findPanelNumber();
     }
 
@@ -75,6 +75,8 @@ public class SolarPanels {
             panelList.add(panelNum);            
         }
         panelNumber = panelList.get(0);
+        //this for loop is to get the smallest number of panels needed possible as well as the position of the
+        //panel power in the panel list
         for (int i = 0; i < panelList.size(); i++) {
             int num = panelList.get(i);
             if (num < panelNumber) {
