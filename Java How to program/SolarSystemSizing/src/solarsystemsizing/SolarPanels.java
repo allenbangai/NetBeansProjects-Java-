@@ -121,7 +121,7 @@ public class SolarPanels {
      * @return 
      * It return either a true or false
      */
-    private boolean isEven(int val){
+    protected boolean isEven(int val){
         if(val%2 == 0){
             return true;
         }else{
