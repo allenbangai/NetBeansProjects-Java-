@@ -38,7 +38,7 @@ public class SolarPanelPro extends SolarPanels{
     @Override
     public int getPanelNumber() {
         double power = (double)panelPower;
-        int panelNumber = Math.round(super.getEnergy()/(super.getIrradiance()*power));
+        int panelNumber = (int) Math.round(super.getEnergy()/(super.getIrradiance()*power));
         if(!super.isEven(panelNumber)){
             panelNumber++;
         }

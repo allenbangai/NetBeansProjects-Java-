@@ -58,8 +58,7 @@ public class SolarSizing {
                 stmEnergy = total.total();
                 solarPanels = new SolarPanelPro(stmEnergy, 4.3, 300);
                 stmNumberOfPanels = solarPanels.getPanelNumber();
-                stmPowerOfPanels = solarPanels.getPanelPower();
-                
+                stmPowerOfPanels = solarPanels.getPanelPower();                
                 break;
         }
     }
