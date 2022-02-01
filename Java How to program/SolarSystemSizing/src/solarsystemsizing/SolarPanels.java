@@ -51,7 +51,7 @@ public class SolarPanels {
      * private method to get the smallest number of panels needed for sizing the system
      * @return 
      */
-    private int getPanelNumber(){        
+    private int findPanelNumber(){        
         float val;
         for(int panel : panelsPower){
             val = (float)panel;
