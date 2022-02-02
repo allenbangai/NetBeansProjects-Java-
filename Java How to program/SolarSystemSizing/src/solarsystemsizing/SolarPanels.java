@@ -108,10 +108,11 @@ public class SolarPanels {
         for (int i = 0; i < panelList.size(); i++) {
             int num = panelList.get(i);
             if (num < panelNumber) {
-                panelNumber = num;
+                num = panelNumber;
                 position = i;
             }
-        }        
+        }  
+        System.out.println("position is: "+position);
     } 
     
     /**

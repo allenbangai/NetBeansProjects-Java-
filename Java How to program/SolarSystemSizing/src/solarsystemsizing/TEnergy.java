@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author DELL
  */
 public class TEnergy extends Total{
-    private ArrayList<Energy> energys;
+    private ArrayList<Energy> energys = new ArrayList<>();
     int tEnergy;
 
     public TEnergy(ArrayList<Energy> energys) {
