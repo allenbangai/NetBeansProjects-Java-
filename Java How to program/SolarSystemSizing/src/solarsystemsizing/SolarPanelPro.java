@@ -24,7 +24,7 @@ public class SolarPanelPro extends SolarPanels{
      * In this case, the power of the available solar panel will be used to size the system
      * and might not be the most optimum choice...
      */
-    public SolarPanelPro(double energy, double irradiance, int panelPower) {
+    public SolarPanelPro(float energy, float irradiance, int panelPower) {
         super(energy, irradiance);
         this.panelPower = panelPower;       
     }
@@ -37,8 +37,8 @@ public class SolarPanelPro extends SolarPanels{
      */
     @Override
     public int getPanelNumber() {
-        double power = (double)panelPower;
-        int panelNumber = (int) Math.round(super.getEnergy()/(super.getIrradiance()*power));
+        float power = (float)panelPower;
+        int panelNumber = Math.round(super.getEnergy()/(super.getIrradiance()*power));
         if(!super.isEven(panelNumber)){
             panelNumber++;
         }

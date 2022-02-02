@@ -15,5 +15,5 @@ public abstract class Total {
         return val;
     }
     
-    public abstract double total();
+    public abstract float total();
 }

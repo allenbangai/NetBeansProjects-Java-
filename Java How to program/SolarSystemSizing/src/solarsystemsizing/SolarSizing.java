@@ -48,7 +48,7 @@ public class SolarSizing {
                 stmEnergy = total.total();
                 solarPanels = new SolarPanels(stmEnergy, 4.3);
                 stmNumberOfPanels = solarPanels.getPanelNumber();
-                stmEnergy = solarPanels.getEnergy();
+                stmPowerOfPanels = solarPanels.getPanelPower();
                 break;
             case 4:
                 System.out.println("here, you will have the sizing of your system from the total ");

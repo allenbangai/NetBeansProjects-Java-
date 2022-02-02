@@ -51,7 +51,7 @@ public class TEnergy extends Total{
     }
 
     @Override
-    public double total() {
-        return super.getVal() * (double)returnTotalEnergy();
+    public float total() {
+        return (float) (super.getVal() * (double)returnTotalEnergy());
     }    
 }

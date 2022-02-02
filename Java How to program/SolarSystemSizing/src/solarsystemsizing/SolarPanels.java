@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author kamadje Allen
  */
 public class SolarPanels {
-    private double energy;
-    private double irradiance;
+    private float energy;
+    private float irradiance;
     /**
      * This variable comprises all the available solar panels 
      * and their respective power
@@ -28,7 +28,7 @@ public class SolarPanels {
      * @param energy
      * @param irradiance 
      */
-    public SolarPanels(double energy, double irradiance) {
+    public SolarPanels(float energy, float irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
         //initializing method to find panelNumber and panel power position
@@ -39,7 +39,7 @@ public class SolarPanels {
      * Setter for initiating private variable energy
      * @param energy 
      */
-    public void setEnergy(double energy) {
+    public void setEnergy(float energy) {
         this.energy = energy;
     }
 
@@ -47,7 +47,7 @@ public class SolarPanels {
      * Setter for initiating private variable irradiance
      * @param irradiance 
      */
-    public void setIrradiance(double irradiance) {
+    public void setIrradiance(float irradiance) {
         this.irradiance = irradiance;
     }
 
@@ -55,7 +55,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system energy
      */
-    public double getEnergy() {
+    public float getEnergy() {
         return energy;
     }
 
@@ -63,7 +63,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system solar irradiance for the particular location
      */
-    public double getIrradiance() {
+    public float getIrradiance() {
         return irradiance;
     }
 
@@ -79,7 +79,7 @@ public class SolarPanels {
 
     /** 
      * Method getPanelPower()
-     * @return panelPower
+     * @return
      * This method returns the selected panel power for sizing the system
      * Returned value is of type Integer
      */
@@ -93,10 +93,10 @@ public class SolarPanels {
      * @return 
      */
     private void findPanelNumber(){        
-        double val;
+        float val;
         for(int panel : panelsPower){
-            val = (double)panel;
-            int panelNum = (int) Math.round(energy/(val*irradiance));
+            val = (float)panel;
+            int panelNum = Math.round(energy/(val*irradiance));
             if (!isEven(panelNum)) {
                 panelNum++;
             }
@@ -107,8 +107,8 @@ public class SolarPanels {
         //panel power in the panel list
         for (int i = 0; i < panelList.size(); i++) {
             int num = panelList.get(i);
-            if (num < panelNumber) {
-                num = panelNumber;
+            if (panelNumber >= num) {
+                panelNumber = num;
                 position = i;
             }
         }  

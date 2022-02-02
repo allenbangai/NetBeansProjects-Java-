@@ -68,7 +68,7 @@ public class TPower extends Total{
     }
     
     @Override
-    public double total() {
-        return super.getVal() * returnTEnergy();
+    public float total() {
+        return (float) (super.getVal() * returnTEnergy());
     }
 }
