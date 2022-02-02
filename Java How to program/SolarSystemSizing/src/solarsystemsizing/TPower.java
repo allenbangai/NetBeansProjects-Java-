@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Kamadje Allen
  */
 public class TPower extends Total{
-    private ArrayList<Power> powers;
+    private ArrayList<Power> powers = new ArrayList<>();
     private int tPower;
     private int hours; //total harmonized hours of autonomy or utility of all loads
 

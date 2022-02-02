@@ -111,8 +111,7 @@ public class SolarPanels {
                 panelNumber = num;
                 position = i;
             }
-        }  
-        System.out.println("position is: "+position);
+        }
     } 
     
     /**

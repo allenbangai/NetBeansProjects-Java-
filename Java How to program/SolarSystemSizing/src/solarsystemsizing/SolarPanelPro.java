@@ -54,7 +54,5 @@ public class SolarPanelPro extends SolarPanels{
         return panelPower;
     }
     
-    
-    
-    
+        
 }
