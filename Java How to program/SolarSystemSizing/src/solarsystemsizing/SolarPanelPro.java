@@ -26,7 +26,7 @@ public class SolarPanelPro extends SolarPanels{
      */
     public SolarPanelPro(float energy, float irradiance, int panelPower) {
         super(energy, irradiance);
-        this.panelPower = panelPower;       
+        this.panelPower = panelPower;
     }
 
     /**
