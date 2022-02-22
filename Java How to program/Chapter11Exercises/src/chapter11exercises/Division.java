@@ -6,7 +6,7 @@ package chapter11exercises;
 
 /**
  *
- * @author DELL
+ * @author Kamadje Allen
  */
 public class Division {
     
