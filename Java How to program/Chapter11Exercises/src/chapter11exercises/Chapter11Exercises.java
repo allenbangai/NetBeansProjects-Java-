@@ -23,7 +23,9 @@ public class Chapter11Exercises {
                 int numerator = scanner.nextInt();
                 System.out.println("Please enter an integer denominator");
                 int denominator = scanner.nextInt();
-                
+                new Division();
+                int result = Division.quotient(numerator, denominator);
+                System.out.println("Result of "+numerator+"/"+denominator+" = "+ result);
             }catch(InputMismatchException inputMismatchException){
 
             }catch(ArithmeticException arithmeticException){
