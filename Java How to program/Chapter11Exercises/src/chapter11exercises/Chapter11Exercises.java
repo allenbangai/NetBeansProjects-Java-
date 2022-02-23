@@ -10,23 +10,24 @@ import java.util.Scanner;
  * @author Kamadje Allen
  */
 public class Chapter11Exercises {
+    private static Scanner scanner = new Scanner(System.in);
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         System.out.println("Welcome to chapter 11");
-        Scanner scanner = new Scanner(System.in);
-
         do{
             try{
                 System.out.println("Please enter an integer numerator");
                 int numerator = scanner.nextInt();
                 System.out.println("Please enter an integer denominator");
                 int denominator = scanner.nextInt();
+                
             }catch(InputMismatchException inputMismatchException){
 
             }catch(ArithmeticException arithmeticException){
-                
+
             }
         }while(true);
     }
