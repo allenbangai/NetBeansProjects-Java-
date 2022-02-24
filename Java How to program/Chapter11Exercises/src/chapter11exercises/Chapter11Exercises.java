@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Chapter11Exercises {
     private static Scanner scanner = new Scanner(System.in);
-
+    private static boolean loop;
     /**
      * @param args the command line arguments
      */
@@ -19,6 +19,7 @@ public class Chapter11Exercises {
         System.out.println("Welcome to chapter 11");
         do{
             try{
+                loop = false;
                 System.out.println("Please enter an integer numerator");
                 int numerator = scanner.nextInt();
                 System.out.println("Please enter an integer denominator");
@@ -27,11 +28,16 @@ public class Chapter11Exercises {
                 int result = Division.quotient(numerator, denominator);
                 System.out.println("Result of "+numerator+"/"+denominator+" = "+ result);
             }catch(InputMismatchException inputMismatchException){
-
+                loop = true;
+                System.err.printf("%nException: %s%n", inputMismatchException);
+                scanner.nextLine();
+                System.out.println("You must enter integers. Please try again.");
             }catch(ArithmeticException arithmeticException){
-
+                loop = true;
+                System.err.printf("%nException: %s%n", arithmeticException);
+                System.out.println("Zero is an invalid denominator. Please try again");
             }
-        }while(true);
+        }while(loop);
     }
     
 }
