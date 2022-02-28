@@ -53,8 +53,7 @@ public class Chapter11Exercises {
                     exceptions.throwException();                    
                 } catch (Exception e) {
                     System.err.println("Exception handled in main");
-                }
-                
+                }                
                 exceptions.doesNotThrowException();
                 break;
             }
