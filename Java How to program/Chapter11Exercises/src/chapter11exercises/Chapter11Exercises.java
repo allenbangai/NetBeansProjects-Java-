@@ -21,6 +21,8 @@ public class Chapter11Exercises {
         "a choice to view the implementation on any of the exercises or examples in this chapter");
         System.out.println("Enter the implementatio of your choice: ");
         int choice = scanner.nextInt();
+        
+        UsingExceptions exceptions = new UsingExceptions();
         switch(choice){
             case 1:{
                 do{
@@ -46,7 +48,14 @@ public class Chapter11Exercises {
                 }while(loop);
                 break;
             }
-            case 3:{
+            case 2:{
+                try {
+                    exceptions.throwException();                    
+                } catch (Exception e) {
+                    System.err.println("Exception handled in main");
+                }
+                
+                exceptions.doesNotThrowException();
                 break;
             }
             case 4:{
