@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Chapter11Exercises {
     private static Scanner scanner = new Scanner(System.in);
     private static boolean loop;
-    static UsingExceptions exceptions = new UsingExceptions();
     /**
      * @param args the command line arguments
      */
@@ -48,17 +47,16 @@ public class Chapter11Exercises {
                 }while(loop);
                 break;
             }
-            case 2:{
+            case 2:{ 
+                new UsingExceptions(); 
                 try {
-                    exceptions.throwException();                    
+                    UsingExceptions.throwException();                    
                 } catch (Exception e) {
                     System.err.println("Exception handled in main");
-                }  
-                new UsingExceptions();              
+                }              
                 try {
                     UsingExceptions.doesNotThrowException();
                 } catch (Exception e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 break;
@@ -88,7 +86,7 @@ public class Chapter11Exercises {
                 break;
             }
             case 4:{
-                
+
                 break;
             }
             case 5:{
