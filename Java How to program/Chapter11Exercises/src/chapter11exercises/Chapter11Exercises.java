@@ -64,9 +64,31 @@ public class Chapter11Exercises {
                 break;
             }
             case 3:{
+                try {
+                    new UsingExceptions();
+                    UsingExceptions.method1();
+                } catch (Exception e) {
+                    System.err.printf("%s%n%n", e.getMessage());
+                    e.printStackTrace();
+
+                    // obtain the stack-trace information
+                    StackTraceElement[] traceElements = e.getStackTrace();
+
+                    System.out.printf("%nStack trace from getStackTrace:%n");
+                    System.out.println("Class\t\tFile\t\t\tLine\tMethod");
+
+                    // loop through traceElements to get exception description
+                    for(StackTraceElement element: traceElements){
+                        System.out.println("element.getClassName(): "+ element.getClassName());
+                        System.out.println("element.getFileName(): "+ element.getFileName());
+                        System.out.println("element.getLineNumber(): "+ element.getLineNumber());
+                        System.out.println("element.getMethodName(): "+ element.getMethodName());
+                    }
+                }
                 break;
             }
             case 4:{
+                
                 break;
             }
             case 5:{
