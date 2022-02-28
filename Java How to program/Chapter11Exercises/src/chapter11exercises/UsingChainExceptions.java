@@ -20,14 +20,22 @@ package chapter11exercises;
  */
 public class UsingChainExceptions {
     public static void method1() throws Exception{
-
+        try {
+            method2();
+        } catch (Exception e) {
+            throw new Exception("Exception thrown in method1()", e);
+        }
     }
 
     public static void method2() throws Exception{
-
+        try {
+            method3();
+        } catch (Exception e) {
+            throw new Exception("Exception thrown in mwthod2()", e);
+        }
     }
 
     public static void method3() throws Exception{
-
+        throw new Exception("Exception thrown in method3()");
     }
 }// end class UsingChainedExceptions
