@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Chapter11Exercises {
     private static Scanner scanner = new Scanner(System.in);
     private static boolean loop;
+    static UsingExceptions exceptions = new UsingExceptions();
     /**
      * @param args the command line arguments
      */
@@ -20,9 +21,8 @@ public class Chapter11Exercises {
         System.out.println("In this chapter, there are a set of exercises, make/n"+
         "a choice to view the implementation on any of the exercises or examples in this chapter");
         System.out.println("Enter the implementatio of your choice: ");
-        int choice = scanner.nextInt();
+        int choice = scanner.nextInt();       
         
-        UsingExceptions exceptions = new UsingExceptions();
         switch(choice){
             case 1:{
                 do{
@@ -58,7 +58,13 @@ public class Chapter11Exercises {
                 exceptions.doesNotThrowException();
                 break;
             }
+            case 3:{
+                break;
+            }
             case 4:{
+                break;
+            }
+            case 5:{
                 break;
             }
         }
