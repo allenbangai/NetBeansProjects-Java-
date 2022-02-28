@@ -86,7 +86,12 @@ public class Chapter11Exercises {
                 break;
             }
             case 4:{
-
+                try {
+                    new UsingChainExceptions();
+                    UsingChainExceptions.method1();                    
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
             }
             case 5:{
