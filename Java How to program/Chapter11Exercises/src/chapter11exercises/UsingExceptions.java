@@ -26,7 +26,7 @@ public class UsingExceptions {
     }
     
     // demonstrate finally when no exception occurs
-    public static void doesNotThrowException(){
+    public static void doesNotThrowException() throws Exception{
         try{ // try block does not throw an exception
             System.out.println("Method does not throw exeption");
         }catch(Exception exception){ //does not execute

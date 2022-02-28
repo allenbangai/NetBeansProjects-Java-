@@ -18,7 +18,7 @@ public class Chapter11Exercises {
      */
     public static void main(String[] args) {
         System.out.println("Welcome to chapter 11");
-        System.out.println("In this chapter, there are a set of exercises, make/n"+
+        System.out.println("In this chapter, there are a set of exercises, make\n"+
         "a choice to view the implementation on any of the exercises or examples in this chapter");
         System.out.println("Enter the implementatio of your choice: ");
         int choice = scanner.nextInt();       
@@ -53,8 +53,14 @@ public class Chapter11Exercises {
                     exceptions.throwException();                    
                 } catch (Exception e) {
                     System.err.println("Exception handled in main");
-                }                
-                exceptions.doesNotThrowException();
+                }  
+                new UsingExceptions();              
+                try {
+                    UsingExceptions.doesNotThrowException();
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 break;
             }
             case 3:{
