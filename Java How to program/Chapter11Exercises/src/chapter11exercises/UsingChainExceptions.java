@@ -19,6 +19,9 @@ package chapter11exercises;
  * exception.
  */
 public class UsingChainExceptions {
+    /**
+     * call method2; throw exceptions back to main
+     */
     public static void method1() throws Exception{
         try {
             method2();
@@ -27,6 +30,9 @@ public class UsingChainExceptions {
         }
     }
 
+    /**
+     * call method3; throw exceptions back to method1
+     */
     public static void method2() throws Exception{
         try {
             method3();
@@ -35,6 +41,9 @@ public class UsingChainExceptions {
         }
     }
 
+    /**
+     * call method3; throw exceptions back to method1
+     */
     public static void method3() throws Exception{
         throw new Exception("Exception thrown in method3()");
     }
