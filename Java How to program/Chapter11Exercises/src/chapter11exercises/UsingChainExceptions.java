@@ -19,5 +19,15 @@ package chapter11exercises;
  * exception.
  */
 public class UsingChainExceptions {
-    
-}
+    public static void method1() throws Exception{
+
+    }
+
+    public static void method2() throws Exception{
+
+    }
+
+    public static void method3() throws Exception{
+
+    }
+}// end class UsingChainedExceptions
