@@ -20,8 +20,6 @@ public class SolarSizing {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //objects here
         Total total;
         SolarPanels solarPanels;
         
