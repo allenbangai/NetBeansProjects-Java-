@@ -16,4 +16,12 @@ public class Battery {
         this.voltage = voltage;
         this.ampereHour = ampereHour;
     }
+
+    public int getVoltage() {
+        return voltage;
+    }
+
+    public int getAmpereHour() {
+        return ampereHour;
+    }
 }
