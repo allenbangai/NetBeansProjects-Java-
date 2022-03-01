@@ -18,4 +18,16 @@ public class Panel {
         this.voltage = voltage;
         this.nominalVoltage = nominalVoltage;
     }
+
+    public int getPower() {
+        return power;
+    }
+
+    public int getVoltage() {
+        return voltage;
+    }
+
+    public int getNominalVoltage() {
+        return nominalVoltage;
+    }
 }
