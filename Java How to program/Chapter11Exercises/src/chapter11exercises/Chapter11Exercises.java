@@ -89,12 +89,18 @@ public class Chapter11Exercises {
                 try {
                     new UsingChainExceptions();
                     UsingChainExceptions.method1();                    
-                } catch (Exception e) {
+                } catch (Exception e) { // exceptions thrown from method1
                     e.printStackTrace();
                 }
                 break;
             }
             case 5:{
+                System.out.print("Enter a number between 0 and 10: ");
+                int number = scanner.nextInt();
+
+                // assert that the value is >= 0 and <= 10
+                assert(number >0 && number <= 10) : "bad number "+ number;
+                System.out.printf("You entered %d%n", number);
                 break;
             }
         }
