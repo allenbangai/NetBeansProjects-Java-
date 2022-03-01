@@ -9,5 +9,11 @@ package solarsystemsizing;
  * @author Kamadje Allen
  */
 public class Battery {
-    
+    int voltage;
+    int ampereHour;
+
+    public Battery(int voltage, int ampereHour) {
+        this.voltage = voltage;
+        this.ampereHour = ampereHour;
+    }
 }
