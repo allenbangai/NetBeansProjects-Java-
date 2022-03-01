@@ -9,8 +9,8 @@ package solarsystemsizing;
  * @author Kamadje Allen
  */
 public class Battery {
-    int voltage;
-    int ampereHour;
+    private int voltage;
+    private int ampereHour;
 
     public Battery(int voltage, int ampereHour) {
         this.voltage = voltage;

@@ -9,9 +9,9 @@ package solarsystemsizing;
  * @author Kamadje Allen
  */
 public class Panel {
-    int power;
-    int voltage;
-    int nominalVoltage;
+    private int power;
+    private int voltage;
+    private int nominalVoltage;
 
     public Panel(int power, int voltage, int nominalVoltage) {
         this.power = power;
