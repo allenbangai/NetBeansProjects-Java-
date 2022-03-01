@@ -24,4 +24,8 @@ public class Battery {
     public int getAmpereHour() {
         return ampereHour;
     }
+    
+    public int getEnergy(){
+        return voltage * ampereHour;
+    }
 }
