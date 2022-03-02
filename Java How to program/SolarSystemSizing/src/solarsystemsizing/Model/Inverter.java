@@ -9,5 +9,9 @@ package solarsystemsizing.Model;
  * @author Kamadje Allen
  */
 public class Inverter {
-    
+    int ratedWatt;
+    int ratedVAR;
+    int ratedVA;
+    double powerFactor;
+    int DCinput;
 }
