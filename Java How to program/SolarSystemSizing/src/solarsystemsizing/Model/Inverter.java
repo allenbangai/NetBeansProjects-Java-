@@ -8,7 +8,7 @@ public class Inverter {
     private int ratedWatt;
     private int ratedVAR;
     private int ratedVA;
-    private int powerFactor;
+    private double powerFactor;
     private int DCinput;
 
     /**
@@ -27,10 +27,11 @@ public class Inverter {
      * @param powerFactor
      * @param DCinput
      */
-    public Inverter(int ratedVAR, int powerFactor, int DCinput){
+    public Inverter(int ratedVAR, double powerFactor, int DCinput){
         this.ratedVAR = ratedVAR;
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
+        this.ratedWatt =  (int)(( ratedVAR * powerFactor) / (1 - powerFactor));
     }
 
     /**
@@ -40,10 +41,11 @@ public class Inverter {
      * @param DCinput
      * @param bool
      */
-    public Inverter(int ratedVA, int powerFactor, int DCinput, Boolean bool){
+    public Inverter(int ratedVA, double powerFactor, int DCinput, Boolean bool){
         this.ratedVA = ratedVA;
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
+        this.ratedWatt =  (int)( ratedVA * powerFactor);
     }    
 
     /**
@@ -70,7 +72,7 @@ public class Inverter {
     /**
      * @return int return the powerFactor
      */
-    public int getPowerFactor() {
+    public double getPowerFactor() {
         return powerFactor;
     }
 
