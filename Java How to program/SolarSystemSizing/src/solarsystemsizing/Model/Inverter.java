@@ -9,9 +9,14 @@ package solarsystemsizing.Model;
  * @author Kamadje Allen
  */
 public class Inverter {
-    int ratedWatt;
-    int ratedVAR;
-    int ratedVA;
-    int powerFactor;
-    int DCinput;
+    private int ratedWatt;
+    private int ratedVAR;
+    private int ratedVA;
+    private int powerFactor;
+    private int DCinput;
+
+    public Inverter(int ratedWatt, int DCinput){
+        this.ratedWatt = ratedWatt;
+        this.DCinput = DCinput;
+    }
 }
