@@ -14,4 +14,8 @@ public class Inverter {
     int ratedVA;
     double powerFactor;
     int DCinput;
+
+    public Inverter(){
+        
+    }
 }
