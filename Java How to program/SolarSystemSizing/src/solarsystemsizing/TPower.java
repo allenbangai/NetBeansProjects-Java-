@@ -4,6 +4,7 @@
  */
 package solarsystemsizing;
 
+import solarsystemsizing.Model.Power;
 import java.util.ArrayList;
 
 /**
