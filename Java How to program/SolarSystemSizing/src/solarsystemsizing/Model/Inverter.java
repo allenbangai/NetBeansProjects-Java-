@@ -19,4 +19,10 @@ public class Inverter {
         this.ratedWatt = ratedWatt;
         this.DCinput = DCinput;
     }
+
+    public Inverter(int ratedVAR, int powerFactor, int DCinput){
+        this.ratedVA = ratedVA;
+        this.powerFactor = powerFactor;
+        this.DCinput = DCinput;
+    }
 }
