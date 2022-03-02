@@ -8,6 +8,10 @@ package solarsystemsizing.Model;
  *
  * @author Kamadje Allen
  */
-
-public class Inverter{
-} 
+public class Inverter {
+    int ratedWatt;
+    int ratedVAR;
+    int ratedVA;
+    int powerFactor;
+    int DCinput;
+}
