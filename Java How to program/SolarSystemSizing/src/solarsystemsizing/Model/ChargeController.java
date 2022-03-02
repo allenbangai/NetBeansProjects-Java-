@@ -35,4 +35,28 @@ public class ChargeController{
         this.ratedVoltage2 = ratedVoltage2;
         this.ratedVoltage3 = ratedVoltage3;
     }
+
+    public int getMinInputCurrent() {
+        return minInputCurrent;
+    }
+
+    public int getMaxInputCurrent() {
+        return maxInputCurrent;
+    }
+
+    public int getMaxInputVoltage() {
+        return maxInputVoltage;
+    }
+
+    public int getRatedVoltage1() {
+        return ratedVoltage1;
+    }
+
+    public int getRatedVoltage2() {
+        return ratedVoltage2;
+    }
+
+    public int getRatedVoltage3() {
+        return ratedVoltage3;
+    }
 }
