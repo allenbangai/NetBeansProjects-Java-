@@ -31,4 +31,42 @@ public class Inverter {
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
     }
+
+    
+
+    /**
+     * @return int return the ratedWatt
+     */
+    public int getRatedWatt() {
+        return ratedWatt;
+    }
+
+    /**
+     * @return int return the ratedVAR
+     */
+    public int getRatedVAR() {
+        return ratedVAR;
+    }
+
+    /**
+     * @return int return the ratedVA
+     */
+    public int getRatedVA() {
+        return ratedVA;
+    }
+
+    /**
+     * @return int return the powerFactor
+     */
+    public int getPowerFactor() {
+        return powerFactor;
+    }
+
+    /**
+     * @return int return the DCinput
+     */
+    public int getDCinput() {
+        return DCinput;
+    }
+    
 }
