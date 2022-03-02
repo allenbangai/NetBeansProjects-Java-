@@ -26,4 +26,13 @@ public class ChargeController{
         this.ratedVoltage1 = ratedVoltage1;
         this.ratedVoltage2 = ratedVoltage2;
     }
+
+    public ChargeController(int minInputCurrent, int maxInputCurrent, int maxInputVoltage, int ratedVoltage1, int ratedVoltage2, int ratedVoltage3) {
+        this.minInputCurrent = minInputCurrent;
+        this.maxInputCurrent = maxInputCurrent;
+        this.maxInputVoltage = maxInputVoltage;
+        this.ratedVoltage1 = ratedVoltage1;
+        this.ratedVoltage2 = ratedVoltage2;
+        this.ratedVoltage3 = ratedVoltage3;
+    }
 }
