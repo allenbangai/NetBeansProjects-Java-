@@ -21,6 +21,12 @@ public class Inverter {
     }
 
     public Inverter(int ratedVAR, int powerFactor, int DCinput){
+        this.ratedVAR = ratedVAR;
+        this.powerFactor = powerFactor;
+        this.DCinput = DCinput;
+    }
+
+    public Inverter(int ratedVA, int powerFactor, int DCinput, Boolean bool){
         this.ratedVA = ratedVA;
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
