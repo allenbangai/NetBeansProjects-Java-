@@ -15,24 +15,40 @@ public class Inverter {
     private int powerFactor;
     private int DCinput;
 
+    /**
+     * 
+     * @param ratedWatt
+     * @param DCinput
+     */
     public Inverter(int ratedWatt, int DCinput){
         this.ratedWatt = ratedWatt;
         this.DCinput = DCinput;
     }
 
+    /**
+     * 
+     * @param ratedVAR
+     * @param powerFactor
+     * @param DCinput
+     */
     public Inverter(int ratedVAR, int powerFactor, int DCinput){
         this.ratedVAR = ratedVAR;
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
     }
 
+    /**
+     * 
+     * @param ratedVA
+     * @param powerFactor
+     * @param DCinput
+     * @param bool
+     */
     public Inverter(int ratedVA, int powerFactor, int DCinput, Boolean bool){
         this.ratedVA = ratedVA;
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
-    }
-
-    
+    }    
 
     /**
      * @return int return the ratedWatt
