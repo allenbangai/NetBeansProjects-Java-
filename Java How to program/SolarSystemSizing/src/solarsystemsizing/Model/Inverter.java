@@ -12,9 +12,17 @@ public class Inverter {
     private int DCinput;
 
     /**
-     * 
+     * This constructor discribes an object of the class inverter with rated output
+     * parameters giving as Reactive Power which account for the reactive power 
+     * consume by the load which the inverter will supply, denoted as VAR and the Power 
+     * Factor of the inverter with no SI unit.
      * @param ratedWatt
+     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      */
     public Inverter(int ratedWatt, int DCinput){
         this.ratedWatt = ratedWatt;
@@ -116,5 +124,10 @@ public class Inverter {
         return DCinput;
     }
 
-    //TODO 1: Additional doucmentation needed for class and methods    
+    /**
+     * TODO 3: Objects of each inverter type are supposed to be declared and defined in    
+     * the class inverter and a private constructor is then used to instantiate each of those 
+     * objects with all the power parameters of a AC device that is W, VAR, VA, PF, and 
+     * not forgetting the DCinput parameter of the inverter in VDC.
+    */
 }
