@@ -32,4 +32,5 @@ public class ChargeController{
     public int getRatedVoltage() {
         return ratedVoltage;
     }
+    //TODO 2: Document code
 }

@@ -50,6 +50,8 @@ public class Inverter {
 
     /**
      * @return int return the ratedWatt
+     * This give the rated output Real Power or to say the power in Watt.
+     * It is usually denoted in KW but here, the return power is in W.
      */
     public int getRatedWatt() {
         return ratedWatt;
@@ -57,6 +59,8 @@ public class Inverter {
 
     /**
      * @return int return the ratedVAR
+     * This give the rated output Reactive power of the inverter.
+     * It is usually denoted in KVAR but here, the value is in VAR.
      */
     public int getRatedVAR() {
         return ratedVAR;
@@ -64,6 +68,8 @@ public class Inverter {
 
     /**
      * @return int return the ratedVA
+     * This give the rated output Apparent power of the inverter.
+     * It is usually denoted in KVA but here, the value is in VA.
      */
     public int getRatedVA() {
         return ratedVA;
@@ -71,6 +77,9 @@ public class Inverter {
 
     /**
      * @return int return the powerFactor
+     * The inverter being a AC appliance has a power factor.
+     * This power factor give the amount of reactive to real power consumed.
+     * It doesn't have any unit and must be less than one.
      */
     public double getPowerFactor() {
         return powerFactor;
@@ -78,6 +87,8 @@ public class Inverter {
 
     /**
      * @return int return the DCinput
+     * The DC input is takes in a particular input rated voltage in VDC.
+     * The DC input is in volt.
      */
     public int getDCinput() {
         return DCinput;
