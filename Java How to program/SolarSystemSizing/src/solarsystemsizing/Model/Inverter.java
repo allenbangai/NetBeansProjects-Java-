@@ -22,10 +22,20 @@ public class Inverter {
     }
 
     /**
-     * 
+     * This constructor discribes an object of the class inverter with rated output
+     * parameters giving as Reactive Power which account for the reactive power 
+     * consume by the load which the inverter will supply, denoted as VAR and the Power 
+     * Factor of the inverter with no SI unit.
      * @param ratedVAR
+     * The ratedVAR symbolises the reactive power of the inverter and the value inputed 
+     * should be in VAR and not KVAR or any other type.
      * @param powerFactor
+     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * than one (<1).
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      */
     public Inverter(int ratedVAR, double powerFactor, int DCinput){
         this.ratedVAR = ratedVAR;
@@ -35,11 +45,23 @@ public class Inverter {
     }
 
     /**
-     * 
+     * This constructor discribes an object of the class inverter with rated output
+     * parameters giving as Apparent Power of inverter denoted as VA and the Power Factor
+     * of the inverter with no SI unit.
      * @param ratedVA
+     * The ratedVA symbolises the apparent power of the inverter and the value inputed 
+     * should be in VA and not KVA or any other one.
      * @param powerFactor
+     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * than one (<1).
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @param bool
+     * This boolean value is redundant and is used by the program to characterise this 
+     * particular constructor. The value inputed must be @true or the program won't consider
+     * this constructor instantiation.
      */
     public Inverter(int ratedVA, double powerFactor, int DCinput, Boolean bool){
         this.ratedVA = ratedVA;
