@@ -76,7 +76,51 @@ public class Inverter {
         this.powerFactor = powerFactor;
         this.DCinput = DCinput;
         this.ratedWatt =  (int)( ratedVA * powerFactor);
-    }    
+    } 
+    
+    public Inverter(){
+
+    }
+    
+    /**
+     * 
+     */
+    public static Inverter inverterWatt_PF(){
+
+        return new Inverter();
+    }   
+    
+    /**
+     * 
+     */
+    public static Inverter inverterVA_VAR(){
+
+        return new Inverter();
+    }   
+    
+    /**
+     * 
+     */
+    public static Inverter inverterVA_PF(){
+
+        return new Inverter();
+    }   
+    
+    /**
+     * 
+     */
+    public static Inverter inverterVAR_PF(){
+
+        return new Inverter();
+    }   
+    
+    /**
+     * 
+     */
+    public static Inverter inverterWatt_VAR(){
+
+        return new Inverter();
+    }
 
     /**
      * @return int return the ratedWatt
