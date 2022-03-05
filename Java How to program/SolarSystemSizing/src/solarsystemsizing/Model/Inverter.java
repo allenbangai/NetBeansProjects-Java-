@@ -145,8 +145,9 @@ public class Inverter {
      * @return
      */
     public static Inverter inverterVAR_PF(int ratedVAR, double powerFactor, int DCinput){
-
-        return new Inverter();
+        int ratedVA = ratedVAR / squareSubstr(1, powerFactor);
+        int ratedWatt = (int) (ratedVA * powerFactor);
+        return new Inverter(ratedWatt, ratedVAR, ratedVA, powerFactor, DCinput);
     }   
     
     /**
@@ -157,8 +158,9 @@ public class Inverter {
      * @return
      */
     public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
-
-        return new Inverter();
+        int ratedVA = squareSum(ratedWatt, ratedVAR);
+        double powerFactor = ratedWatt / ratedVA;
+        return new Inverter(ratedWatt, ratedVAR, ratedVA, powerFactor, DCinput);
     }
 
     /**
@@ -169,8 +171,9 @@ public class Inverter {
      * @return
      */
     public static Inverter inverterWatt_VA(int ratedWatt, int ratedVA, int DCinput){
-
-        return new Inverter();
+        int ratedVAR = squareSubstr(ratedVA, ratedWatt);
+        double powerFactor = ratedWatt / ratedVA;
+        return new Inverter(ratedWatt, ratedVAR, ratedVA, powerFactor, DCinput);
     }
 
     /**
@@ -219,15 +222,15 @@ public class Inverter {
         return DCinput;
     }
 
-    private static int squareSum(int a, int b){
+    private static int squareSum(double a, double b){
         return rootVal((a*a) + (b*b));
     }
 
-    private static int squareSubstr(int a, int b){
+    private static int squareSubstr(double a, double b){
         return rootVal((a*a) - (b*b));
     }
 
-    private static int rootVal(int a){
+    private static int rootVal(double a){
         return (int) Math.sqrt(a);
     }
 
