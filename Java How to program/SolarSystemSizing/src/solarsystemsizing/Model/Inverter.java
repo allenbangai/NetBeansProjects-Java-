@@ -98,38 +98,74 @@ public class Inverter {
         this.DCinput = DCinput;
     }
     
-    
+    /**
+     * 
+     * @param ratedWatt
+     * @param powerFactor
+     * @param DCinput
+     * @return
+     */
     public Inverter inverterWatt_PF(int ratedWatt, double powerFactor, int DCinput){
         this.ratedVA = (int) (ratedWatt/powerFactor);
         this.ratedVAR = squareSubstr(this.ratedVA, ratedWatt);
         return new Inverter(ratedWatt, this.ratedVAR, this.ratedVA, powerFactor, DCinput);
     }   
     
-    
+    /**
+     * 
+     * @param ratedVA
+     * @param ratedVAR
+     * @param DCinput
+     * @return
+     */
     public static Inverter inverterVA_VAR(int ratedVA, int ratedVAR, int DCinput){
 
         return new Inverter();
     }   
     
-    
+    /**
+     * 
+     * @param ratedVA
+     * @param powerFactor
+     * @param DCinput
+     * @return
+     */
     public static Inverter inverterVA_PF(int ratedVA, double powerFactor, int DCinput){
 
         return new Inverter();
     }   
     
-    
+    /**
+     * 
+     * @param ratedVAR
+     * @param powerFactor
+     * @param DCinput
+     * @return
+     */
     public static Inverter inverterVAR_PF(int ratedVAR, double powerFactor, int DCinput){
 
         return new Inverter();
     }   
     
-    
+    /**
+     * 
+     * @param ratedWatt
+     * @param ratedVAR
+     * @param DCinput
+     * @return
+     */
     public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
 
         return new Inverter();
     }
 
-
+    /**
+     * 
+     * @param ratedWatt
+     * @param ratedVA
+     * @param DCinput
+     * @return
+     */
     public static Inverter inverterWatt_VA(int ratedWatt, int ratedVA, int DCinput){
 
         return new Inverter();
