@@ -82,6 +82,14 @@ public class Inverter {
 
     }
 
+    /**
+     * 
+     * @param ratedWatt
+     * @param ratedVAR
+     * @param ratedVA
+     * @param powerFactor
+     * @param DCinput
+     */
     private Inverter(int ratedWatt, int ratedVAR, int ratedVA, double powerFactor, int DCinput) {
         this.ratedWatt = ratedWatt;
         this.ratedVAR = ratedVAR;
@@ -103,9 +111,7 @@ public class Inverter {
         return new Inverter();
     }   
     
-    /**
-     * 
-     */
+    
     public static Inverter inverterVA_PF(int ratedVA, double powerFactor, int DCinput){
 
         return new Inverter();
@@ -119,6 +125,12 @@ public class Inverter {
     
     
     public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
+
+        return new Inverter();
+    }
+
+
+    public static Inverter inverterWatt_VA(int ratedWatt, int ratedVA, int DCinput){
 
         return new Inverter();
     }
