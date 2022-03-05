@@ -81,11 +81,24 @@ public class Inverter {
     public Inverter(){
 
     }
+
+    private Inverter(int ratedWatt, int ratedVAR, int ratedVA, double powerFactor, int DCinput) {
+        this.ratedWatt = ratedWatt;
+        this.ratedVAR = ratedVAR;
+        this.ratedVA = ratedVA;
+        this.powerFactor = powerFactor;
+        this.DCinput = DCinput;
+    }
     
-    /**
-     * 
-     */
-    public static Inverter inverterWatt_PF(){
+    
+    public Inverter inverterWatt_PF(int ratedWatt, double powerFactor, int DCinput){
+        this.ratedVA = (int) (ratedWatt/powerFactor);
+        this.ratedVAR = squareSubstr(this.ratedVA, ratedWatt);
+        return new Inverter(ratedWatt, this.ratedVAR, this.ratedVA, powerFactor, DCinput);
+    }   
+    
+    
+    public static Inverter inverterVA_VAR(int ratedVA, int ratedVAR, int DCinput){
 
         return new Inverter();
     }   
@@ -93,31 +106,19 @@ public class Inverter {
     /**
      * 
      */
-    public static Inverter inverterVA_VAR(){
+    public static Inverter inverterVA_PF(int ratedVA, double powerFactor, int DCinput){
 
         return new Inverter();
     }   
     
-    /**
-     * 
-     */
-    public static Inverter inverterVA_PF(){
+    
+    public static Inverter inverterVAR_PF(int ratedVAR, double powerFactor, int DCinput){
 
         return new Inverter();
     }   
     
-    /**
-     * 
-     */
-    public static Inverter inverterVAR_PF(){
-
-        return new Inverter();
-    }   
     
-    /**
-     * 
-     */
-    public static Inverter inverterWatt_VAR(){
+    public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
 
         return new Inverter();
     }
@@ -166,6 +167,18 @@ public class Inverter {
      */
     public int getDCinput() {
         return DCinput;
+    }
+
+    private int squareSum(int a, int b){
+        return rootVal((a*a) + (b*b));
+    }
+
+    private int squareSubstr(int a, int b){
+        return rootVal((a*a) - (b*b));
+    }
+
+    private int rootVal(int a){
+        return (int) Math.sqrt(a);
     }
 
     /**
