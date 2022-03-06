@@ -122,6 +122,9 @@ public class Inverter {
      * @param ratedVA
      * @param ratedVAR
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @return
      */
     public Inverter inverterVA_VAR(int ratedVA, int ratedVAR, int DCinput){
@@ -135,6 +138,9 @@ public class Inverter {
      * @param ratedVA
      * @param powerFactor
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @return
      */
     public static Inverter inverterVA_PF(int ratedVA, double powerFactor, int DCinput){
@@ -161,6 +167,9 @@ public class Inverter {
      * @param ratedWatt
      * @param ratedVAR
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @return
      */
     public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
@@ -174,6 +183,9 @@ public class Inverter {
      * @param ratedWatt
      * @param ratedVA
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @return
      */
     public static Inverter inverterWatt_VA(int ratedWatt, int ratedVA, int DCinput){
