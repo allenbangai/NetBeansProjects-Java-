@@ -20,7 +20,7 @@ public class Inverter {
      * The ratedWatt symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and inputed in VDC.
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      */
@@ -88,7 +88,10 @@ public class Inverter {
      * @param ratedVAR
      * @param ratedVA
      * @param powerFactor
-     * @param DCinput
+     * @param DCinput 
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      */
     private Inverter(int ratedWatt, int ratedVAR, int ratedVA, double powerFactor, int DCinput) {
         this.ratedWatt = ratedWatt;
@@ -103,6 +106,9 @@ public class Inverter {
      * @param ratedWatt
      * @param powerFactor
      * @param DCinput
+     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
      * @return
      */
     public Inverter inverterWatt_PF(int ratedWatt, double powerFactor, int DCinput){
