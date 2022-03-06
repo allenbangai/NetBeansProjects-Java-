@@ -221,15 +221,44 @@ public class Inverter {
     public int getDCinput() {
         return DCinput;
     }
-
+    
+    /**
+     * This method takes in two parameters, cast them to Double type, and does the 
+     * sum of the square of each of the cast parameters a and b.
+     * This sum this then passed into a function rootVal(arg) and return the 
+     * square root of the passed value in Integer format.
+     * @param a
+     * The value passed is of tyoe double
+     * @param b
+     * The value passed is of type double
+     * @return
+     * The return value is of type interger
+     */
     private static int squareSum(double a, double b){
         return rootVal((a*a) + (b*b));
     }
 
+    /**
+     * This method takes in two parameters, cast them to Double type, and does the 
+     * substraction of the square (first - second) of each of the passed parameters a and b.
+     * The substracted value this then passed into a function rootVal(arg) and the return  
+     * square root of the passed value is in Integer format.
+     * @param a
+     * The value passed is of tyoe double
+     * @param b
+     * The value passed is of type double
+     * @return
+     * The returned value is of type interger
+     */
     private static int squareSubstr(double a, double b){
         return rootVal((a*a) - (b*b));
     }
 
+    /**
+     * 
+     * @param a
+     * @return
+     */
     private static int rootVal(double a){
         return (int) Math.sqrt(a);
     }
