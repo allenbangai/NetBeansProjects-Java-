@@ -16,18 +16,7 @@ public class Inverter {
      * parameters giving as Reactive Power which account for the reactive power 
      * consume by the load which the inverter will supply, denoted as VAR and the Power 
      * Factor of the inverter with no SI unit.
-     * @param ratedWatt
-     * The ratedWatt symbolises the real power of the inverter and the value inputed 
-     * should be in W and not KW or any other type.
-     * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
-     * This is the voltage that the inverter takes to convert direct current (ADC) to 
-     * AC current.
      */
-    public Inverter(int ratedWatt, int DCinput){
-        this.ratedWatt = ratedWatt;
-        this.DCinput = DCinput;
-    }
 
     /**
      * This constructor discribes an object of the class inverter with rated output
@@ -85,6 +74,8 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
+     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
      * @param ratedVAR
      * @param ratedVA
      * @param powerFactor
@@ -104,6 +95,8 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
+     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
      * @param powerFactor
      * @param DCinput
      * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
@@ -165,6 +158,8 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
+     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
      * @param ratedVAR
      * @param DCinput
      * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
@@ -181,6 +176,8 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
+     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
      * @param ratedVA
      * @param DCinput
      * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
