@@ -255,9 +255,11 @@ public class Inverter {
     }
 
     /**
-     * 
+     * This method computes the square roots of any value being pass as argurment
      * @param a
+     * Takes a parameter of type double
      * @return
+     * Returns the square root of the parameter a
      */
     private static int rootVal(double a){
         return (int) Math.sqrt(a);
