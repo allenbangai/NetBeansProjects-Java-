@@ -26,4 +26,6 @@ public class Panel {
     public int getNominalVoltage() {
         return nominalVoltage;
     }
+
+    //TODO 4: Document code in this class Panel.java
 }

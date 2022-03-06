@@ -1,6 +1,5 @@
 package solarsystemsizing;
 
-import java.lang.*;
 import java.util.Scanner;
 
 /**

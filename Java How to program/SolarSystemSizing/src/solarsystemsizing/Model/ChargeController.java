@@ -5,10 +5,10 @@ package solarsystemsizing.Model;
  * @author Kamadje Allen
  */
 public class ChargeController{
-    int minInputCurrent;
-    int maxInputCurrent;
-    int maxInputVoltage;
-    int ratedVoltage;
+    private int minInputCurrent;
+    private int maxInputCurrent;
+    private int maxInputVoltage;
+    private int ratedVoltage;
 
     public ChargeController(int minInputCurrent, int maxInputCurrent, int maxInputVoltage, int ratedVoltage) {
         this.minInputCurrent = minInputCurrent;

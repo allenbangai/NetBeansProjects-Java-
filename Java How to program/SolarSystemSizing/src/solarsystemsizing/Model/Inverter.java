@@ -266,11 +266,7 @@ public class Inverter {
     private static int rootVal(double a){
         return (int) Math.sqrt(a);
     }
-
-    /**
-     * TODO 3: Objects of each inverter type are supposed to be declared and defined in    
-     * the class inverter and a private constructor is then used to instantiate each of those 
-     * objects with all the power parameters of a AC device that is W, VAR, VA, PF, and 
-     * not forgetting the DCinput parameter of the inverter in VDC.
-    */
+    
+    //TODO 3: Complete documentation for class Inverter
+    
 }

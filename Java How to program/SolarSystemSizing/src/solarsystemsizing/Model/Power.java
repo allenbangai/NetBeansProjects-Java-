@@ -9,8 +9,8 @@ public class Power {
     private int powerOfLoad;
 
     /***
-     * instantiates parameters for a load so the total number of load can be return from object
-     * S.I.U of Load is Watt(W)
+     * Instantiates parameters for a load so the total number of load can be return from object
+     * S.I.U of Load is Watt(W).
      * @param numOfLoad
      * @param powerOfLoad 
      */
@@ -20,40 +20,41 @@ public class Power {
     }
 
     /**
-     * return the available number of load
      * @return 
+     * Return the available number of load.
      */
     public int getNumOfLoad() {
         return numOfLoad;
     }
 
     /**
-     * Set available number of load for a given load
      * @param numOfLoad 
+     * Set available number of load for a given load.
      */
     public void setNumOfLoad(int numOfLoad) {
         this.numOfLoad = numOfLoad;
     }
 
     /**
-     * return the power of particular load
      * @return 
+     * Return the power of particular load.
      */
     public int getPowerOfLoad() {
         return powerOfLoad;
     }
 
     /**
-     * Set the power of a given load in Watt
      * @param powerOfLoad 
+     * Set the power of a given load in Watt.
      */
     public void setPowerOfLoad(int powerOfLoad) {
         this.powerOfLoad = powerOfLoad;
     }
     
     /**
-     * implementation to return the total power (W) from the load of a single device and number of load available
      * @return 
+     * Implementation to return the total power (W) from the load of a single device 
+     * and number of load available.
      */
     public int getPower(){
         return (numOfLoad * powerOfLoad);
