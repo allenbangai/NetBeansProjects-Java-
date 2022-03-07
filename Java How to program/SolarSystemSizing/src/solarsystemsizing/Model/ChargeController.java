@@ -1,7 +1,10 @@
 package solarsystemsizing.Model;
 
 /**
- *
+ * This class ChargeController describes the characteristics of a Solar Charge Controller.
+ * This characteristics describes the behavior of a charge controller an the way they 
+ * behave. This characteristics are the input voltage, min an max current with the output
+ * rate voltage.
  * @author Kamadje Allen
  */
 public class ChargeController{
@@ -10,6 +13,13 @@ public class ChargeController{
     private int maxInputVoltage;
     private int ratedVoltage;
 
+    /**
+     * 
+     * @param minInputCurrent
+     * @param maxInputCurrent
+     * @param maxInputVoltage
+     * @param ratedVoltage
+     */
     public ChargeController(int minInputCurrent, int maxInputCurrent, int maxInputVoltage, int ratedVoltage) {
         this.minInputCurrent = minInputCurrent;
         this.maxInputCurrent = maxInputCurrent;
