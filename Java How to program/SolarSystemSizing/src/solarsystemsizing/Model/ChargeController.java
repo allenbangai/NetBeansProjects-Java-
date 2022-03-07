@@ -40,24 +40,25 @@ public class ChargeController{
     }
 
     /**
-     * 
      * @return
+     * It returns the particullar solar charge controller min input current in DC.
      */
     public int getMinInputCurrent() {
         return minInputCurrent;
     }
 
     /**
-     * 
      * @return
+     * It returns the particullar solar charge controller max input current in DC.
      */
     public int getMaxInputCurrent() {
         return maxInputCurrent;
     }
 
-    /***
-     * 
+    /**
      * @return
+     * It returns the particullar solar charge controller max input voltage in DC which the
+     * total solar panel open circuit conection wll supply.
      */
     public int getMaxInputVoltage() {
         return maxInputVoltage;
