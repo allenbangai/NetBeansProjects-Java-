@@ -12,41 +12,20 @@ public class Inverter {
     private int DCinput;
 
     /**
-     * This constructor discribes an object of the class inverter with rated output
-     * parameters giving as Reactive Power which account for the reactive power 
-     * consume by the load which the inverter will supply, denoted as VAR and the Power 
-     * Factor of the inverter with no SI unit.
-     */
-
-    /**
-     * This constructor discribes an object of the class inverter with rated output
-     * parameters giving as Reactive Power which account for the reactive power 
-     * consume by the load which the inverter will supply, denoted as VAR and the Power 
-     * Factor of the inverter with no SI unit.
-     */
-
-    /**
-     * This constructor discribes an object of the class inverter with rated output
-     * parameters giving as Apparent Power of inverter denoted as VA and the Power Factor
-     * of the inverter with no SI unit.
-     */
-
-    /**
-     * 
      * @param ratedWatt
-     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
      * @param ratedVAR
-     * The ratedVAR symbolises the reactive power of the inverter and the value inputed 
+     * The {@link #ratedVAR} symbolises the reactive power of the inverter and the value inputed 
      * should be in VAR and not KVAR or any other type.
      * @param ratedVA
-     * The ratedVA symbolises the apparent power of the inverter and the value inputed 
+     * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.
      * @param powerFactor
-     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * The {@link #powerFactor} gives the ratio of ratedWatt to ratedVA and must be less 
      * than one (<1).
      * @param DCinput 
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      */
@@ -59,18 +38,22 @@ public class Inverter {
     }
     
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedWatt}, 
+     * {@link #DCinput}, and {@link #powerFactor}.
      * @param ratedWatt
-     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
      * @param powerFactor
-     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * The {@link #powerFactor} gives the ratio of ratedWatt to ratedVA and must be less 
      * than one (<1).
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public Inverter inverterWatt_PF(int ratedWatt, double powerFactor, int DCinput){
         this.ratedVA = (int) (ratedWatt/powerFactor);
@@ -81,13 +64,13 @@ public class Inverter {
     /**
      * 
      * @param ratedVA
-     * The ratedVA symbolises the apparent power of the inverter and the value inputed 
+     * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.
      * @param ratedVAR
-     * The ratedVAR symbolises the reactive power of the inverter and the value inputed 
+     * The {@link #ratedVAR} symbolises the reactive power of the inverter and the value inputed 
      * should be in VAR and not KVAR or any other type.
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
@@ -101,13 +84,13 @@ public class Inverter {
     /**
      * 
      * @param ratedVA
-     * The ratedVA symbolises the apparent power of the inverter and the value inputed 
+     * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.
      * @param powerFactor
-     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * The {@link #powerFactor} gives the ratio of ratedWatt to ratedVA and must be less 
      * than one (<1).
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
@@ -121,13 +104,13 @@ public class Inverter {
     /**
      * 
      * @param ratedVAR
-     * The ratedVAR symbolises the reactive power of the inverter and the value inputed 
+     * The {@link #ratedVAR} symbolises the reactive power of the inverter and the value inputed 
      * should be in VAR and not KVAR or any other type.
      * @param powerFactor
-     * The power factor gives the ratio of ratedWatt to ratedVA and must be less 
+     * The {@link #powerFactor} gives the ratio of ratedWatt to ratedVA and must be less 
      * than one (<1).
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
@@ -141,13 +124,13 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
-     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
      * @param ratedVAR
-     * The ratedVAR symbolises the reactive power of the inverter and the value inputed 
+     * The {@link #ratedVAR} symbolises the reactive power of the inverter and the value inputed 
      * should be in VAR and not KVAR or any other type.
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
@@ -161,13 +144,13 @@ public class Inverter {
     /**
      * 
      * @param ratedWatt
-     * The ratedWatt symbolises the real power of the inverter and the value inputed 
+     * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
      * @param ratedVA
-     * The ratedVA symbolises the apparent power of the inverter and the value inputed 
+     * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.v
      * @param DCinput
-     * The DCinput symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
@@ -179,7 +162,7 @@ public class Inverter {
     }
 
     /**
-     * @return int return the ratedWatt
+     * @return int return the {@link #ratedWatt}
      * This give the rated output Real Power or to say the power in Watt.
      * It is usually denoted in KW but here, the return power is in W.
      */
@@ -188,7 +171,7 @@ public class Inverter {
     }
 
     /**
-     * @return int return the ratedVAR
+     * @return int return the {@link #ratedVAR}
      * This give the rated output Reactive power of the inverter.
      * It is usually denoted in KVAR but here, the value is in VAR.
      */
@@ -197,7 +180,7 @@ public class Inverter {
     }
 
     /**
-     * @return int return the ratedVA
+     * @return int return the {@link #ratedVA}
      * This give the rated output Apparent power of the inverter.
      * It is usually denoted in KVA but here, the value is in VA.
      */
@@ -206,7 +189,7 @@ public class Inverter {
     }
 
     /**
-     * @return int return the powerFactor
+     * @return int return the {@link #powerFactor}
      * The inverter being a AC appliance has a power factor.
      * This power factor give the amount of reactive to real power consumed.
      * It doesn't have any unit and must be less than one.
@@ -217,7 +200,7 @@ public class Inverter {
 
     /**
      * @return int return the DCinput
-     * The DC input is takes in a particular input rated voltage in VDC.
+     * The {@link #DCinput} is takes in a particular input rated voltage in VDC.
      * The DC input is in volt.
      */
     public int getDCinput() {
@@ -227,7 +210,7 @@ public class Inverter {
     /**
      * This method takes in two parameters, cast them to Double type, and does the 
      * sum of the square of each of the cast parameters a and b.
-     * This sum this then passed into a function rootVal(arg) and return the 
+     * This sum this then passed into a function {@link #rootVal(double)} and return the 
      * square root of the passed value in Integer format.
      * @param a
      * The value passed is of tyoe double
