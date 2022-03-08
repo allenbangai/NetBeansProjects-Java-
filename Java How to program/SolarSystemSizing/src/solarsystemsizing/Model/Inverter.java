@@ -74,6 +74,9 @@ public class Inverter {
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public Inverter inverterVA_VAR(int ratedVA, int ratedVAR, int DCinput){
         this.ratedWatt = squareSubstr(ratedVA, ratedVAR);
@@ -94,6 +97,9 @@ public class Inverter {
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public static Inverter inverterVA_PF(int ratedVA, double powerFactor, int DCinput){
         int ratedWatt = (int) (ratedVA*powerFactor);
@@ -114,6 +120,9 @@ public class Inverter {
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public static Inverter inverterVAR_PF(int ratedVAR, double powerFactor, int DCinput){
         int ratedVA = ratedVAR / squareSubstr(1, powerFactor);
@@ -134,6 +143,9 @@ public class Inverter {
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public static Inverter inverterWatt_VAR(int ratedWatt, int ratedVAR, int DCinput){
         int ratedVA = squareSum(ratedWatt, ratedVAR);
@@ -154,6 +166,9 @@ public class Inverter {
      * This is the voltage that the inverter takes to convert direct current (ADC) to 
      * AC current.
      * @return
+     * This constructor returns the object of the constructor {@link #Inverter(int, int, int, double, int)}
+     * which is a private constructor instantiating an Inverter with all the field parameters of 
+     * the class Inverter.
      */
     public static Inverter inverterWatt_VA(int ratedWatt, int ratedVA, int DCinput){
         int ratedVAR = squareSubstr(ratedVA, ratedWatt);
