@@ -24,13 +24,15 @@ public class ChargeController{
      * properly. This current is entered in Ampere (A).
      * @param maxInputVoltage
      * The maximum input voltge is the voltage solar panel supply should not exceed and 
-     * must be below or the solar panel supply should not exceed.
+     * must be below or the solar panel supply should not exceed. The value entered is in 
+     * volts (VDC).
      * @param ratedVoltage
      * This is the output rated voltage released to the batteries in other to charge the 
      * battery. For certain cases, the controller can have somany different types of rated 
      * output voltage eiher due to differnt number of output ports or can varry automatically 
      * as it adapts to the receiving voltage of the battery. In this case, we use different 
-     * contructors for describing the same obects with differnt rated output voltage. 
+     * contructors for describing the same obects with differnt rated output voltage. The 
+     * value entered is in volts (VDC)
      */
     public ChargeController(int minInputCurrent, int maxInputCurrent, int maxInputVoltage, int ratedVoltage) {
         this.minInputCurrent = minInputCurrent;
@@ -41,7 +43,7 @@ public class ChargeController{
 
     /**
      * @return
-     * It returns the particullar solar charge controller min input current in DC.
+     * It returns the particullar solar charge controller {@link #minInputCurrent} in DC.
      */
     public int getMinInputCurrent() {
         return minInputCurrent;
@@ -49,7 +51,7 @@ public class ChargeController{
 
     /**
      * @return
-     * It returns the particullar solar charge controller max input current in DC.
+     * It returns the particullar solar charge controller {@link #maxInputCurrent} in DC.
      */
     public int getMaxInputCurrent() {
         return maxInputCurrent;
@@ -57,7 +59,7 @@ public class ChargeController{
 
     /**
      * @return
-     * It returns the particullar solar charge controller max input voltage in DC which the
+     * It returns the particullar solar charge controller {@link #maxInputVoltage} in DC which the
      * total solar panel open circuit conection wll supply.
      */
     public int getMaxInputVoltage() {
@@ -66,7 +68,14 @@ public class ChargeController{
 
     /**
      * 
+     * This is the output rated voltage released to the batteries in other to charge the 
+     * battery. For certain cases, the controller can have somany different types of rated 
+     * output voltage eiher due to differnt number of output ports or can varry automatically 
+     * as it adapts to the receiving voltage of the battery. In this case, we use different 
+     * contructors for describing the same obects with differnt rated output voltage. 
      * @return
+     * This method returns the output {@link #ratedVoltage} that the charge controller supplies to or 
+     * rerceives from the batery.
      */
     public int getRatedVoltage() {
         return ratedVoltage;
