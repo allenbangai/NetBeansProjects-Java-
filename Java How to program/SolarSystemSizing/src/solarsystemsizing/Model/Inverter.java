@@ -12,6 +12,8 @@ public class Inverter {
     private int DCinput;
 
     /**
+     * This private constructor describes the charateristics of a class Inverter with all field
+     * variables instatiated.
      * @param ratedWatt
      * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
