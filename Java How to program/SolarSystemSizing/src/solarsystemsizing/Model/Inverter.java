@@ -62,7 +62,8 @@ public class Inverter {
     }   
     
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedVAR}, 
+     * {@link #ratedVA}, and {@link #DCinput}.
      * @param ratedVA
      * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.
@@ -85,7 +86,8 @@ public class Inverter {
     }   
     
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedVA}, 
+     * {@link #powerFactor}, and {@link #DCinput}.
      * @param ratedVA
      * The {@link #ratedVA} symbolises the apparent power of the inverter and the value inputed 
      * should be in VA and not KVA or any other one.
@@ -108,7 +110,8 @@ public class Inverter {
     }   
     
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedVAR}, 
+     * {@link #powerFactor}, and {@link #DCinput}.
      * @param ratedVAR
      * The {@link #ratedVAR} symbolises the reactive power of the inverter and the value inputed 
      * should be in VAR and not KVAR or any other type.
@@ -131,7 +134,8 @@ public class Inverter {
     }   
     
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedVAR}, 
+     * {@link #ratedWatt}, and {@link #DCinput}.
      * @param ratedWatt
      * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
@@ -154,7 +158,8 @@ public class Inverter {
     }
 
     /**
-     * 
+     * This constructor is for inverters with the followng characteristics: {@link #ratedVA}, 
+     * {@link #powerFactor}, and {@link #DCinput}.
      * @param ratedWatt
      * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
      * should be in W and not KW or any other type.
