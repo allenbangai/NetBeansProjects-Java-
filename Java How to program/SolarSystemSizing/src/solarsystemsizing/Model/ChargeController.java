@@ -23,11 +23,11 @@ public class ChargeController{
      * The maximum possible curent the charge controller can take in other to function 
      * properly. This current is entered in Ampere (A).
      * @param maxInputVoltage
-     * The maximum input voltge is the voltage solar panel supply should not exceed and 
+     * The {@link #maxInputVoltage} is the voltage solar panel supply should not exceed and 
      * must be below or the solar panel supply should not exceed. The value entered is in 
      * volts (VDC).
      * @param ratedVoltage
-     * This is the output rated voltage released to the batteries in other to charge the 
+     * This is the output {@link #ratedVoltage} released to the batteries in other to charge the 
      * battery. For certain cases, the controller can have somany different types of rated 
      * output voltage eiher due to differnt number of output ports or can varry automatically 
      * as it adapts to the receiving voltage of the battery. In this case, we use different 
