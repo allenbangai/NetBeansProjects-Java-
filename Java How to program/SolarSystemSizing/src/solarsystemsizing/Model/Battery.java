@@ -17,9 +17,9 @@ public class Battery {
      * This constructor descibes the only possible object that can be instantiated from the 
      * class Battery and takes bothe the {@link #voltage} and {@link #ampereHour}.
      * @param voltage
-     * The voltage parameter here is entered in volts (VDC) and cannot be zerro.
+     * The {@link #voltage} parameter here is entered in volts (VDC) and cannot be zerro.
      * @param ampereHour
-     * The ampereHour parameter here is entered in ampere hour (AH) and value cannot be 
+     * The {@link #ampereHour} parameter here is entered in ampere hour (AH) and value cannot be 
      * zero but must be and interger
      */
     public Battery(int voltage, int ampereHour) {
