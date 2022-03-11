@@ -6,6 +6,8 @@ package solarsystemsizing;
 
 import java.util.ArrayList;
 
+import solarsystemsizing.Model.Panel;
+
 /**
  * Class solar panel
  * @author kamadje Allen
@@ -18,7 +20,8 @@ public class SolarPanels {
      * and their respective power
      */
     private int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
-    private ArrayList<Integer> panelList = new ArrayList<>();   
+    private ArrayList<Integer> panelList = new ArrayList<>();
+    private ArrayList<Panel> panels = new ArrayList<>();
     private int panelNumber;
     private int panelPower;
     private int position;
@@ -34,6 +37,20 @@ public class SolarPanels {
         //initializing method to find panelNumber and panel power position
         this.findPanelNumber();
     }
+
+    
+
+    public SolarPanels(float energy, float irradiance, int[] panelsPower, ArrayList<Integer> panelList, ArrayList<Panel> panels, int panelNumber, int panelPower, int position) {
+        this.energy = energy;
+        this.irradiance = irradiance;
+        this.panelsPower = panelsPower;
+        this.panelList = panelList;
+        this.panels = panels;
+        this.panelNumber = panelNumber;
+        this.panelPower = panelPower;
+        this.position = position;
+    }
+    
 
     /**
      * Setter for initiating private variable energy
