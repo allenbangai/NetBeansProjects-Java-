@@ -3,6 +3,8 @@ package solarsystemsizing;
 import java.util.*;
 
 import solarsystemsizing.Model.Panel;
+import solarsystemsizing.Sizing.SolarPanelPro;
+import solarsystemsizing.Sizing.SolarPanels;
 
 /**
  *
@@ -63,7 +65,8 @@ public class SolarSizing {
                 System.out.println("individual power and number of load for each device of the system inputed");
                 total = new TPower(2000, 5);
                 stmEnergy = total.total();
-                solarPanels = new SolarPanelPro(stmEnergy, (float) 4.3, 300);
+                Panel panel = new Panel(300, 24, 36);
+                solarPanels = new SolarPanelPro(stmEnergy, (float) 4.3, panel.getPower());
                 stmNumberOfPanels = solarPanels.getPanelNumber();
                 stmPowerOfPanels = solarPanels.getPanelPower();
                 break;
