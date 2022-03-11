@@ -27,6 +27,7 @@ public class SolarPanelPro extends SolarPanels{
     public SolarPanelPro(double energy, double irradiance, int panelPower) {
         super(energy, irradiance);
         this.panelPower = panelPower;
+        this.getPanelNumber();
     }
 
     /**
@@ -42,7 +43,7 @@ public class SolarPanelPro extends SolarPanels{
         if(!super.isEven(panelNumber)){
             panelNumber++;
         }
-        return super.getPanelNumber(); 
+        return panelNumber; 
     }
 
     /**

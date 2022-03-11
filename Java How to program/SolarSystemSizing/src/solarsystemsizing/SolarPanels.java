@@ -34,8 +34,6 @@ public class SolarPanels {
     public SolarPanels(double energy, double irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
-        //initializing method to find panelNumber and panel power position
-        this.findPanelNumber();
     }    
 
     /**
@@ -48,7 +46,8 @@ public class SolarPanels {
         this.energy = energy;
         this.irradiance = irradiance;
         this.panels = panels;
-        findPanelNumber();
+        //initializing method to find panelNumber and panel power position
+        this.findPanelNumber();
     }
     
 
@@ -117,7 +116,7 @@ public class SolarPanels {
     }
     
     /**
-     * Private method to get the smallest number of panels needed for sizing the system
+     * Private method to get the smallest number of panels needed for sizing the system.
      * This method also helps to determine to determine the type of panel object needed for sizing the object
      */
     private void findPanelNumber(){        
@@ -143,7 +142,7 @@ public class SolarPanels {
     } 
     
     /**
-     * Function is to return true if input value is even
+     * Function is to return true if input value is even.
      * @param 
      * val is of type int
      * @return 
