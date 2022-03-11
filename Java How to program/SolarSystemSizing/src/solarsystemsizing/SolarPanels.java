@@ -13,8 +13,8 @@ import solarsystemsizing.Model.Panel;
  * @author kamadje Allen
  */
 public class SolarPanels {
-    private float energy;
-    private float irradiance;
+    private double energy;
+    private double irradiance;
     /**
      * This variable comprises all the available solar panels 
      * and their respective power
@@ -31,7 +31,7 @@ public class SolarPanels {
      * @param energy
      * @param irradiance 
      */
-    public SolarPanels(float energy, float irradiance) {
+    public SolarPanels(double energy, double irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
         //initializing method to find panelNumber and panel power position
@@ -44,7 +44,7 @@ public class SolarPanels {
      * @param irradiance
      * @param panels
      */
-    public SolarPanels(float energy, float irradiance, ArrayList<Panel> panels) {
+    public SolarPanels(double energy, double irradiance, ArrayList<Panel> panels) {
         this.energy = energy;
         this.irradiance = irradiance;
         this.panels = panels;
@@ -72,7 +72,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system energy
      */
-    public float getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
@@ -80,7 +80,7 @@ public class SolarPanels {
      * @return 
      * Method returns the system solar irradiance for the particular location
      */
-    public float getIrradiance() {
+    public double getIrradiance() {
         return irradiance;
     }
 
@@ -124,7 +124,7 @@ public class SolarPanels {
         float val;
         for(Panel panel : panels){
             val = (float)panel.getPower();
-            panelNumber = Math.round(energy/(val*irradiance));
+            panelNumber = (int) Math.round(energy/(val*irradiance));
             if (!isEven(panelNumber)) {
                 panelNumber++;
             }
