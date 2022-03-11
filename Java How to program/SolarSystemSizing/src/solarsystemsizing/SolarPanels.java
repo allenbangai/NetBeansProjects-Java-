@@ -40,15 +40,10 @@ public class SolarPanels {
 
     
 
-    public SolarPanels(float energy, float irradiance, int[] panelsPower, ArrayList<Integer> panelList, ArrayList<Panel> panels, int panelNumber, int panelPower, int position) {
+    public SolarPanels(float energy, float irradiance, ArrayList<Panel> panels) {
         this.energy = energy;
         this.irradiance = irradiance;
-        this.panelsPower = panelsPower;
-        this.panelList = panelList;
         this.panels = panels;
-        this.panelNumber = panelNumber;
-        this.panelPower = panelPower;
-        this.position = position;
     }
     
 
@@ -95,7 +90,7 @@ public class SolarPanels {
     }
 
     /** 
-     * Method getPanelPower()
+     * Method {@link #getPanelPower()}
      * @return
      * This method returns the selected panel power for sizing the system
      * Returned value is of type Integer
@@ -103,7 +98,18 @@ public class SolarPanels {
     public int getPanelPower() {
         panelPower = panelsPower[position];
         return panelPower;
-    }    
+    }
+
+    /**
+     * Method {@link #getPanel()}
+     * @return
+     * This method returns the selected panel object for sizing the system
+     * The returned value is of type Panel giving you the panelVoltage, panelPower, and 
+     * panelNominalVoltage.
+     */
+    public Panel getPanel(){
+        return panels.get(position);
+    }
     
     /**
      * Private method to get the smallest number of panels needed for sizing the system
