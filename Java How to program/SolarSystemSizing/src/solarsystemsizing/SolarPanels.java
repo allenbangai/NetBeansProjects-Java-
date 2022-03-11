@@ -36,14 +36,19 @@ public class SolarPanels {
         this.irradiance = irradiance;
         //initializing method to find panelNumber and panel power position
         this.findPanelNumber();
-    }
+    }    
 
-    
-
+    /**
+     * 
+     * @param energy
+     * @param irradiance
+     * @param panels
+     */
     public SolarPanels(float energy, float irradiance, ArrayList<Panel> panels) {
         this.energy = energy;
         this.irradiance = irradiance;
         this.panels = panels;
+        findPanelNumber();
     }
     
 
@@ -113,17 +118,17 @@ public class SolarPanels {
     
     /**
      * Private method to get the smallest number of panels needed for sizing the system
-     * @return 
+     * This method also helps to determine to determine the type of panel object needed for sizing the object
      */
     private void findPanelNumber(){        
         float val;
-        for(int panel : panelsPower){
-            val = (float)panel;
-            int panelNum = Math.round(energy/(val*irradiance));
-            if (!isEven(panelNum)) {
-                panelNum++;
+        for(Panel panel : panels){
+            val = (float)panel.getPower();
+            panelNumber = Math.round(energy/(val*irradiance));
+            if (!isEven(panelNumber)) {
+                panelNumber++;
             }
-            panelList.add(panelNum);            
+            panelList.add(panelNumber);         
         }
         panelNumber = panelList.get(0);
         //this for loop is to get the smallest number of panels needed possible as well as the position of the
@@ -138,7 +143,7 @@ public class SolarPanels {
     } 
     
     /**
-     * Function is to return true if input @param is even
+     * Function is to return true if input value is even
      * @param 
      * val is of type int
      * @return 
