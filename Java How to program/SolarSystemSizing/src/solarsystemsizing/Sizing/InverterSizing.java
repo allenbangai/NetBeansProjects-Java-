@@ -13,6 +13,7 @@ import solarsystemsizing.Model.Inverter;
 public class InverterSizing {
     private ArrayList<Inverter> inverters = new ArrayList<>();
     private int systemMaxPower;
+    private int inverterVoltage = 0;
 
     /**
      * 
@@ -50,6 +51,36 @@ public class InverterSizing {
      */
     public void setSystemMaxPower(int systemMaxPower) {
         this.systemMaxPower = systemMaxPower;
+    }
+
+    /***
+     * 
+     * @param inverterVoltage
+     */
+    public void setInverterVoltage(int inverterVoltage){
+        this.inverterVoltage = inverterVoltage;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    private int getInverterVoltage(){
+        if(inverterVoltage == 0){
+            if(systemMaxPower > 0 && systemMaxPower <= 3000){
+                return 12;
+            }else if (systemMaxPower > 3000 && systemMaxPower <= 10000){
+                return 24;
+            }else{
+                return 48;
+            }
+        }else{
+            return inverterVoltage;
+        }
+    }
+
+    public Inverter getInverter(){
+        return new Inverter(1000, 24);
     }
 
 }
