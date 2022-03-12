@@ -36,7 +36,7 @@ public class SolarSizing {
         panelList.add(new Panel(350, 24, 36));
         
         //variables here
-        float stmEnergy = 0;
+        double stmEnergy = 0;
         int stmNumberOfPanels = 0;
         int stmPowerOfPanels = 0;
         System.out.println("Enter value for sizing type");
