@@ -54,22 +54,36 @@ public class TPower extends Total{
     public ArrayList<Power> getPowers() {
         return powers;
     }
+
+    private int val1 = 0;
+    private void toHelp(){
+        for(Power power : powers){
+            val1 = val1 + power.getPower();
+        }
+    }
     
     private int returnTEnergy(){
         ArrayList<Power> powers = getPowers();
         if (powers.isEmpty()) {
             return gettPower() * getHours();
         } else {
-            int val = 0;
-            for(Power power : powers){
-                val = val + power.getPower();
-            }
-            return val * getHours();
+            toHelp();
+            return val1 * getHours();
         }
     }
     
     @Override
-    public float totalE() {
+    public double totalE() {
         return (float) (super.getVal() * returnTEnergy());
+    }
+
+    @Override
+    public double totalP() {
+        if(getPowers().isEmpty()){
+            return (double)gettPower();
+        }else{
+            toHelp();
+            return val1;
+        }
     }
 }
