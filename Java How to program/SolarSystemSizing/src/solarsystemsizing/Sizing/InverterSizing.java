@@ -66,17 +66,14 @@ public class InverterSizing {
      * @return
      */
     private int getInverterVoltage(){
-        if(inverterVoltage == 0){
-            if(systemMaxPower > 0 && systemMaxPower <= 3000){
-                return 12;
-            }else if (systemMaxPower > 3000 && systemMaxPower <= 10000){
-                return 24;
-            }else{
-                return 48;
-            }
+        if(systemMaxPower > 0 && systemMaxPower <= 3000){
+            inverterVoltage = 12;
+        }else if (systemMaxPower > 3000 && systemMaxPower <= 10000){
+            inverterVoltage = 24;
         }else{
-            return inverterVoltage;
+            inverterVoltage = 48;
         }
+        return inverterVoltage;
     }
 
     public Inverter getInverter(){
