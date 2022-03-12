@@ -12,6 +12,21 @@ public class Inverter {
     private int DCinput;
 
     /**
+     * 
+     * @param ratedWatt
+     * The {@link #ratedWatt} symbolises the real power of the inverter and the value inputed 
+     * should be in W and not KW or any other type.
+     * @param DCinput
+     * The {@link #DCinput} symbolises the DC input voltage of the inverter and it is inputed in VDC.
+     * This is the voltage that the inverter takes to convert direct current (ADC) to 
+     * AC current.
+     */
+    public Inverter(int ratedWatt, int DCinput){
+        this.ratedWatt = ratedWatt;
+        this.DCinput = DCinput;
+    }
+
+    /**
      * This private constructor describes the charateristics of a class Inverter with all field
      * variables instatiated.
      * @param ratedWatt

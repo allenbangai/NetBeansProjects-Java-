@@ -1,7 +1,8 @@
 package solarsystemsizing.Sizing;
 
 /**
- * 
+ * @since
+ * version 1.0
  * @author
  * Kamadje Allen
  */
