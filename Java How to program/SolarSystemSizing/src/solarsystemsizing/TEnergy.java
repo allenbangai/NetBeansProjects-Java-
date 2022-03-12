@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class TEnergy extends Total{
     private ArrayList<Energy> energys = new ArrayList<>();
-    int tEnergy;
+    private int tEnergy;
 
     public TEnergy(ArrayList<Energy> energys) {
         this.energys = energys;
