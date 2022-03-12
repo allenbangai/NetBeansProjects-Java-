@@ -44,26 +44,37 @@ public class TEnergy extends Total{
     public void setEnergys(ArrayList<Energy> tEnergys) {
         this.energys = tEnergys;
     }
+
+    private int val1 = 0, val2 = 0;
+    private void toHelp(){
+        for (Energy energy : energys) {
+            val1 = val1 + energy.getEnergy();
+            val2 = val2 + energy.getPower();
+        }
+
+    }
     
     private int returnTotalEnergy(){
         if (getEnergys().isEmpty()) {
             return gettEnergy();
-        } else {
-            int val = 0;
-            for (Energy energy : energys) {
-                val = val + energy.getPower();
-            }
-            return val;
+        }else {
+            toHelp();
+            return val1;
         }
     }
 
     @Override
-    public float totalE() {
-        return (float) (super.getVal() * (double)returnTotalEnergy());
+    public double totalE() {
+        return (double) (super.getVal() * (double)returnTotalEnergy());
     }
     
     @Override
-    public float totalP(){
-        return
+    public double totalP(){
+        if(getEnergys().isEmpty()){
+            return (double)(gettEnergy()/getHours());
+        }else{
+            toHelp();
+            return (double)(val2);
+        }
     }
 }
