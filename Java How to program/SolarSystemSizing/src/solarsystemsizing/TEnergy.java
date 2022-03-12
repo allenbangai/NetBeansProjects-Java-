@@ -14,13 +14,19 @@ import java.util.ArrayList;
 public class TEnergy extends Total{
     private ArrayList<Energy> energys = new ArrayList<>();
     private int tEnergy;
+    private int hours;
 
     public TEnergy(ArrayList<Energy> energys) {
         this.energys = energys;
     }
 
-    public TEnergy(int tEnergy) {
+    public TEnergy(int tEnergy, int hours) {
         this.tEnergy = tEnergy;
+        this.hours = hours;
+    }
+
+    public int getHours(){
+        return hours;
     }
 
     public int gettEnergy() {
@@ -52,7 +58,12 @@ public class TEnergy extends Total{
     }
 
     @Override
-    public float total() {
+    public float totalE() {
         return (float) (super.getVal() * (double)returnTotalEnergy());
-    }    
+    }
+    
+    @Override
+    public float totalP(){
+        return
+    }
 }

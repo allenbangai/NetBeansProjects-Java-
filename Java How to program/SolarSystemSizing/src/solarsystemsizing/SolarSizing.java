@@ -54,7 +54,7 @@ public class SolarSizing {
             case 3:
                 System.out.println("Here, you will have the sizing of your system from the total individual"
                         + " power, number of loads and hours of autonomu for each device of the system inputed");
-                total = new TEnergy(4000);
+                total = new TEnergy(4000, 5);
                 stmEnergy = total.total();
                 solarPanels = new SolarPanels(stmEnergy, 4.3, panelList);
                 stmNumberOfPanels = solarPanels.getPanelNumber();
