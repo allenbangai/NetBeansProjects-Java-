@@ -76,6 +76,29 @@ public class InverterSizing {
         return inverterVoltage;
     }
 
+    private Inverter findInverter(){
+        Inverter inverter1;
+        int inverterRatedWatt;
+        int init, diff = 0, i=0;
+
+        for(Inverter inverter: inverters){
+            inverterRatedWatt = inverter.getRatedWatt();
+            if(inverterRatedWatt > systemMaxPower){
+                init = inverterRatedWatt - systemMaxPower;
+                if(i == 0){
+                    diff = init;
+                }
+                if(diff >= init){
+                    diff = init;
+                }
+            }
+            i++;
+        }
+
+
+        return inverter1;
+    }
+
     public Inverter getInverter(){
         return new Inverter(1000, 24);
     }
