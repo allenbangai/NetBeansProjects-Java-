@@ -22,7 +22,7 @@ public class Store {
         return panels;
     }
 
-    public static ArrayList<Inverter> getInverter(){
+    public static ArrayList<Inverter> getInverters(){
         ArrayList<Inverter> inverters = new ArrayList<>();
         inverters.add(new Inverter(1000, 12));
         inverters.add(new Inverter(1000, 24));

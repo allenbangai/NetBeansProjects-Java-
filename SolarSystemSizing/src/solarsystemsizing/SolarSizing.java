@@ -3,6 +3,7 @@ package solarsystemsizing;
 import java.util.*;
 
 import solarsystemsizing.Model.*;
+import solarsystemsizing.Sizing.InverterSizing;
 import solarsystemsizing.Sizing.SolarPanelPro;
 import solarsystemsizing.Sizing.SolarPanels;
 import solarsystemsizing.Util.Store;
@@ -22,10 +23,15 @@ public class SolarSizing {
     public static void main(String[] args) {
         Total total;
         SolarPanels solarPanels;
+        InverterSizing inverterSizing;
         ArrayList<Panel> panelList = Store.getPanels();
+        ArrayList<Inverter> inverterList = Store.getInverters();
         
         //variables here
         double stmEnergy = 0;
+        double stmPower = 0;
+        Panel stmPanel;
+        Inverter stmInverter;
         int stmNumberOfPanels = 0;
         int stmPowerOfPanels = 0;
         System.out.println("Enter value for sizing type");
@@ -45,22 +51,28 @@ public class SolarSizing {
                         + " power, number of loads and hours of autonomu for each device of the system inputed");
                 total = new TEnergy(4000, 5);
                 stmEnergy = total.totalE();
+                stmPower = total.totalP();
                 solarPanels = new SolarPanels(stmEnergy, 4.3, panelList);
                 stmNumberOfPanels = solarPanels.getPanelNumber();
                 stmPowerOfPanels = solarPanels.getPanel().getPower();
+                stmPanel = solarPanels.getPanel();
                 break;
             case 4:
                 System.out.println("here, you will have the sizing of your system from the total ");
                 System.out.println("individual power and number of load for each device of the system inputed");
                 total = new TPower(2000, 5);
                 stmEnergy = total.totalE();
+                stmPower = total.totalP();
                 Panel panel = new Panel(300, 24, 36);
                 solarPanels = new SolarPanelPro(stmEnergy, (float) 4.3, panel.getPower());
                 stmNumberOfPanels = solarPanels.getPanelNumber();
                 stmPowerOfPanels = solarPanels.getPanelPower();
+                stmPanel = panel;
+                inverterSizing = new InverterSizing(inverterList, (int) stmPower);
+                stmInverter = inverterSizing.getInverter();
                 break;
         }
-        System.out.println("System Energy is: "+ stmEnergy);
+        System.out.println("System Energy is: "+ stmEnergy + "and System power is: "+stmPower);
         System.out.println("System will have " + stmNumberOfPanels + " of " + stmPowerOfPanels + " each");
     }
 }
