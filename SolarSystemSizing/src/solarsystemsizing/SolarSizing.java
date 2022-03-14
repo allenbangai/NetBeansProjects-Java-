@@ -2,7 +2,7 @@ package solarsystemsizing;
 
 import java.util.*;
 
-import solarsystemsizing.Model.Panel;
+import solarsystemsizing.Model.*;
 import solarsystemsizing.Sizing.SolarPanelPro;
 import solarsystemsizing.Sizing.SolarPanels;
 import solarsystemsizing.Util.Store;
