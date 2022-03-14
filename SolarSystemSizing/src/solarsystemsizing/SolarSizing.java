@@ -23,7 +23,7 @@ public class SolarSizing {
     public static void p0main(String[] args) {
         Total total;
         SolarPanels solarPanels;
-        InverterSizing inverterSizing = new InverterSizing();
+        InverterSizing inverterSizing;
         ArrayList<Panel> panelList = Store.getPanels();
         ArrayList<Inverter> inverterList = Store.getInverters();
         
@@ -31,7 +31,7 @@ public class SolarSizing {
         double stmEnergy = 0;
         double stmPower = 0;
         Panel stmPanel;
-        Inverter stmInverter;
+        Inverter stmInverter = new Inverter();
         int stmNumberOfPanels = 0;
         int stmPowerOfPanels = 0;
         System.out.println("Enter value for sizing type");
