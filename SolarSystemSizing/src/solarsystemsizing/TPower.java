@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 /**
  * Class to get the total energy of the system from a fix time and variable power of the System
+ * 
+ * @since 1.0
+ * 
  * @author Kamadje Allen
  */
 public class TPower extends Total{
@@ -74,16 +77,16 @@ public class TPower extends Total{
     
     @Override
     public double totalE() {
-        return (float) (super.getVal() * returnTEnergy());
+        return (double) (super.getVal() * returnTEnergy());
     }
 
     @Override
     public double totalP() {
         if(getPowers().isEmpty()){
-            return (double)gettPower();
+            return (double) (getVal() * gettPower());
         }else{
             toHelp();
-            return val1;
+            return (double) (getVal() * val1);
         }
     }
 }

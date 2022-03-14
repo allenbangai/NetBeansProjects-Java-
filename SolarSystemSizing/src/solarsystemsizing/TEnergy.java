@@ -8,8 +8,9 @@ import solarsystemsizing.Model.Energy;
 import java.util.ArrayList;
 
 /**
+ * @since 1.0
  *
- * @author DELL
+ * @author Kamadje Allen
  */
 public class TEnergy extends Total{
     private ArrayList<Energy> energys = new ArrayList<>();
@@ -65,16 +66,16 @@ public class TEnergy extends Total{
 
     @Override
     public double totalE() {
-        return (double) (super.getVal() * (double)returnTotalEnergy());
+        return (double) (getVal() * returnTotalEnergy());
     }
     
     @Override
     public double totalP(){
         if(getEnergys().isEmpty()){
-            return (double)(gettEnergy()/getHours());
+            return (double) (getVal() * (gettEnergy()/getHours()));
         }else{
             toHelp();
-            return (double)(val2);
+            return (double) (getVal() * val2);
         }
     }
 }
