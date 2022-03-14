@@ -80,7 +80,7 @@ public class InverterSizing {
     }
 
     private Inverter findInverter(){
-        Inverter actualInverter;
+        Inverter actualInverter = new Inverter();
         ArrayList<Inverter> inverList = new ArrayList<>();
         int inverterRatedWatt;
         int init;
@@ -125,20 +125,17 @@ public class InverterSizing {
                  * the system voltage dicided by the system or by the user.
                  * Hence an inverter with the highest voltage is selected for sizing the system
                  */
-                Inverter val = inverter;
+                Inverter obj = inverter;
                 if(i == 0){
                     actualInverter = inverter;
                 }
+                if(obj.getDCinput() >= actualInverter.getDCinput()){
+                    actualInverter = obj;
+                }
             }
-            
+            i++;
         }
         return actualInverter;
-    }
-
-    private Inverter searchInverterVoltage(int voltage, ArrayList<Inverter> inverters){
-        for (Inverter element : inverters) {
-            
-        }
     }
 
     /**

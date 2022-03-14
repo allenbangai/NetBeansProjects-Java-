@@ -11,6 +11,10 @@ public class Inverter {
     private double powerFactor;
     private int DCinput;
 
+    public Inverter(){
+        
+    }
+
     /**
      * 
      * @param ratedWatt
