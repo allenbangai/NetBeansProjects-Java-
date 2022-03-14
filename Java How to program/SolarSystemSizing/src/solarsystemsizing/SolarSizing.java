@@ -5,6 +5,7 @@ import java.util.*;
 import solarsystemsizing.Model.Panel;
 import solarsystemsizing.Sizing.SolarPanelPro;
 import solarsystemsizing.Sizing.SolarPanels;
+import solarsystemsizing.Util.Store;
 
 /**
  *
@@ -21,15 +22,7 @@ public class SolarSizing {
     public static void main(String[] args) {
         Total total;
         SolarPanels solarPanels;
-        ArrayList<Panel> panelList = new ArrayList<>();
-        panelList.add(new Panel(100, 12, 18));
-        panelList.add(new Panel(110, 12, 18));
-        panelList.add(new Panel(150, 12, 18));
-        panelList.add(new Panel(200, 24, 36));
-        panelList.add(new Panel(220, 24, 36));
-        panelList.add(new Panel(275, 24, 36));
-        panelList.add(new Panel(300, 24, 36));
-        panelList.add(new Panel(350, 24, 36));
+        ArrayList<Panel> panelList = Store.getPanels();
         
         //variables here
         double stmEnergy = 0;
