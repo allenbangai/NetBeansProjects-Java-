@@ -20,10 +20,10 @@ public class SolarSizing {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void p0main(String[] args) {
         Total total;
         SolarPanels solarPanels;
-        InverterSizing inverterSizing;
+        InverterSizing inverterSizing = new InverterSizing();
         ArrayList<Panel> panelList = Store.getPanels();
         ArrayList<Inverter> inverterList = Store.getInverters();
         
@@ -73,7 +73,9 @@ public class SolarSizing {
                 break;
         }
         System.out.println("System Energy is: "+ stmEnergy + "and System power is: "+stmPower);
-        System.out.println("System will have " + stmNumberOfPanels + " of " + stmPowerOfPanels + " each");
-
+        System.out.println("System will have " + stmNumberOfPanels + " panels of " 
+        + stmPowerOfPanels + "W each");
+        System.out.println("System Inverter with rated output of" + stmInverter.getRatedWatt()
+         + "W and DC rated input of " + stmInverter.getDCinput() + "V");
     }
 }

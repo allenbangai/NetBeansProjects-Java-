@@ -19,6 +19,13 @@ public class InverterSizing {
     private static final int inverterVoltage3 = 48;
 
     /**
+     * Empty constructor
+     */
+    public InverterSizing(){
+
+    }
+
+    /**
      * 
      * @param inverters
      * @param systemMaxPower
