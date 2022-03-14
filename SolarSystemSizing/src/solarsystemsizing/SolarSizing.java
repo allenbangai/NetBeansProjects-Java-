@@ -3,9 +3,7 @@ package solarsystemsizing;
 import java.util.*;
 
 import solarsystemsizing.Model.*;
-import solarsystemsizing.Sizing.InverterSizing;
-import solarsystemsizing.Sizing.SolarPanelPro;
-import solarsystemsizing.Sizing.SolarPanels;
+import solarsystemsizing.Sizing.*;
 import solarsystemsizing.Util.Store;
 
 /**
