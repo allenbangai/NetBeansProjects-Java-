@@ -19,13 +19,6 @@ public class InverterSizing {
     private static final int inverterVoltage3 = 48;
 
     /**
-     * Empty constructor
-     */
-    public InverterSizing(){
-
-    }
-
-    /**
      * 
      * @param inverters
      * @param systemMaxPower
@@ -34,20 +27,6 @@ public class InverterSizing {
         this.inverters = inverters;
         this.systemMaxPower = systemMaxPower;
     }    
-
-    /**
-     * @return ArrayList<Inverter> return the inverters
-     */
-    public ArrayList<Inverter> getInverters() {
-        return inverters;
-    }
-
-    /**
-     * @param inverters the inverters to set
-     */
-    public void setInverters(ArrayList<Inverter> inverters) {
-        this.inverters = inverters;
-    }
 
     /**
      * @return int return the systemMaxPower
@@ -95,9 +74,11 @@ public class InverterSizing {
         ArrayList<Inverter> inverList = new ArrayList<>();
         int inverterRatedWatt;
         int init;
-        int diff = 0, i=0;
+        int diff = 0;
+        int i;
 
         //part 1
+        i = 0;
         for(Inverter inverter: inverters){
             inverterRatedWatt = inverter.getRatedWatt();
             if(inverterRatedWatt > systemMaxPower){
@@ -105,11 +86,11 @@ public class InverterSizing {
                 if(i == 0){
                     diff = init;
                 }
+                i++;
                 if(diff >= init){
                     diff = init;
                 }
             }
-            i++;
         }
 
         //part 2
@@ -140,11 +121,11 @@ public class InverterSizing {
                 if(i == 0){
                     actualInverter = inverter;
                 }
+                i++;
                 if(obj.getDCinput() >= actualInverter.getDCinput()){
                     actualInverter = obj;
                 }
             }
-            i++;
         }
         return actualInverter;
     }
