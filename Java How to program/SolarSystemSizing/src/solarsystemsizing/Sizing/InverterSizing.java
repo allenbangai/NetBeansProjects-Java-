@@ -79,6 +79,10 @@ public class InverterSizing {
         return inverterVoltage;
     }
 
+    /**
+     * 
+     * @return
+     */
     private Inverter findInverter(){
         Inverter actualInverter = new Inverter();
         ArrayList<Inverter> inverList = new ArrayList<>();
@@ -143,7 +147,7 @@ public class InverterSizing {
      * @return
      */
     public Inverter getInverter(){
-        return new Inverter(1000, 24);
+        return findInverter();
     }
 
 }

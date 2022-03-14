@@ -21,10 +21,6 @@ public class SolarSizing {
     public static void main(String[] args) {
         Total total;
         SolarPanels solarPanels;
-        /**
-         * This variable comprises all the available solar panels objects
-         * {100, 120, 150, 200, 220, 250, 275, 300, 350};
-         */
         ArrayList<Panel> panelList = new ArrayList<>();
         panelList.add(new Panel(100, 12, 18));
         panelList.add(new Panel(110, 12, 18));
