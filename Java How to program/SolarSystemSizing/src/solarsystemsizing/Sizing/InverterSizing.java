@@ -80,7 +80,7 @@ public class InverterSizing {
     }
 
     private Inverter findInverter(){
-        Inverter inverter1;
+        Inverter actualInverter;
         ArrayList<Inverter> inverList = new ArrayList<>();
         int inverterRatedWatt;
         int init;
@@ -110,16 +110,41 @@ public class InverterSizing {
                     inverList.add(inverter);
                 }
             }
-            i++;
         }
 
         //part 3
+        i = 0;
         for(Inverter inverter: inverList){
-
+            if(getInverterVoltage() == inverter.getDCinput()){
+                actualInverter = inverter;
+                break; //we break here because we have already obtained our desired inverter
+                // rated DC input voltage
+            }else{
+                /**
+                 * This condition is excuted if and only if an inverter is not found with
+                 * the system voltage dicided by the system or by the user.
+                 * Hence an inverter with the highest voltage is selected for sizing the system
+                 */
+                Inverter val = inverter;
+                if(i == 0){
+                    actualInverter = inverter;
+                }
+            }
+            
         }
-        return inverter1;
+        return actualInverter;
     }
 
+    private Inverter searchInverterVoltage(int voltage, ArrayList<Inverter> inverters){
+        for (Inverter element : inverters) {
+            
+        }
+    }
+
+    /**
+     * 
+     * @return
+     */
     public Inverter getInverter(){
         return new Inverter(1000, 24);
     }
