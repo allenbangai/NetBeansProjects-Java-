@@ -14,6 +14,7 @@ import java.util.*;
 public class BatterySizing {
     ArrayList<Battery> batteries = new ArrayList<>();
     int stmMaxEnergy;
+    int stmMaxPower;
     int stmVoltage;
 
     public BatterySizing(){
