@@ -107,6 +107,9 @@ public class BatterySizing {
     private int findBatteryVoltage(){
         if(getStmMaxPower() > 0 && getStmMaxPower() <= 10000 && batteryVoltage == 0){
             batteryVoltage = 24;
+            if(batteryVoltage > getStmDCVoltage()){
+                batteryVoltage = 12;
+            }
         }else if (getStmMaxPower() > 10000 && batteryVoltage == 0) {
             batteryVoltage = 2;
         }
@@ -114,11 +117,18 @@ public class BatterySizing {
     }
 
     /**
-     * 
+     * Return total set of batteries energy in ampere hour AH
      * @return
      */
-    public int batteriesEnergy(){
+    public int getBatteriesEnergy(){
         return Math.round(getStmMaxEnergy()/getBatteryVoltage());
+    }
+
+    public int findBattery() {
+        
+
+
+        return 0;
     }
 
 }
