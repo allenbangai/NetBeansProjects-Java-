@@ -68,7 +68,7 @@ public class BatterySizing {
      * @return int return the batteryVoltage
      */
     public int getBatteryVoltage() {
-        return batteryVoltage;
+        return findBatteryVoltage();
     }
 
     /**
@@ -111,6 +111,14 @@ public class BatterySizing {
             batteryVoltage = 2;
         }
         return batteryVoltage;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public int batteriesEnergy(){
+        return Math.round(getStmMaxEnergy()/getBatteryVoltage());
     }
 
 }
