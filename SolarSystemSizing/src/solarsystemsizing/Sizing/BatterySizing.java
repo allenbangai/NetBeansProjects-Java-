@@ -105,7 +105,11 @@ public class BatterySizing {
      * @return
      */
     private int findBatteryVoltage(){
-        
+        if(getStmMaxPower() > 0 && getStmMaxPower() <= 10000 && batteryVoltage == 0){
+            batteryVoltage = 24;
+        }else if (getStmMaxPower() > 10000 && batteryVoltage == 0) {
+            batteryVoltage = 2;
+        }
         return batteryVoltage;
     }
 
