@@ -12,43 +12,70 @@ import java.util.*;
  * @author Kamadje Allen
  */
 public class BatterySizing {
-    ArrayList<Battery> batteries = new ArrayList<>();
-    int stmMaxEnergy;
-    int stmMaxPower;
-    int stmVoltage = 0;
+    private ArrayList<Battery> batteries = new ArrayList<>();
+    private int stmMaxEnergy;
+    private Inverter inverter;
+    private int batteryVoltage = 0;
 
     public BatterySizing(){
 
     }
 
-    public BatterySizing(ArrayList<Battery> batteries, int stmMaxEnergy, int stmMaxPower) {
+    public BatterySizing(ArrayList<Battery> batteries, int stmMaxEnergy, Inverter inverter) {
         this.batteries = batteries;
         this.stmMaxEnergy = stmMaxEnergy;
-        this.stmMaxPower = stmMaxPower;
+        this.inverter = inverter;
     }
 
+    /**
+     * @return ArrayList<Battery> return the batteries
+     */
     public ArrayList<Battery> getBatteries() {
-        return this.batteries;
+        return batteries;
     }
 
+    /**
+     * @return int return the stmMaxEnergy
+     */
     public int getStmMaxEnergy() {
-        return this.stmMaxEnergy;
+        return stmMaxEnergy;
     }
 
-    public int getStmMaxPower() {
-        return this.stmMaxPower;
+    /**
+     * @return Inverter return the inverter
+     */
+    private Inverter getInverter() {
+        return inverter;
     }
 
-    public void setStmMaxPower(int stmMaxPower) {
-        this.stmMaxPower = stmMaxPower;
+    /**
+     * 
+     * @return {@link #getStmMaxPower()} return {@link #getInverter()}.getRatedWatt()
+     */
+    public int getStmMaxPower(){
+        return getInverter().getRatedWatt();
     }
 
-    public int getStmVoltage() {
-        return this.stmVoltage;
+    /**
+     * 
+     * @return {@link #getStmDCVoltage()} return {@link #getInverter()}.getDCinput()
+     */
+    public int getStmDCVoltage(){
+        return getInverter().getDCinput();
     }
 
-    public void setStmVoltage(int stmVoltage) {
-        this.stmVoltage = stmVoltage;
+    /**
+     * @return int return the batteryVoltage
+     */
+    public int getBatteryVoltage() {
+        return batteryVoltage;
+    }
+
+    /**
+     * @param batteryVoltage the batteryVoltage to set
+     */
+    public void setBatteryVoltage(int batteryVoltage) {
+        this.batteryVoltage = batteryVoltage;
     }
 
     @Override
@@ -59,7 +86,7 @@ public class BatterySizing {
             return false;
         }
         BatterySizing batterySizing = (BatterySizing) o;
-        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && stmMaxPower == batterySizing.stmMaxPower;
+        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && Objects.equals(inverter, batterySizing.inverter);
     }
 
     @Override
@@ -67,8 +94,19 @@ public class BatterySizing {
         return "{" +
             " batteries='" + getBatteries() + "'" +
             ", stmMaxEnergy='" + getStmMaxEnergy() + "'" +
-            ", stmMaxPower='" + getStmMaxPower() + "'" +
-            ", stmVoltage='" + getStmVoltage() + "'" +
+            ", inverter DC Voltage='" + getInverter().getDCinput() + "'" +
+            ", inverter RatedPower='" + getInverter().getRatedWatt() + "'" +
+            ", batteryVoltage='" + getBatteryVoltage() + "'" +
             "}";
     }
+
+    /**
+     * 
+     * @return
+     */
+    private int findBatteryVoltage(){
+        
+        return batteryVoltage;
+    }
+
 }
