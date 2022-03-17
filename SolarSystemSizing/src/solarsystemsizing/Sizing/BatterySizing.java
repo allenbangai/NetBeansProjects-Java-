@@ -15,16 +15,16 @@ public class BatterySizing {
     ArrayList<Battery> batteries = new ArrayList<>();
     int stmMaxEnergy;
     int stmMaxPower;
-    int stmVoltage;
+    int stmVoltage = 0;
 
     public BatterySizing(){
 
     }
 
-    public BatterySizing(ArrayList<Battery> batteries, int stmMaxPower, int stmVoltage) {
+    public BatterySizing(ArrayList<Battery> batteries, int stmMaxEnergy, int stmMaxPower) {
         this.batteries = batteries;
-        this.stmMaxEnergy = stmMaxPower;
-        this.stmVoltage = stmVoltage;
+        this.stmMaxEnergy = stmMaxEnergy;
+        this.stmMaxPower = stmMaxPower;
     }
 
     public ArrayList<Battery> getBatteries() {
@@ -33,6 +33,14 @@ public class BatterySizing {
 
     public int getStmMaxEnergy() {
         return this.stmMaxEnergy;
+    }
+
+    public int getStmMaxPower() {
+        return this.stmMaxPower;
+    }
+
+    public void setStmMaxPower(int stmMaxPower) {
+        this.stmMaxPower = stmMaxPower;
     }
 
     public int getStmVoltage() {
@@ -51,14 +59,15 @@ public class BatterySizing {
             return false;
         }
         BatterySizing batterySizing = (BatterySizing) o;
-        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && stmVoltage == batterySizing.stmVoltage;
+        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && stmMaxPower == batterySizing.stmMaxPower;
     }
 
     @Override
     public String toString() {
         return "{" +
             " batteries='" + getBatteries() + "'" +
-            ", stmMaxPower='" + getStmMaxEnergy() + "'" +
+            ", stmMaxEnergy='" + getStmMaxEnergy() + "'" +
+            ", stmMaxPower='" + getStmMaxPower() + "'" +
             ", stmVoltage='" + getStmVoltage() + "'" +
             "}";
     }

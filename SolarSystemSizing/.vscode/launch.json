@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SolarSizing",
+            "request": "launch",
+            "mainClass": "solarsystemsizing.SolarSizing",
+            "projectName": "SolarSystemSizing_dfb5e1ec"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
