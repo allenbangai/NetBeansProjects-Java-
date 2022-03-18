@@ -120,7 +120,7 @@ public class BatterySizing {
      * Return total set of batteries energy in ampere hour AH
      * @return
      */
-    public int getBatteriesEnergy(){
+    public int getBatteriesEnergy_AH(){
         return Math.round(getStmMaxEnergy()/getBatteryVoltage());
     }
 
