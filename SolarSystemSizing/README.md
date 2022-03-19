@@ -7,14 +7,27 @@ To size a solar system for supplying a set of loads, we need to know the total p
 - Fourth: Here you can enter the power of each load and their repective number but there is a global number of hours autonomy for all the loads which by default it is 8 hours but can be modified by the user. 
 At the end of the sizing of your system using our algorithm, the user will know the panel, inverter, battery, charge controller that he/she  have to use.
 Our algorithm consist of the following
+
 ## Sizing the total power of the system
+- Finding the total maximum power of the system
 
 ## Sizing the energy consumption of the house with a specific hour of autonomy
+- Finding the total energy needed per day and the number off hours of autonomy per day of the system
 
 ## Sizing of the Solar panel
+Here you need to find the
+- Power of the panel needed
+- Voltage of the panel needed
+- Nominal voltage of the panel needed
+- Numbers of Panels needed
 
 ## Sizing of the Inverter
+In sizing the inverter needed for the systemm you need to find the following
+- Inverter output rated Watt (in W)
+- Inverter input rated DC Voltage (usually called the system voltage)
+- Find the total number of inverters only in case of very large systems (in this casem the connection of inverters is supposed to be considered carefully)
 
 ## Sizing of the Solar Battery
+
 
 ## Sizing of the Solar Charge Controller
