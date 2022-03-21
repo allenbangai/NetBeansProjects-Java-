@@ -16,6 +16,7 @@ public class BatterySizing {
     private int stmMaxEnergy;
     private Inverter inverter;
     private int batteryVoltage = 0;
+    private int batteryAmpereHour = 0;
 
     public BatterySizing(){
 
@@ -31,7 +32,14 @@ public class BatterySizing {
      * @return ArrayList<Battery> return the batteries
      */
     public ArrayList<Battery> getBatteries() {
-        return batteries;
+        ArrayList<Battery> batteryList1 = new ArrayList<>();
+        int batteryVoltage = getBatteryVoltage();
+        for(Battery battery: batteries){
+            if(batteryVoltage <= battery.getVoltage()){
+                batteryList1.add(battery);
+            }
+        }
+        return batteryList1;
     }
 
     /**
@@ -76,6 +84,15 @@ public class BatterySizing {
      */
     public void setBatteryVoltage(int batteryVoltage) {
         this.batteryVoltage = batteryVoltage;
+    }
+
+    /**
+     * 
+     * @param ampereHour set the battery ampereHour needed for sizing the batteries
+     * chosen from the list of available batteries available for sizing o batteries.
+     */
+    public void setBatteryAmpereHour(int ampereHour) {
+        this.batteryAmpereHour = ampereHour;
     }
 
     @Override
@@ -124,8 +141,11 @@ public class BatterySizing {
         return Math.round(getStmMaxEnergy()/getBatteryVoltage());
     }
 
-    public int findBattery() {
-        
+    public int findBatteryNum() {
+        int batteryNum = 0;
+        if(batteryAmpereHour != 0){
+            batteryNum = getBatteriesEnergy_AH()/batteryAmpereHour;
+        }
         return 0;
     }
 
