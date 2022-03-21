@@ -105,13 +105,17 @@ public class BatterySizing {
 
     /**
      * 
-     * @param ampereHour set the battery ampereHour needed for sizing the batteries
-     * chosen from the list of available batteries available for sizing o batteries.
+     * @param ampereHour Set the battery ampereHour needed for sizing the batteries chosen 
+     * from the list of available batteries available for sizing o batteries.
      */
     public void setBatteryAmpereHour(int ampereHour) {
         this.batteryAmpereHour = ampereHour;
     }
 
+    /**
+     * This methd will you determine if two instance of BatterySizing are equal and return
+     * true if they are equal else return false
+     */
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -124,6 +128,8 @@ public class BatterySizing {
     }
 
     /**
+     * The override {@link #toString()} prints you know everything you need to know about
+     * the class BattterySizing.java
      * @return
      */
     @Override
@@ -138,7 +144,7 @@ public class BatterySizing {
     }
 
     /**
-     * 
+     * Returns the required battery voltage that will be used for sizing the system
      * @return
      */
     private int findBatteryVoltage(){
@@ -151,21 +157,33 @@ public class BatterySizing {
     }
 
     /**
-     * Return total set of batteries energy in ampere hour AH
+     * Return total set of batteries energy in amperehour (Ah)
      * @return
      */
     public int getBatteriesEnergy_AH(){
         return Math.round(getStmMaxEnergy()/getBatteryVoltage());
     }
 
+    /**
+     * Return the required number of batteries needed for sizing the system
+     * @return
+     */
     public int findBatteryNum() {
         return getBatteriesEnergy_AH()/getBatteryAmpereHour();
     }
 
+    /**
+     * Return the number of series connection for batteries array connection
+     * @return
+     */
     public int getSeriesConnection(){
         return getStmDCVoltage()/getBatteryVoltage();
     }
 
+    /**
+     * Return the number of parallel connections for batteries array connection
+     * @return
+     */
     public int getParallelConnection(){
         return findBatteryNum()/getSeriesConnection();
     }
