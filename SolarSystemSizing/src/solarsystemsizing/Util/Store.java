@@ -24,8 +24,15 @@ public class Store {
 
     public static ArrayList<Inverter> getInverters(){
         ArrayList<Inverter> inverters = new ArrayList<>();
+        inverters.add(new Inverter(300, 12));
+        inverters.add(new Inverter(200, 12));
+        inverters.add(new Inverter(400, 12));
+        inverters.add(new Inverter(500, 12));
+        inverters.add(new Inverter(600, 12));
+        inverters.add(new Inverter(1000, 24));
         inverters.add(new Inverter(1000, 12));
         inverters.add(new Inverter(1000, 24));
+        inverters.add(new Inverter(1200, 12));
         inverters.add(new Inverter(1500, 12));
         inverters.add(new Inverter(1500, 24));
         inverters.add(new Inverter(2000, 12));
@@ -36,10 +43,13 @@ public class Store {
         inverters.add(new Inverter(3000, 24));
         inverters.add(new Inverter(3500, 12));
         inverters.add(new Inverter(3500, 24));
+        inverters.add(new Inverter(4000, 12));
         inverters.add(new Inverter(4000, 24));
         inverters.add(new Inverter(4000, 48));
+        inverters.add(new Inverter(4500, 12));
         inverters.add(new Inverter(4500, 24));
         inverters.add(new Inverter(4500, 48));
+        inverters.add(new Inverter(5000, 12));
         inverters.add(new Inverter(5000, 24));
         inverters.add(new Inverter(5000, 48));
         inverters.add(new Inverter(5500, 48));

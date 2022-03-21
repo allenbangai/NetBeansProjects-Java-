@@ -126,8 +126,6 @@ public class BatterySizing {
 
     public int findBattery() {
         
-
-
         return 0;
     }
 
