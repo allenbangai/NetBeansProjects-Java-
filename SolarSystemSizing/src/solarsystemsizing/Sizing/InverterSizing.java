@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import solarsystemsizing.Model.Inverter;
 
 /**
- * @since
- * version 1.0
- * @author
- * Kamadje Allen
+ * 
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
+ * @author Kamadje Allen
  */
 public class InverterSizing {
     private ArrayList<Inverter> inverters = new ArrayList<>();

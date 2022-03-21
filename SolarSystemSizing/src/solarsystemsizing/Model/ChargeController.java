@@ -5,6 +5,10 @@ package solarsystemsizing.Model;
  * This characteristics describes the behavior of a charge controller an the way they 
  * behave. This characteristics are the input voltage, min an max current with the output
  * rate voltage.
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
  * @author Kamadje Allen
  */
 public class ChargeController{

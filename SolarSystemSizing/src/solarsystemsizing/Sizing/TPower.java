@@ -11,7 +11,9 @@ import java.util.ArrayList;
 /**
  * Class to get the total energy of the system from a fix time and variable power of the System
  * 
- * @since 1.0
+ * @since year 2022
+ * 
+ * @version 1.0
  * 
  * @author Kamadje Allen
  */

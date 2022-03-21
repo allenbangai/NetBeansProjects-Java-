@@ -7,6 +7,10 @@ package solarsystemsizing.Model;
  * This characteristics are used to describe an object of a battery so we could this class to 
  * describe different types of objects of batteries. This characteristics are {@link #voltage} 
  * and {@link #ampereHour}.
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
  * @author Kamadje Allen
  */
 public class Battery {

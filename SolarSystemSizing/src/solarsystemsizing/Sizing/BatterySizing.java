@@ -4,8 +4,8 @@ import solarsystemsizing.Model.*;
 import java.util.*;
 
 /**
- * 
- * @since 1.0
+ * This class is used to sizing everything concerning batteries
+ * @since year 2022
  * 
  * @version 1.0
  * 

@@ -2,6 +2,10 @@ package solarsystemsizing.Model;
 
 /**
  * Energy stands for Total Energy
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
  * @author Kamadje Allen
  */
 public class Energy extends Power{

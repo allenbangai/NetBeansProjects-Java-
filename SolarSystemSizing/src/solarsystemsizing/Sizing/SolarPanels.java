@@ -11,7 +11,11 @@ import solarsystemsizing.Util.Helper;
 
 /**
  * Class solar panel
- * @author kamadje Allen
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
+ * @author Kamadje Allen
  */
 public class SolarPanels {
     private Helper helper = new Helper();

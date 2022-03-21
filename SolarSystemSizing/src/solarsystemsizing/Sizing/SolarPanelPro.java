@@ -10,6 +10,10 @@ import solarsystemsizing.Util.Helper;
  * Class SolarPanelPro which extends class SolarPanels...
  * Has two methods, one to get the number of solar panels needed
  * and another to return the power of the desired solar panel...
+ * @since year 2022
+ * 
+ * @version 1.0
+ * 
  * @author Kamadje Allen
  */
 public class SolarPanelPro extends SolarPanels{
