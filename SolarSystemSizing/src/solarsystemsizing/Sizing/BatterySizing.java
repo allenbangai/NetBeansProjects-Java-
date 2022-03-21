@@ -145,8 +145,9 @@ public class BatterySizing {
         int batteryNum = 0;
         if(batteryAmpereHour != 0){
             batteryNum = getBatteriesEnergy_AH()/batteryAmpereHour;
+
         }
-        return 0;
+        return batteryNum;
     }
 
 }
