@@ -92,6 +92,17 @@ public class BatterySizing {
         this.batteryVoltage = batteryVoltage;
     }
 
+    public int getBatteryAmpereHour(){
+        if(batteryAmpereHour == 0){
+            for(Battery battery: getBatteries()){
+                if(batteryAmpereHour <= battery.getAmpereHour()){
+                    batteryAmpereHour = battery.getAmpereHour();
+                }
+            }
+        }
+        return batteryAmpereHour;
+    }
+
     /**
      * 
      * @param ampereHour set the battery ampereHour needed for sizing the batteries
