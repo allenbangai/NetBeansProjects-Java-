@@ -162,6 +162,8 @@ public class BatterySizing {
         return getBatteriesEnergy_AH()/getBatteryAmpereHour();
     }
 
-    
+    public int getSeriesConnection(){
+        return getStmDCVoltage()/getBatteryVoltage();
+    }
 
 }
