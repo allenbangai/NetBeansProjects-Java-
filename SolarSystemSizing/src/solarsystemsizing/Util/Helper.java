@@ -12,7 +12,7 @@ public class Helper {
      * @return 
      * It return either a true or false
      */
-    protected boolean isEven(int val){
+    public boolean isEven(int val){
         if(val%2 == 0){
             return true;
         }else{

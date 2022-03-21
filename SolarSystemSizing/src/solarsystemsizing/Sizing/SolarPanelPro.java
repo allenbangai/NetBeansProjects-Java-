@@ -4,6 +4,8 @@
  */
 package solarsystemsizing.Sizing;
 
+import solarsystemsizing.Util.Helper;
+
 /**
  * Class SolarPanelPro which extends class SolarPanels...
  * Has two methods, one to get the number of solar panels needed
@@ -11,6 +13,7 @@ package solarsystemsizing.Sizing;
  * @author Kamadje Allen
  */
 public class SolarPanelPro extends SolarPanels{
+    private Helper helper = new Helper();
     private int panelPower;
 
     /**
@@ -40,7 +43,7 @@ public class SolarPanelPro extends SolarPanels{
     public int getPanelNumber() {
         float power = (float)panelPower;
         int panelNumber = (int) Math.round(super.getEnergy()/(super.getIrradiance()*power));
-        if(!super.isEven(panelNumber)){
+        if(!helper.isEven(panelNumber)){
             panelNumber++;
         }
         return panelNumber; 

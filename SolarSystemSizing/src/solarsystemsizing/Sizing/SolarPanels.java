@@ -7,12 +7,14 @@ package solarsystemsizing.Sizing;
 import java.util.ArrayList;
 
 import solarsystemsizing.Model.Panel;
+import solarsystemsizing.Util.Helper;
 
 /**
  * Class solar panel
  * @author kamadje Allen
  */
 public class SolarPanels {
+    private Helper helper = new Helper();
     private double energy;
     private double irradiance;
     /**
@@ -124,7 +126,7 @@ public class SolarPanels {
         for(Panel panel : panels){
             val = (float)panel.getPower();
             panelNumber = (int) Math.round(energy/(val*irradiance));
-            if (!isEven(panelNumber)) {
+            if (!helper.isEven(panelNumber)) {
                 panelNumber++;
             }
             panelList.add(panelNumber);         
