@@ -166,4 +166,8 @@ public class BatterySizing {
         return getStmDCVoltage()/getBatteryVoltage();
     }
 
+    public int getParallelConnection(){
+        return findBatteryNum()/getSeriesConnection();
+    }
+
 }

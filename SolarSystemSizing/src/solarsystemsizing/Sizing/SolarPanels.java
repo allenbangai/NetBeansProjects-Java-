@@ -142,7 +142,7 @@ public class SolarPanels {
     } 
     
     /**
-     * Function is to return true if input value is even.
+     * Function is to return true if input value is even and false if input is odd.
      * @param 
      * val is of type int
      * @return 
