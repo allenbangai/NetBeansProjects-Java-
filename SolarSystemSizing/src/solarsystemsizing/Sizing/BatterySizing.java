@@ -22,6 +22,12 @@ public class BatterySizing {
 
     }
 
+    /**
+     * 
+     * @param batteries
+     * @param stmMaxEnergy
+     * @param inverter
+     */
     public BatterySizing(ArrayList<Battery> batteries, int stmMaxEnergy, Inverter inverter) {
         this.batteries = batteries;
         this.stmMaxEnergy = stmMaxEnergy;
@@ -35,7 +41,7 @@ public class BatterySizing {
         ArrayList<Battery> batteryList1 = new ArrayList<>();
         int batteryVoltage = getBatteryVoltage();
         for(Battery battery: batteries){
-            if(batteryVoltage <= battery.getVoltage()){
+            if(batteryVoltage == battery.getVoltage()){
                 batteryList1.add(battery);
             }
         }
@@ -106,6 +112,9 @@ public class BatterySizing {
         return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && Objects.equals(inverter, batterySizing.inverter);
     }
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
         return "{" +
@@ -123,10 +132,7 @@ public class BatterySizing {
      */
     private int findBatteryVoltage(){
         if(getStmMaxPower() > 0 && getStmMaxPower() <= 10000 && batteryVoltage == 0){
-            batteryVoltage = 24;
-            if(batteryVoltage > getStmDCVoltage()){
-                batteryVoltage = 12;
-            }
+            batteryVoltage = 12;
         }else if (getStmMaxPower() > 10000 && batteryVoltage == 0) {
             batteryVoltage = 2;
         }
@@ -145,7 +151,6 @@ public class BatterySizing {
         int batteryNum = 0;
         if(batteryAmpereHour != 0){
             batteryNum = getBatteriesEnergy_AH()/batteryAmpereHour;
-
         }
         return batteryNum;
     }
