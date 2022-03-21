@@ -43,7 +43,7 @@ public class SolarPanelPro extends SolarPanels{
     public int getPanelNumber() {
         float power = (float)panelPower;
         int panelNumber = (int) Math.round(super.getEnergy()/(super.getIrradiance()*power));
-        if(!helper.isEven(panelNumber)){
+        if(!helper.isvalid(panelNumber)){
             panelNumber++;
         }
         return panelNumber; 

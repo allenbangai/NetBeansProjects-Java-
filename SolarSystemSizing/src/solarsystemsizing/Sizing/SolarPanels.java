@@ -126,7 +126,7 @@ public class SolarPanels {
         for(Panel panel : panels){
             val = (float)panel.getPower();
             panelNumber = (int) Math.round(energy/(val*irradiance));
-            if (!helper.isEven(panelNumber)) {
+            if (!helper.isvalid(panelNumber)) {
                 panelNumber++;
             }
             panelList.add(panelNumber);         
@@ -140,21 +140,6 @@ public class SolarPanels {
                 panelNumber = num;
                 position = i;
             }
-        }
-    } 
-    
-    /**
-     * Function is to return true if input value is even and false if input is odd.
-     * @param 
-     * val is of type int
-     * @return 
-     * It return either a true or false
-     */
-    protected boolean isEven(int val){
-        if(val%2 == 0){
-            return true;
-        }else{
-            return false;
         }
     }
     
