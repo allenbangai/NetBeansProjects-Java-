@@ -161,4 +161,13 @@ public class BatterySizing {
     public int findBatteryNum() {
         return getBatteriesEnergy_AH()/getBatteryAmpereHour();
     }
+
+    public int getSeriesConnection(){
+        return getStmDCVoltage()/getBatteryVoltage();
+    }
+
+    public int getParallelConnection(){
+        return findBatteryNum()/getSeriesConnection();
+    }
+
 }
