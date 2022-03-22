@@ -6,7 +6,7 @@ To size a solar system for supplying a set of loads, we need to know the total p
 - Third: Here you can enter the powers of each type load, their numbers and hours of autonomy each. The default number of hours of autonomy is 8 hours. If you have a set of identical loads with the same power rating but you want to have different hours of autonomy, you should enter them as different kind of loads. The same goes for if the loads have different power rating.
 - Fourth: Here you can enter the power of each load and their repective number but there is a global number of hours autonomy for all the loads which by default it is 8 hours but can be modified by the user. 
 At the end of the sizing of your system using our algorithm, the user will know the panel, inverter, battery, charge controller that he/she have to use with enough detail on each of them and how they are to be connected including the array connections of both the panels and batteries.
-Our algorithm consist of the following.
+**Our algorithm consist of the following.**
 
 ## Sizing the total power of the system
 - Finding the total maximum power of the system.
@@ -41,4 +41,4 @@ In the sizing of the charge controller, the following should be known;
 - Battery outlet of the charge controller should have the same rating as that of the inverter DC input.
 - Max input voltage of the solar charge controller in the panel outlet.
 - Range of acceptable DC input current (max and min input current from panels) in the panel outlet.
-- **_Note:_** We need to note that then last two point will always depend on the array connection of pannels.
+- `**_Note:_** We need to note that then last two point will always depend on the array connection of pannels.`
