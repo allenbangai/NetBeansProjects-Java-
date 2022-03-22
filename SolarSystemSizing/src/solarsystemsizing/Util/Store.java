@@ -16,6 +16,10 @@ public class Store {
 
     }
 
+    /**
+     * This method returns a storage of the available list of panels object in store in the app
+     * @return
+     */
     public static ArrayList<Panel> getPanels(){
         ArrayList<Panel> panels = new ArrayList<>();
         panels.add(new Panel(100, 12, 18));
@@ -29,6 +33,10 @@ public class Store {
         return panels;
     }
 
+    /**
+     * This method returns a storage of the available list of inverters object in store in the app
+     * @return
+     */
     public static ArrayList<Inverter> getInverters(){
         ArrayList<Inverter> inverters = new ArrayList<>();
         inverters.add(new Inverter(300, 12));
@@ -66,6 +74,10 @@ public class Store {
         return inverters;
     }
 
+    /**
+     * This method returns a storage of the available list of batteries object in store in the app
+     * @return
+     */
     public ArrayList<Battery> getBatteries() {
         ArrayList<Battery> batteries = new ArrayList<>();
         batteries.add(new Battery(12, 110));
@@ -112,7 +124,6 @@ public class Store {
         batteries.add(new Battery(2, 2000));
         batteries.add(new Battery(2, 2500));
         batteries.add(new Battery(2, 3000));
-        
         return batteries;
     }
 }
