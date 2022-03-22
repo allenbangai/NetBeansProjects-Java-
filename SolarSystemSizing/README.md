@@ -40,4 +40,4 @@ In the sizing of the charge controller, the following should be known;
 - Battery outlet of the charge controller should have the same rating as that of the inverter DC input.
 - Max input voltage of the solar charge controller in the panel outlet.
 - Range of acceptable DC input current (max and min input current from panels) in the panel outlet.
-- *Note:* We need to note that then last two point will always depend on the array connection of pannels.
+- **_Note:_** We need to note that then last two point will always depend on the array connection of pannels.
