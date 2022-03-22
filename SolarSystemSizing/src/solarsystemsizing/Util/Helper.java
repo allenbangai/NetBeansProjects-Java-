@@ -35,7 +35,7 @@ public class Helper {
      * @return Return value can either be true or false.
      */
     public boolean isvalid(int value) {
-        if(value%3 == 0 || value%5 == 0){
+        if(value%3 == 0 || value%5 == 0 || value%2 == 0){
             return true;
         }else{
             return false;

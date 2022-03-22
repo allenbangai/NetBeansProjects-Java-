@@ -1,6 +1,8 @@
 package solarsystemsizing.Sizing;
 
 import solarsystemsizing.Model.*;
+import solarsystemsizing.Util.Helper;
+
 import java.util.*;
 
 /**
@@ -13,6 +15,7 @@ import java.util.*;
  */
 public class BatterySizing {
     private ArrayList<Battery> batteries = new ArrayList<>();
+    private Helper helper = new Helper();
     private int stmMaxEnergy;
     private Inverter inverter;
     private int batteryVoltage = 0;
@@ -181,7 +184,11 @@ public class BatterySizing {
      * @return
      */
     public int findBatteryNum() {
-        return getBatteriesEnergy_AH()/getBatteryAmpereHour();
+        int batteryNum = getBatteriesEnergy_AH()/getBatteryAmpereHour();
+        if(!helper.isEven(batteryNum)){
+            batteryNum++;
+        }
+        return batteryNum;
     }
 
     /**
