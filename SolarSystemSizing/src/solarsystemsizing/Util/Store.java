@@ -65,4 +65,54 @@ public class Store {
         inverters.add(new Inverter(15000, 48));
         return inverters;
     }
+
+    public ArrayList<Battery> getBatteries() {
+        ArrayList<Battery> batteries = new ArrayList<>();
+        batteries.add(new Battery(12, 110));
+        batteries.add(new Battery(12, 100));
+        batteries.add(new Battery(12, 140));
+        batteries.add(new Battery(12, 145));
+        batteries.add(new Battery(12, 200));
+        batteries.add(new Battery(12, 210));
+        batteries.add(new Battery(12, 225));
+        batteries.add(new Battery(12, 240));
+        batteries.add(new Battery(12, 250));
+        batteries.add(new Battery(12, 300));
+        batteries.add(new Battery(12, 175));
+        batteries.add(new Battery(12, 150));
+        batteries.add(new Battery(12, 180));
+        batteries.add(new Battery(12, 120));
+        batteries.add(new Battery(12, 130));
+        batteries.add(new Battery(12, 160));
+        batteries.add(new Battery(12, 70));
+        batteries.add(new Battery(12, 75));
+        batteries.add(new Battery(12, 80));
+        batteries.add(new Battery(12, 85));
+        batteries.add(new Battery(12, 90));
+        //batteries.add(new Battery(12, 225));
+        batteries.add(new Battery(24, 40));
+        batteries.add(new Battery(24, 55));
+        batteries.add(new Battery(24, 50));
+        batteries.add(new Battery(24, 200));
+        batteries.add(new Battery(24, 150));
+        batteries.add(new Battery(24, 60));
+        batteries.add(new Battery(24, 70));
+        batteries.add(new Battery(24, 75));
+        //batteries.add(new Battery(24, 70));
+        batteries.add(new Battery(2, 200));
+        batteries.add(new Battery(2, 300));
+        batteries.add(new Battery(2, 400));
+        batteries.add(new Battery(2, 500));
+        batteries.add(new Battery(2, 600));
+        batteries.add(new Battery(2, 700));
+        batteries.add(new Battery(2, 800));
+        batteries.add(new Battery(2, 1000));
+        batteries.add(new Battery(2, 1200));
+        batteries.add(new Battery(2, 1500));
+        batteries.add(new Battery(2, 2000));
+        batteries.add(new Battery(2, 2500));
+        batteries.add(new Battery(2, 3000));
+        
+        return batteries;
+    }
 }

@@ -1,4 +1,4 @@
-# SOLAR SYSTEM SIZING
+# SOLAR SYSTEM SIZING 🌅
 This alogirithm is for the sizing of a solar system with the aim coming up with the outcomes which can then helps us design and install a solar system for powering our loads depending on our needs.
 To size a solar system for supplying a set of loads, we need to know the total power of each load and their independent hour of autonomy not forgeting the number of each type of load. This data helps us size a suitable solar system using our algorithm. But what more to our algorithm is that there are four different ways in which data can be inputed into our algorithm for sizing your system. 
 
@@ -44,4 +44,4 @@ In the sizing of the charge controller, the following should be known;
 - Battery outlet of the charge controller should have the same rating as that of the inverter DC input.
 - Max input voltage of the solar charge controller in the panel outlet.
 - Range of acceptable DC input current (max and min input current from panels) in the panel outlet.
-- `**_Note:_** We need to note that then last two point will always depend on the array connection of pannels.`
+- **_Note:_** `We need to note that then last two point will always depend on the array connection of pannels.`
