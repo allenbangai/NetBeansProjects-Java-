@@ -79,6 +79,8 @@ public class SolarSizing {
                 inverterSizing = new InverterSizing(inverterList, (int) stmMaxPower);
                 inverterSizing.setInverterVoltage(24);
                 stmInverter = inverterSizing.getInverter();
+                batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
+                batterySizing.setBatteryVoltage(24);
                 break;
         }
         System.out.println("System Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);

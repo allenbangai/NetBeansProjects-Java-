@@ -57,9 +57,9 @@ public class InverterSizing {
      * @return
      */
     private int getInverterVoltage(){
-        if(systemMaxPower > 0 && systemMaxPower <= 3000 && inverterVoltage == 0){
+        if(systemMaxPower > 0 && systemMaxPower <= 2000 && inverterVoltage == 0){
             inverterVoltage = inverterVoltage1;
-        }else if (systemMaxPower > 3000 && systemMaxPower <= 10000 && inverterVoltage == 0){
+        }else if (systemMaxPower > 2000 && systemMaxPower <= 10000 && inverterVoltage == 0){
             inverterVoltage = inverterVoltage2;
         }else if(systemMaxPower > 10000 && inverterVoltage == 0){
             inverterVoltage = inverterVoltage3;

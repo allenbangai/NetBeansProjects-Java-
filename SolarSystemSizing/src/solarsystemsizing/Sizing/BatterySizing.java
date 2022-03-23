@@ -152,10 +152,10 @@ public class BatterySizing {
      */
     @Override
     public String toString() {
-        return "The Baterries Sizing is as{" +
+        return "The Baterries Sizing is as folows {" +
             " battery voltage= '" + getBatteryVoltage() +
-            "', battery ampereHour= '" + getBatteryAmpereHour() + 
-            "', Total number of batteries= '" + getBatteryNum() +
+            "V', battery ampereHour= '" + getBatteryAmpereHour() + 
+            "Ah', Total number of batteries= '" + getBatteryNum() +
             "', Number of batteries in series= '" + getSeriesConnection() +
             "', Number of battteries in parrallel= '" + getParallelConnection() +
             "'}";
