@@ -7,7 +7,7 @@ import java.util.*;
 
 /**
  * This class is used to sizing everything concerning batteries
- * @since year 2022
+ * @since 1.0
  * 
  * @version 1.0
  * 

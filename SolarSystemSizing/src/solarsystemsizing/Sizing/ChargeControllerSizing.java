@@ -2,7 +2,7 @@ package solarsystemsizing.Sizing;
 
 /**
  * 
- * @since year 2022
+ * @since 1.0
  * 
  * @version 1.0
  * 
