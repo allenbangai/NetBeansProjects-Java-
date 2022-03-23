@@ -174,9 +174,13 @@ public class SolarPanels {
         return pList;
     }
 
-    
+    /**
+     * @return
+     * Returns an object of the panel default connection which contains number of series
+     * and parallel conections.
+     */
     public PanelConnection getPanelConnection() {
-        PanelConnection panelConnection;
+        PanelConnection panelConnection = new PanelConnection(1, 1);
         ArrayList<PanelConnection> pList = new ArrayList<>();
         int i = 0;
         for(PanelConnection connection: pList){
@@ -191,7 +195,7 @@ public class SolarPanels {
             }
             i++;
         }
-        return new PanelConnection(1, 1);
+        return panelConnection;
     }
 
     /**
