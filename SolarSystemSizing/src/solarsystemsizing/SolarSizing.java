@@ -35,7 +35,7 @@ public class SolarSizing {
         System.out.println("Enter value for sizing type");
         ssScanner = new Scanner(System.in);
         sizingType = ssScanner.nextInt();
-        
+
         switch(sizingType){
             case 1:
                 System.out.println("Here, you will have the sizing "
@@ -63,7 +63,7 @@ public class SolarSizing {
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
                 Panel panel = new Panel(300, 24, 36);
-                panelSizing = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel.getPower());
+                panelSizing = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel);
                 inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
                 inverterSizing.setInverterVoltage(24);
                 batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, inverterSizing.getInverter());

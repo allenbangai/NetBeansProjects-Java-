@@ -207,6 +207,7 @@ public class PanelSizing {
         "V',\n Number of Panels= '" + getPanelNumber() +
         "',\n Number of panels in series= '" + getPanelConnection().getSeriesConnection() +
         "',\n Number of panels in parrallel= '" + getPanelConnection().getParallelConnection() +
+        "',\n Number of possible array connections= '" + getPanelConnectionList().size() +
         "'}";
     }
 

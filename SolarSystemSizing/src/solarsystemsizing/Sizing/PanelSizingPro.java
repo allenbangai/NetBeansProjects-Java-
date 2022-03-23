@@ -56,7 +56,7 @@ public class PanelSizingPro extends PanelSizing{
 
     /**
      * @return 
-     * This method return the desired power of the available solar panels need to size you systems
+     * This method return the panel you chosed among the available solar panels need to size you systems
      */
     @Override
     public int getPanelPower() {
