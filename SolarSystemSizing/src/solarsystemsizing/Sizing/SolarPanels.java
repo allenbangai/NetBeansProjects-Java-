@@ -174,6 +174,26 @@ public class SolarPanels {
         return pList;
     }
 
+    
+    public PanelConnection getPanelConnection() {
+        PanelConnection panelConnection;
+        ArrayList<PanelConnection> pList = new ArrayList<>();
+        int i = 0;
+        for(PanelConnection connection: pList){
+            int val1=0, val2=0;
+            val2 = Math.abs(connection.getParallelConnection() - connection.getSeriesConnection());
+            if(i==0){
+                val1 = val2;
+            }
+            if(val1 >= val2){
+                val1 = val2;
+                panelConnection = connection;
+            }
+            i++;
+        }
+        return new PanelConnection(1, 1);
+    }
+
     /**
     * 
     * Class solar panel
