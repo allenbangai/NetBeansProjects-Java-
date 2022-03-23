@@ -158,32 +158,42 @@ public class SolarPanels {
     */
     public class PanelConnection{
         private int seriesConnection;
-        private int parrallelConnection;
+        private int parallelConnection;
 
         /**
-         * 
+         * Constructor for creating object of panel connections
          * @param seriesConnection
-         * @param parrallelConnection
+         * Number of connection of panels in series
+         * @param parallelConnection
+         * Number of connection of panels in parallel
          */
-        public PanelConnection(int seriesConnection, int parrallelConnection){
-            this.parrallelConnection = parrallelConnection;
+        public PanelConnection(int seriesConnection, int parallelConnection){
+            this.parallelConnection = parallelConnection;
             this.seriesConnection = seriesConnection;
         }
 
         /**
-         * 
          * @return
+         * Return the number of series of connection for panels
          */
         public int getSeriesConnection(){
             return seriesConnection;
         }
 
         /**
-         * 
          * @return
+         * Returns the number of paraled connection of panels
          */
         public int getParallelConnection() {
-            return parrallelConnection;
+            return parallelConnection;
+        }
+
+        @Override
+        public String toString() {
+            return "You connection of panels is as follows {"+
+            "', series connection: '" + getSeriesConnection() +
+            "', parallel connection: '" + getParallelConnection()+
+            "'}";
         }
     }
 
