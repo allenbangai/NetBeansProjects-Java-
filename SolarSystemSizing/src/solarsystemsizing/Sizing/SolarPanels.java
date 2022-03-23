@@ -146,5 +146,45 @@ public class SolarPanels {
             }
         }
     }
-    
+
+    /**
+    * 
+    * Class solar panel
+    * @since year 2022
+    * 
+    * @version 1.0
+    * 
+    * @author Kamadje Allen
+    */
+    public class PanelConnection{
+        private int seriesConnection;
+        private int parrallelConnection;
+
+        /**
+         * 
+         * @param seriesConnection
+         * @param parrallelConnection
+         */
+        public PanelConnection(int seriesConnection, int parrallelConnection){
+            this.parrallelConnection = parrallelConnection;
+            this.seriesConnection = seriesConnection;
+        }
+
+        /**
+         * 
+         * @return
+         */
+        public int getSeriesConnection(){
+            return seriesConnection;
+        }
+
+        /**
+         * 
+         * @return
+         */
+        public int getParallelConnection() {
+            return parrallelConnection;
+        }
+    }
+
 }
