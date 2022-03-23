@@ -16,7 +16,7 @@ import solarsystemsizing.Util.Helper;
  * 
  * @author Kamadje Allen
  */
-public class SolarPanelPro extends SolarPanels{
+public class PanelSizingPro extends PanelSizing{
     private Helper helper = new Helper();
     private int panelPower;
 
@@ -31,7 +31,7 @@ public class SolarPanelPro extends SolarPanels{
      * In this case, the power of the available solar panel will be used to size the system
      * and might not be the most optimum choice...
      */
-    public SolarPanelPro(double energy, double irradiance, int panelPower) {
+    public PanelSizingPro(double energy, double irradiance, int panelPower) {
         super(energy, irradiance);
         this.panelPower = panelPower;
         this.getPanelNumber();

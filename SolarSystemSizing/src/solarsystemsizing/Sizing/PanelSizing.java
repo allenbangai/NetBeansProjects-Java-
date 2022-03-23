@@ -17,7 +17,7 @@ import solarsystemsizing.Util.Helper;
  * 
  * @author Kamadje Allen
  */
-public class SolarPanels {
+public class PanelSizing {
     private Helper helper = new Helper();
     private double energy;
     private double irradiance;
@@ -25,11 +25,9 @@ public class SolarPanels {
      * This variable comprises all the available solar panels 
      * and their respective power
      */
-    private int[] panelsPower = {100, 120, 150, 200, 220, 250, 275, 300, 350};
     private ArrayList<Integer> panelList = new ArrayList<>();
     private ArrayList<Panel> panels = new ArrayList<>();
     private int panelNumber;
-    private int panelPower;
     private int position;
 
     /**
@@ -37,7 +35,7 @@ public class SolarPanels {
      * @param energy
      * @param irradiance 
      */
-    public SolarPanels(double energy, double irradiance) {
+    public PanelSizing(double energy, double irradiance) {
         this.energy = energy;
         this.irradiance = irradiance;
     }    
@@ -48,7 +46,7 @@ public class SolarPanels {
      * @param irradiance
      * @param panels
      */
-    public SolarPanels(double energy, double irradiance, ArrayList<Panel> panels) {
+    public PanelSizing(double energy, double irradiance, ArrayList<Panel> panels) {
         this.energy = energy;
         this.irradiance = irradiance;
         this.panels = panels;
@@ -106,8 +104,7 @@ public class SolarPanels {
      * Returned value is of type Integer
      */
     public int getPanelPower() {
-        panelPower = panelsPower[position];
-        return panelPower;
+        return getPanel().getPower();
     }
 
     /**

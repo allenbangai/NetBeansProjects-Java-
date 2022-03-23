@@ -24,7 +24,7 @@ public class SolarSizing {
      */
     public static void main(String[] args) {
         Total total;
-        SolarPanels solarPanels;
+        PanelSizing solarPanels;
         InverterSizing inverterSizing;
         BatterySizing batterySizing = new BatterySizing();
         ArrayList<Panel> panelList = Store.getPanels();
@@ -57,7 +57,7 @@ public class SolarSizing {
                 total = new TEnergy(4000, 5);
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
-                solarPanels = new SolarPanels(stmMaxEnergy, 4.3, panelList);
+                solarPanels = new PanelSizing(stmMaxEnergy, 4.3, panelList);
                 stmNumberOfPanels = solarPanels.getPanelNumber();
                 stmPowerOfPanels = solarPanels.getPanel().getPower();
                 stmPanel = solarPanels.getPanel();
@@ -72,7 +72,7 @@ public class SolarSizing {
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
                 Panel panel = new Panel(300, 24, 36);
-                solarPanels = new SolarPanelPro(stmMaxEnergy, (float) 4.3, panel.getPower());
+                solarPanels = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel.getPower());
                 stmNumberOfPanels = solarPanels.getPanelNumber();
                 stmPowerOfPanels = solarPanels.getPanelPower();
                 stmPanel = panel;
