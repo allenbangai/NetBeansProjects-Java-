@@ -78,7 +78,7 @@ public class Store {
      * This method returns a storage of the available list of batteries object in store in the app
      * @return
      */
-    public ArrayList<Battery> getBatteries() {
+    public static ArrayList<Battery> getBatteries() {
         ArrayList<Battery> batteries = new ArrayList<>();
         batteries.add(new Battery(12, 110));
         batteries.add(new Battery(12, 100));

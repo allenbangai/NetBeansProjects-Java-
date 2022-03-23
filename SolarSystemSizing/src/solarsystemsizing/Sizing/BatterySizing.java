@@ -16,8 +16,8 @@ import java.util.*;
 public class BatterySizing {
     private ArrayList<Battery> batteries = new ArrayList<>();
     private Helper helper = new Helper();
-    private int stmMaxEnergy;
-    private Inverter inverter;
+    private double stmMaxEnergy;
+    private Inverter stmInverter;
     private int batteryVoltage = 0;
     private int batteryAmpereHour = 0;
 
@@ -29,14 +29,17 @@ public class BatterySizing {
      * @param {@link #stmMaxEnergy}
      * The system mazimum energy because the total set of batteries energy is suppose to be equal to 
      * or greater than the system energy consumption in hours. 
-     * @param {@link #inverter}
+     * @param {@link #stmInverter}
      * This inverter gives use the inverter object that was used in sizing the system for reason which
      * can be found in our algorithm.
      */
-    public BatterySizing(ArrayList<Battery> batteries, int stmMaxEnergy, Inverter inverter) {
+    public BatterySizing(ArrayList<Battery> batteries, double stmMaxEnergy2, Inverter stmInverter) {
         this.batteries = batteries;
-        this.stmMaxEnergy = stmMaxEnergy;
-        this.inverter = inverter;
+        this.stmMaxEnergy = stmMaxEnergy2;
+        this.stmInverter = stmInverter;
+    }
+
+    public BatterySizing() {
     }
 
     /**
@@ -58,7 +61,7 @@ public class BatterySizing {
     /**
      * @return int return the max energy that willbe used per day
      */
-    public int getStmMaxEnergy() {
+    public double getStmMaxEnergy() {
         return stmMaxEnergy;
     }
 
@@ -67,7 +70,7 @@ public class BatterySizing {
      * @return 
      */
     private Inverter getInverter() {
-        return inverter;
+        return stmInverter;
     }
 
     /**
@@ -139,7 +142,7 @@ public class BatterySizing {
             return false;
         }
         BatterySizing batterySizing = (BatterySizing) o;
-        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && Objects.equals(inverter, batterySizing.inverter);
+        return Objects.equals(batteries, batterySizing.batteries) && stmMaxEnergy == batterySizing.stmMaxEnergy && Objects.equals(stmInverter, batterySizing.stmInverter);
     }
 
     /**
@@ -176,7 +179,7 @@ public class BatterySizing {
      * @return
      */
     public int getBatteriesEnergy_AH(){
-        return Math.round(getStmMaxEnergy()/getBatteryVoltage());
+        return (int) Math.round(getStmMaxEnergy()/getBatteryVoltage());
     }
 
     /**
