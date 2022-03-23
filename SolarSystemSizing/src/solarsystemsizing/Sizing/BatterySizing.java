@@ -152,13 +152,13 @@ public class BatterySizing {
      */
     @Override
     public String toString() {
-        return "{" +
-            " batteries='" + getBatteries() + "'" +
-            ", stmMaxEnergy='" + getStmMaxEnergy() + "'" +
-            ", inverter DC Voltage='" + getInverter().getDCinput() + "'" +
-            ", inverter RatedPower='" + getInverter().getRatedWatt() + "'" +
-            ", batteryVoltage='" + getBatteryVoltage() + "'" +
-            "}";
+        return "The Baterries Sizing is as{" +
+            " battery voltage= '" + getBatteryVoltage() +
+            "', battery ampereHour= '" + getBatteryAmpereHour() + 
+            "', Total number of batteries= '" + getBatteryNum() +
+            "', Number of batteries in series= '" + getSeriesConnection() +
+            "', Number of battteries in parrallel= '" + getParallelConnection() +
+            "'}";
     }
 
     /**
@@ -186,7 +186,7 @@ public class BatterySizing {
      * Return the required number of batteries needed for sizing the system.
      * @return
      */
-    public int findBatteryNum() {
+    public int getBatteryNum() {
         int batteryNum = getBatteriesEnergy_AH()/getBatteryAmpereHour();
         if(!helper.isEven(batteryNum)){
             batteryNum++;
@@ -207,7 +207,7 @@ public class BatterySizing {
      * @return
      */
     public int getParallelConnection(){
-        return findBatteryNum()/getSeriesConnection();
+        return getBatteryNum()/getSeriesConnection();
     }
 
 }
