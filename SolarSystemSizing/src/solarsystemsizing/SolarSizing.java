@@ -70,7 +70,7 @@ public class SolarSizing {
                 batterySizing.setBatteryVoltage(12);
                 break;
         }
-        System.out.println("System Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);
+        System.out.println("\nSystem Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);
         System.out.println(panelSizing.toString());
         System.out.println("System Inverter with rated output of " + stmInverter.getRatedWatt()
         + "W and DC rated input of " + stmInverter.getDCinput() + "V");
