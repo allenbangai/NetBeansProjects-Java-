@@ -53,7 +53,6 @@ public class SolarSizing {
                 stmMaxPower = total.totalP();
                 panelSizing = new PanelSizing(stmMaxEnergy, 4.3, Store.getPanels());
                 inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
-                stmInverter = inverterSizing.getInverter();
                 batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
                 break;
             case 4:
@@ -70,10 +69,9 @@ public class SolarSizing {
                 batterySizing.setBatteryVoltage(12);
                 break;
         }
-        System.out.println("\nSystem Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);
+        System.out.println("\nSystem Energy is: "+ stmMaxEnergy + "Ah and System power is: "+stmMaxPower + "W.");
         System.out.println(panelSizing.toString());
-        System.out.println("System Inverter with rated output of " + stmInverter.getRatedWatt()
-        + "W and DC rated input of " + stmInverter.getDCinput() + "V");
+        System.out.println(inverterSizing.toString());
         System.out.println(batterySizing.toString());
     }
 }
