@@ -150,23 +150,23 @@ public class SolarPanels {
     public ArrayList<PanelConnection> getPanelConnectionList(){
         int panelNumber = getPanelNumber();
         ArrayList<PanelConnection> pList = new ArrayList<>();
-        if(panelNumber == 1){
-            
-        }
-        for(int i = 0; i<panelNumber; i++){
+        for(int i = 2; i < panelNumber; i++){
             if(panelNumber == 1){
                 pList.add(new PanelConnection(1, 1));
+                break;
             }
             if(panelNumber == 2){
                 pList.add(new PanelConnection(2, 1));
                 pList.add(new PanelConnection(1, 2));
+                break;
             }
             else{
-                
+                if(panelNumber%i == 0){
+                    pList.add(new PanelConnection(i, panelNumber/i));
+                }
             }
         }
-
-        return new ArrayList<>();
+        return pList;
     }
 
     /**
