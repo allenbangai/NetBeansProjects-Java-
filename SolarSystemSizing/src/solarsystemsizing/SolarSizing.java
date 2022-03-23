@@ -24,17 +24,13 @@ public class SolarSizing {
      */
     public static void main(String[] args) {
         Total total;
-        PanelSizing solarPanels;
-        InverterSizing inverterSizing;
+        PanelSizing panelSizing = new PanelSizing();
+        InverterSizing inverterSizing =  new InverterSizing();
         BatterySizing batterySizing = new BatterySizing();
-        ArrayList<Panel> panelList = Store.getPanels();
-        ArrayList<Inverter> inverterList = Store.getInverters();
 
-        
         //variables here
         double stmMaxEnergy = 0;
         double stmMaxPower = 0;
-        Panel stmPanel;
         Inverter stmInverter = new Inverter();
         int stmNumberOfPanels = 0;
         int stmPowerOfPanels = 0;
@@ -57,11 +53,10 @@ public class SolarSizing {
                 total = new TEnergy(4000, 5);
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
-                solarPanels = new PanelSizing(stmMaxEnergy, 4.3, panelList);
-                stmNumberOfPanels = solarPanels.getPanelNumber();
-                stmPowerOfPanels = solarPanels.getPanel().getPower();
-                stmPanel = solarPanels.getPanel();
-                inverterSizing = new InverterSizing(inverterList, (int) stmMaxPower);
+                panelSizing = new PanelSizing(stmMaxEnergy, 4.3, Store.getPanels());
+                stmNumberOfPanels = panelSizing.getPanelNumber();
+                stmPowerOfPanels = panelSizing.getPanel().getPower();
+                inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
                 stmInverter = inverterSizing.getInverter();
                 batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
                 break;
@@ -72,20 +67,17 @@ public class SolarSizing {
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
                 Panel panel = new Panel(300, 24, 36);
-                solarPanels = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel.getPower());
-                stmNumberOfPanels = solarPanels.getPanelNumber();
-                stmPowerOfPanels = solarPanels.getPanelPower();
-                stmPanel = panel;
-                inverterSizing = new InverterSizing(inverterList, (int) stmMaxPower);
+                panelSizing = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel.getPower());
+                stmNumberOfPanels = panelSizing.getPanelNumber();
+                stmPowerOfPanels = panelSizing.getPanelPower();
+                inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
                 inverterSizing.setInverterVoltage(24);
                 stmInverter = inverterSizing.getInverter();
                 batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
-                batterySizing.setBatteryVoltage(24);
+                batterySizing.setBatteryVoltage(12);
                 break;
         }
         System.out.println("System Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);
-        System.out.println("System will have " + stmNumberOfPanels + " panels of " 
-        + stmPowerOfPanels + "W each");
         System.out.println("System Inverter with rated output of " + stmInverter.getRatedWatt()
         + "W and DC rated input of " + stmInverter.getDCinput() + "V");
         System.out.println(batterySizing.toString());
