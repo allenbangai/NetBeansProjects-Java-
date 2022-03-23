@@ -147,6 +147,28 @@ public class SolarPanels {
         }
     }
 
+    public ArrayList<PanelConnection> getPanelConnectionList(){
+        int panelNumber = getPanelNumber();
+        ArrayList<PanelConnection> pList = new ArrayList<>();
+        if(panelNumber == 1){
+            
+        }
+        for(int i = 0; i<panelNumber; i++){
+            if(panelNumber == 1){
+                pList.add(new PanelConnection(1, 1));
+            }
+            if(panelNumber == 2){
+                pList.add(new PanelConnection(2, 1));
+                pList.add(new PanelConnection(1, 2));
+            }
+            else{
+                
+            }
+        }
+
+        return new ArrayList<>();
+    }
+
     /**
     * 
     * Class solar panel
@@ -192,7 +214,7 @@ public class SolarPanels {
         public String toString() {
             return "You connection of panels is as follows {"+
             "', series connection: '" + getSeriesConnection() +
-            "', parallel connection: '" + getParallelConnection()+
+            "', parallel connection: '" + getParallelConnection() +
             "'}";
         }
     }

@@ -39,7 +39,7 @@ public class Helper {
             return true;
         }else if ( value%5 == 0 && value!=5){
             return true;
-        }else if (value%2 == 0 && value!=2) {
+        }else if (value%2 == 0) {
             return true;
         }
         else{
