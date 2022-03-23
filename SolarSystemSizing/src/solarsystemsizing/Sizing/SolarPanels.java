@@ -147,6 +147,11 @@ public class SolarPanels {
         }
     }
 
+    /**
+     * @return
+     * This method returns a list of possible panel connections from the number panels needed to size the system.
+     * The user can now chose among this connection which one will he prefere for his system.
+     */
     public ArrayList<PanelConnection> getPanelConnectionList(){
         int panelNumber = getPanelNumber();
         ArrayList<PanelConnection> pList = new ArrayList<>();
