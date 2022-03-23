@@ -173,8 +173,8 @@ public class PanelSizing {
 
     /**
      * @return
-     * Returns an object of the panel default connection which contains number of series
-     * and parallel conections.
+     * Returns an object of the class PanelConnection with a default panel connection for the system 
+     * which contains number of series and parallel conections.
      */
     public PanelConnection getPanelConnection() {
         PanelConnection panelConnection = new PanelConnection(1, 1);
@@ -193,6 +193,18 @@ public class PanelSizing {
             i++;
         }
         return panelConnection;
+    }
+
+    @Override
+    public String toString() {
+        return "The Panels Sizing is as folows {" +
+        " Panel Power= '" + getPanelPower() +
+        "W', Panel Voltage= '" + getPanel().getVoltage() + 
+        "V', Panel Nominal Voltage= '" + getPanel().getNominalVoltage() +
+        "V', Number of Panels= '" + getPanelNumber() +
+        "', Number of panels in series= '" + getPanelConnection().getSeriesConnection() +
+        "', Number of panels in parrallel= '" + getPanelConnection().getParallelConnection() +
+        "'}";
     }
 
     /**
@@ -230,7 +242,7 @@ public class PanelSizing {
 
         /**
          * @return
-         * Returns the number of paraled connection of panels
+         * Returns the number of parallel connections of panels
          */
         public int getParallelConnection() {
             return parallelConnection;
