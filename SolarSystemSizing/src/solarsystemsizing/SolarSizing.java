@@ -32,12 +32,10 @@ public class SolarSizing {
         double stmMaxEnergy = 0;
         double stmMaxPower = 0;
         Inverter stmInverter = new Inverter();
-        int stmNumberOfPanels = 0;
-        int stmPowerOfPanels = 0;
-        
         System.out.println("Enter value for sizing type");
         ssScanner = new Scanner(System.in);
         sizingType = ssScanner.nextInt();
+        
         switch(sizingType){
             case 1:
                 System.out.println("Here, you will have the sizing "
@@ -54,8 +52,6 @@ public class SolarSizing {
                 stmMaxEnergy = total.totalE();
                 stmMaxPower = total.totalP();
                 panelSizing = new PanelSizing(stmMaxEnergy, 4.3, Store.getPanels());
-                stmNumberOfPanels = panelSizing.getPanelNumber();
-                stmPowerOfPanels = panelSizing.getPanel().getPower();
                 inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
                 stmInverter = inverterSizing.getInverter();
                 batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
@@ -68,16 +64,14 @@ public class SolarSizing {
                 stmMaxPower = total.totalP();
                 Panel panel = new Panel(300, 24, 36);
                 panelSizing = new PanelSizingPro(stmMaxEnergy, (float) 4.3, panel.getPower());
-                stmNumberOfPanels = panelSizing.getPanelNumber();
-                stmPowerOfPanels = panelSizing.getPanelPower();
                 inverterSizing = new InverterSizing(Store.getInverters(), (int) stmMaxPower);
                 inverterSizing.setInverterVoltage(24);
-                stmInverter = inverterSizing.getInverter();
-                batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, stmInverter);
+                batterySizing = new BatterySizing(Store.getBatteries(), stmMaxEnergy, inverterSizing.getInverter());
                 batterySizing.setBatteryVoltage(12);
                 break;
         }
         System.out.println("System Energy is: "+ stmMaxEnergy + "and System power is: "+stmMaxPower);
+        System.out.println(panelSizing.toString());
         System.out.println("System Inverter with rated output of " + stmInverter.getRatedWatt()
         + "W and DC rated input of " + stmInverter.getDCinput() + "V");
         System.out.println(batterySizing.toString());

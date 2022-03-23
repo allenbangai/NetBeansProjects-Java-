@@ -55,6 +55,9 @@ public class PanelSizing {
     }
     
 
+    public PanelSizing() {
+    }
+
     /**
      * Setter for initiating private variable energy
      * @param energy 
@@ -197,13 +200,13 @@ public class PanelSizing {
 
     @Override
     public String toString() {
-        return "The Panels Sizing is as folows {" +
-        " Panel Power= '" + getPanelPower() +
-        "W', Panel Voltage= '" + getPanel().getVoltage() + 
-        "V', Panel Nominal Voltage= '" + getPanel().getNominalVoltage() +
-        "V', Number of Panels= '" + getPanelNumber() +
-        "', Number of panels in series= '" + getPanelConnection().getSeriesConnection() +
-        "', Number of panels in parrallel= '" + getPanelConnection().getParallelConnection() +
+        return "The Panels Sizing is as folows: {" +
+        "\n Panel Power= '" + getPanelPower() +
+        "W',\n Panel Voltage= '" + getPanel().getVoltage() + 
+        "V',\n Panel Nominal Voltage= '" + getPanel().getNominalVoltage() +
+        "V',\n Number of Panels= '" + getPanelNumber() +
+        "',\n Number of panels in series= '" + getPanelConnection().getSeriesConnection() +
+        "',\n Number of panels in parrallel= '" + getPanelConnection().getParallelConnection() +
         "'}";
     }
 

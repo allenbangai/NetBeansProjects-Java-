@@ -30,6 +30,9 @@ public class InverterSizing {
         this.systemMaxPower = systemMaxPower;
     }    
 
+    public InverterSizing() {
+    }
+
     /**
      * @return int return the systemMaxPower
      */
