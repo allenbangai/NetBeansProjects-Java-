@@ -152,7 +152,7 @@ public class BatterySizing {
      */
     @Override
     public String toString() {
-        return "The Baterries Sizing is as folows {" +
+        return "\nThe Baterries Sizing is as folows {" +
             "\n Battery voltage= '" + getBatteryVoltage() +
             "V',\n Battery ampereHour= '" + getBatteryAmpereHour() + 
             "Ah',\n Total number of batteries= '" + getBatteryNum() +

@@ -200,7 +200,7 @@ public class PanelSizing {
 
     @Override
     public String toString() {
-        return "The Panels Sizing is as folows: {" +
+        return "\nThe Panels Sizing is as folows: {" +
         "\n Panel Power= '" + getPanelPower() +
         "W',\n Panel Voltage= '" + getPanel().getVoltage() + 
         "V',\n Panel Nominal Voltage= '" + getPanel().getNominalVoltage() +

@@ -143,4 +143,12 @@ public class InverterSizing {
         return findInverter();
     }
 
+    @Override
+    public String toString() {
+        return "\nThe Inverter Sizing is as folows {" +
+        "\n Inverter input DC Voltage= '" + getInverter().getDCinput() +
+        "V',\n Inverter output rated power= '" + getInverter().getRatedWatt() + 
+        "W',\n Inverter output rated voltage= '" + "220/240" +
+        "'}";
+    }
 }
