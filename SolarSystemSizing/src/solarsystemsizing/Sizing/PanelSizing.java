@@ -181,7 +181,7 @@ public class PanelSizing {
      */
     public PanelConnection getPanelConnection() {
         PanelConnection panelConnection = new PanelConnection(1, 1);
-        ArrayList<PanelConnection> pList = new ArrayList<>();
+        ArrayList<PanelConnection> pList = getPanelConnectionList();
         int i = 0;
         for(PanelConnection connection: pList){
             int val1=0, val2=0;

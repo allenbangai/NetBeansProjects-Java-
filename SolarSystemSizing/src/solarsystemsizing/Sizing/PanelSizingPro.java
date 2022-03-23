@@ -4,6 +4,7 @@
  */
 package solarsystemsizing.Sizing;
 
+import solarsystemsizing.Model.Panel;
 import solarsystemsizing.Util.Helper;
 
 /**
@@ -18,7 +19,7 @@ import solarsystemsizing.Util.Helper;
  */
 public class PanelSizingPro extends PanelSizing{
     private Helper helper = new Helper();
-    private int panelPower;
+    private Panel panel;
 
     /**
      * Constructor Solar Panel Pro take the following...
@@ -26,14 +27,14 @@ public class PanelSizingPro extends PanelSizing{
      * Total of the system per day of variable float and is rated in wattHour...
      * @param irradiance
      * Solar irradiance of a particular location e.i is total time of sunlight per day...
-     * @param panelPower 
+     * @param panel 
      * Desired or available solar panel power intended to size the system...
      * In this case, the power of the available solar panel will be used to size the system
      * and might not be the most optimum choice...
      */
-    public PanelSizingPro(double energy, double irradiance, int panelPower) {
+    public PanelSizingPro(double energy, double irradiance, Panel panel) {
         super(energy, irradiance);
-        this.panelPower = panelPower;
+        this.panel = panel;
         this.getPanelNumber();
     }
 
@@ -45,7 +46,7 @@ public class PanelSizingPro extends PanelSizing{
      */
     @Override
     public int getPanelNumber() {
-        float power = (float)panelPower;
+        float power = (float)panel.getPower();
         int panelNumber = (int) Math.round(super.getEnergy()/(super.getIrradiance()*power));
         if(!helper.isvalid(panelNumber)){
             panelNumber++;
@@ -59,8 +60,11 @@ public class PanelSizingPro extends PanelSizing{
      */
     @Override
     public int getPanelPower() {
-        return panelPower;
+        return panel.getPower();
     }
     
-        
+    @Override
+    public Panel getPanel() {
+        return panel;
+    }
 }
