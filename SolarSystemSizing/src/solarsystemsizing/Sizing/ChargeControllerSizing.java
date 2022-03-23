@@ -24,50 +24,16 @@ public class ChargeControllerSizing {
         return this.inverterSizing;
     }
 
-    public void setInverterSizing(InverterSizing inverterSizing) {
-        this.inverterSizing = inverterSizing;
-    }
-
     public int getStmDCVoltage() {
         return this.stmDCVoltage;
     }
 
-    public void setStmDCVoltage(int stmDCVoltage) {
-        this.stmDCVoltage = stmDCVoltage;
-    }
-
-    public ChargeControllerSizing inverterSizing(InverterSizing inverterSizing) {
-        setInverterSizing(inverterSizing);
-        return this;
-    }
-
-    public ChargeControllerSizing stmDCVoltage(int stmDCVoltage) {
-        setStmDCVoltage(stmDCVoltage);
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof ChargeControllerSizing)) {
-            return false;
-        }
-        ChargeControllerSizing chargeControllerSizing = (ChargeControllerSizing) o;
-        return Objects.equals(inverterSizing, chargeControllerSizing.inverterSizing) && stmDCVoltage == chargeControllerSizing.stmDCVoltage;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(inverterSizing, stmDCVoltage);
-    }
-
     @Override
     public String toString() {
-        return "{" +
-            " inverterSizing='" + getInverterSizing() + "'" +
-            ", stmDCVoltage='" + getStmDCVoltage() + "'" +
-            "}";
+        return "\n{" +
+            "\n inverterSizing= '" + getInverterSizing() +
+            "',\n stmDCVoltage= '" + getStmDCVoltage() +
+            "'}";
     }
 
 }
